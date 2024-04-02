@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ThankYouPage: React.FC = () => {
+const ThankYouMessage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center relative">
       <div className="absolute inset-0">
@@ -19,10 +20,10 @@ const ThankYouPage: React.FC = () => {
         <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl">
           Thank You!
         </h1>
-        <p className="text-lg mt-4 md:text-xl lg:text-2xl">
+        <p className="text-base mt-4 sm:text-xs md:text-xl lg:text-2xl">
           Your message has been successfully sent.
         </p>
-        <p className="text-lg md:text-xl lg:text-2xl">
+        <p className="text-base md:text-xl lg:text-2xl">
           I&apos;ll get back to you soon!
         </p>
 
@@ -38,4 +39,4 @@ const ThankYouPage: React.FC = () => {
   );
 };
 
-export default ThankYouPage;
+export default ThankYouMessage;
