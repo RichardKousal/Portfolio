@@ -11,6 +11,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @layer utilities {
   .text-balance {
