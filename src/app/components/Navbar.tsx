@@ -110,7 +110,7 @@ export default function Navbar() {
               </svg>
             </a>
           </div>
-          <ThemeSwitch isDarkmode={isDarkmode} toggleTheme={toggleTheme} />
+          <ThemeSwitch toggleTheme={toggleTheme} />
         </div>
 
         {/* Toggle Button for Mobile Menu */}

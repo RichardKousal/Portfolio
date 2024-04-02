@@ -43,7 +43,7 @@ export default function CustomHero({}: CustomHeroProps) {
             <p className="mb-6 text-gray-800 dark:text-white">
               As a Test Engineer, I have a strong passion for automated testing.
               I believe that automated testing is essential and has a unique
-              place in the software development lifecycle. I'm committed to
+              place in the software development lifecycle. I&apos;m committed to
               delivering high-quality software through rigorous testing
               practices.
             </p>

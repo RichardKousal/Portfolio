@@ -1,11 +1,15 @@
 import React from "react";
 import { useTheme } from "next-themes";
 
-export default function ThemeSwitch({ isDarkmode, toggleTheme }) {
+interface Props {
+  toggleTheme: () => void;
+}
+
+export default function ThemeSwitch({ toggleTheme }: Props) {
   const { theme, setTheme } = useTheme();
 
   const handleToggleTheme = () => {
-    toggleTheme(); // volání toggleTheme funkce
+    toggleTheme();
     setTheme(theme === "dark" ? "light" : "dark");
   };
 

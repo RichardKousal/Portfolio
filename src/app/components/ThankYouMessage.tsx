@@ -2,19 +2,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // Upravený import
 
 const ThankYouMessage: React.FC = () => {
-  const router = usePathname(); // Použití useAppRouter
-  const { thankYou } = (router.query as { thankYou: string }) || {}; // Získání query parametrů
-
-  useEffect(() => {
-    if (thankYou === "true") {
-      // Provedení akce, pokud je parametr thankYou roven 'true'
-      // Například zobrazení potvrzovací zprávy nebo provedení navigace
-    }
-  }, [thankYou]);
-
   return (
     <div className="min-h-screen flex flex-col justify-center items-center relative">
       <div className="absolute inset-0">
