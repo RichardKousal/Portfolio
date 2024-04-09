@@ -1,5 +1,6 @@
 import React from "react";
-import SkillsSection from "../components/SkillsSection";
+import SkillsSection from "./SkillsSection";
+import { useTranslations } from "next-intl";
 
 interface Skill {
   name: string;
@@ -72,6 +73,7 @@ const skillsData: Section[] = [
 ];
 
 const SkillsPage: React.FC = () => {
+  const t = useTranslations("Index");
   return (
     <div
       id="skills"
@@ -81,7 +83,7 @@ const SkillsPage: React.FC = () => {
       <div className="mx-auto pt-2 relative z-0">
         <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
           {" "}
-          Skills
+          {t("title")}
         </h1>
       </div>
       <div className="container mx-auto p-8">

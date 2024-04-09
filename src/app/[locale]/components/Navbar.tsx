@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import userData from "../constants/data";
 import ThemeSwitch from "./ThemeSwitcher";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -80,6 +81,7 @@ export default function Navbar() {
         {/* Social Links */}
         <div className="flex items-center space-x-2">
           {/* Hide icons for mobile resolutions */}
+          <LanguageSwitcher></LanguageSwitcher>
           <div className="hidden sm:flex space-x-2 items-center">
             <a
               href={userData.socialLinks.instagram}

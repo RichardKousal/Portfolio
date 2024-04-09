@@ -23,9 +23,13 @@ export default function ThemeSwitch({ toggleTheme }: Props) {
       <div
         className={`w-7 h-7 flex items-center justify-center rounded-full transition duration-500 transform ${
           theme === "dark"
-            ? "bg-yellow-500 -translate-x-3"
-            : "bg-blue-500 translate-x-3"
-        } p-1 text-white`}
+            ? "bg-yellow-500 sm:bg-yellow-500 -translate-x-3 sm:-translate-x-3"
+            : "bg-blue-500 sm:bg-blue-500 translate-x-3 sm:translate-x-3"
+        } p-1 text-white ${
+          theme === "dark"
+            ? "-translate-x-1 sm:-translate-x-1"
+            : "-translate-x-3 sm:-translate-x-1"
+        }`}
       >
         {theme === "dark" ? (
           <svg

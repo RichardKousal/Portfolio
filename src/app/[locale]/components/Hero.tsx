@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import AnimatedHeading from "./FramerComponent";
 import { FaArrowDown } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import i18nConfig from "@/app/i18nConfig";
 
 interface CustomHeroProps {
   mainHeadingClasses: string;
@@ -9,6 +12,7 @@ interface CustomHeroProps {
 }
 
 export default function CustomHero({}: CustomHeroProps) {
+  const { t, i18n } = useTranslation();
   return (
     <div className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8">
       <div className="container mx-auto px-5 py-20 md:py-32 flex justify-center items-start">
@@ -24,7 +28,10 @@ export default function CustomHero({}: CustomHeroProps) {
                   transition: { duration: 2.0, visible: 100 },
                 }}
               >
-                <h1>Hi,</h1>
+                <h1>{t("title")}</h1>
+
+                {/* "Index": {
+    "title": "Hello!" */}
               </AnimatedHeading>
             </div>
             <div className="mb-0 text-3xl font-bold text-green-600 dark:text-green-500 md:mb-8">
