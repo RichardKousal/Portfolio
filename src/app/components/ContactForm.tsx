@@ -1,7 +1,15 @@
+"use client";
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useTranslation } from "react-i18next";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const ContactForm: React.FC = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { i18n } = useTranslation();
+
   const onSubmit = async (values: any, actions: any) => {
     try {
       const response = await fetch("/api/email", {
@@ -14,7 +22,9 @@ const ContactForm: React.FC = () => {
       if (response.ok) {
         console.log("Email sent successfully");
         actions.resetForm();
-        window.location.href = "/thank-you"; // Přesměrování na klientské straně
+
+        // Přesměrování na stránku /thank-you v aktuálním jazyce
+        router.push(`/${i18n.language}/thank-you`);
       } else {
         console.error("Failed to send email");
       }
@@ -22,7 +32,7 @@ const ContactForm: React.FC = () => {
       console.error("Error:", error);
     }
   };
-
+  const { t } = useTranslation();
   return (
     <div className="h-full flex justify-center items-center">
       <div className="border border-black dark:border-gray-700 p-8 rounded-md">
@@ -43,25 +53,19 @@ const ContactForm: React.FC = () => {
           }) => {
             const errors: any = {};
             if (!values.name) {
-              errors.name = "This field is required";
+              errors.name = t("contact.validations.name");
             }
             if (!values.email) {
-              errors.email = "This field is required";
+              errors.email = t("contact.validations.email");
             } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
-              errors.email = "Invalid email address";
+              errors.email = t("contact.validations.invalidEmail");
             }
             if (!values.subject) {
-              errors.subject = "This field is required";
+              errors.subject = t("contact.validations.subject");
             }
-            if (
-              values.phoneNumber &&
-              !/^\+?\d{3} \d{3} \d{3} \d{3}$/.test(values.phoneNumber)
-            ) {
-              errors.phoneNumber =
-                "Invalid phone number format (e.g. +xxx xxx xxx xxx)";
-            }
+
             if (!values.message) {
-              errors.message = "This field is required";
+              errors.message = t("contact.validations.message");
             }
             return errors;
           }}
@@ -73,7 +77,7 @@ const ContactForm: React.FC = () => {
                 htmlFor="name"
                 className="block font-semibold text-gray-800 dark:text-gray-200"
               >
-                Your Name
+                {t("contact.labels.name")}
               </label>
               <Field
                 type="text"
@@ -92,7 +96,7 @@ const ContactForm: React.FC = () => {
                 htmlFor="email"
                 className="block font-semibold text-gray-800 dark:text-gray-200"
               >
-                Your Email
+                {t("contact.labels.email")}
               </label>
               <Field
                 type="email"
@@ -111,7 +115,7 @@ const ContactForm: React.FC = () => {
                 htmlFor="subject"
                 className="block font-semibold text-gray-800 dark:text-gray-200"
               >
-                Subject
+                {t("contact.labels.subject")}
               </label>
               <Field
                 type="text"
@@ -130,7 +134,7 @@ const ContactForm: React.FC = () => {
                 htmlFor="phoneNumber"
                 className="block font-semibold text-gray-800 dark:text-gray-200"
               >
-                Phone Number (optional)
+                {t("contact.labels.phoneNumber")}
               </label>
               <Field
                 type="tel"
@@ -149,7 +153,7 @@ const ContactForm: React.FC = () => {
                 htmlFor="message"
                 className="block font-semibold text-gray-800 dark:text-gray-200"
               >
-                Message
+                {t("contact.labels.message")}
               </label>
               <Field
                 as="textarea"
@@ -168,7 +172,7 @@ const ContactForm: React.FC = () => {
               type="submit"
               className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600"
             >
-              Submit
+              {t("contact.actions.submit")}
             </button>
           </Form>
         </Formik>

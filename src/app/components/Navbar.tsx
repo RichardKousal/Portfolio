@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import userData from "../constants/data";
 import ThemeSwitch from "./ThemeSwitcher";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -11,39 +13,23 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const storedDarkmode = localStorage.getItem("isDarkmode");
-    if (storedDarkmode === "true") {
-      setIsDarkmode(true);
-    } else if (storedDarkmode === "false") {
-      setIsDarkmode(false);
-    }
-  }, []);
-
-  useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
       setScrolled(isScrolled);
     };
 
     document.addEventListener("scroll", handleScroll);
+
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const links = [
-    { id: 1, text: "Home", href: "/" },
-    { id: 2, text: "About", href: "#about" },
-    { id: 3, text: "Experience", href: "#experience" },
-    { id: 4, text: "Skills", href: "#skills" },
-    { id: 5, text: "Contact", href: "#contact" },
-  ];
-
   const toggleTheme = () => {
     setIsDarkmode(!isDarkmode);
     localStorage.setItem("isDarkmode", String(!isDarkmode));
   };
-
+  const { t } = useTranslation();
   return (
     <nav
       className={`bg-blue-950 px-4 py-2 fixed top-0 left-0 right-0 z-50 flex justify-between items-center transition-all duration-500 ease-in-out ${
@@ -62,24 +48,53 @@ export default function Navbar() {
 
       {/* Navigation Links for Desktop */}
       <div className="hidden md:flex space-x-4">
-        {links.map(({ id, text, href }) => (
-          <a
-            key={id}
-            href={`/#${href.substring(1)}`} // Odkaz vždy začíná na kořenové cestě a přidává se cílový identifikátor
-            className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
-              pathname === href ? "text-green-300" : "text-white"
-            }`}
-          >
-            {text}
-          </a>
-        ))}
+        <a
+          href="/#"
+          className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+            pathname === "/" ? "text-green-300" : "text-white"
+          }`}
+        >
+          {t("navigation.navHome")}
+        </a>
+        <a
+          href="/#about"
+          className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+            pathname === "#about" ? "text-green-300" : "text-white"
+          }`}
+        >
+          {t("navigation.navAbout")}
+        </a>
+        <a
+          href="/#experience"
+          className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+            pathname === "#experience" ? "text-green-300" : "text-white"
+          }`}
+        >
+          {t("navigation.navExperience")}
+        </a>
+        <a
+          href="/#skills"
+          className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+            pathname === "#skills" ? "text-green-300" : "text-white"
+          }`}
+        >
+          {t("navigation.navSkills")}
+        </a>
+        <a
+          href="/#contact"
+          className={`py-2 px-4 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+            pathname === "#contact" ? "text-green-300" : "text-white"
+          }`}
+        >
+          {t("navigation.navContact")}
+        </a>
       </div>
 
       {/* Social Links and Theme Switch */}
       <div className="flex items-center space-x-4">
         {/* Social Links */}
         <div className="flex items-center space-x-2">
-          {/* Hide icons for mobile resolutions */}
+          <LanguageSwitcher />
           <div className="hidden sm:flex space-x-2 items-center">
             <a
               href={userData.socialLinks.instagram}
@@ -117,8 +132,7 @@ export default function Navbar() {
         <div className="md:hidden lg:hidden xl:hidden relative ml-4">
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="
-            text-white hover:text-green-300 focus:outline-none"
+            className="text-white hover:text-green-300 focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -147,19 +161,63 @@ export default function Navbar() {
           {navOpen && (
             <div className="absolute top-12 right-0 bg-zinc-900 w-auto min-w-max mt-2 rounded-md shadow-lg">
               <ul className="py-2">
-                {links.map(({ id, text, href }) => (
-                  <li key={id}>
-                    <a
-                      href={`/#${href.substring(1)}`} // Odkaz vždy začíná na kořenové cestě a přidává se cílový identifikátor
-                      className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
-                        pathname === href ? "text-green-300" : "text-white"
-                      }`}
-                      onClick={() => setNavOpen(false)}
-                    >
-                      {text}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a
+                    href="/#"
+                    className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+                      pathname === "/" ? "text-green-300" : "text-white"
+                    }`}
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {t("navigation.navHome")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#about"
+                    className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+                      pathname === "#about" ? "text-green-300" : "text-white"
+                    }`}
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {t("navigation.navAbout")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#experience"
+                    className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+                      pathname === "#experience"
+                        ? "text-green-300"
+                        : "text-white"
+                    }`}
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {t("navigation.navExperience")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#skills"
+                    className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+                      pathname === "#skills" ? "text-green-300" : "text-white"
+                    }`}
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {t("navigation.navSkills")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#contact"
+                    className={`block px-4 py-2 text-base font-medium hover:text-green-300 transition duration-300 ease-in-out ${
+                      pathname === "#contact" ? "text-green-300" : "text-white"
+                    }`}
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {t("navigation.navContact")}
+                  </a>
+                </li>
               </ul>
             </div>
           )}

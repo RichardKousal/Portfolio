@@ -3,8 +3,30 @@ import userData from "../constants/data";
 import Image from "next/image";
 import AnimatedHeading from "../components/FramerComponent";
 import { FaCheckCircle } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const AboutPage: React.FC = () => {
+  const { t } = useTranslation();
+
+  const sections = [
+    {
+      title: t("about.title1"),
+      content: t("about.title1Value"),
+    },
+    {
+      title: t("about.title2"),
+      content: t("about.title2Value"),
+    },
+    {
+      title: t("about.title3"),
+      content: t("about.title3Value"),
+    },
+    {
+      title: t("about.title4"),
+      content: t("about.title4Value"),
+    },
+  ];
+
   return (
     <div
       id="about"
@@ -12,16 +34,18 @@ const AboutPage: React.FC = () => {
       style={{ paddingTop: "50px" }}
     >
       <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
-        About Me
+        {t("about.aboutMe")}
       </h1>
       <div className="container mx-auto p-8 grid md:grid-cols-2 gap-8 items-center">
         <div className="relative h-full">
           <Image
             src={userData.aboutMePic}
             alt="Your Photo"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            width={600} // specify the width
+            height={600} // specify the height
+            className="rounded-lg object-cover" // use className instead of objectFit
+            sizes="(max-width: 600px) 100vw, 600px"
+            priority={true}
           />
         </div>
         <div>
@@ -38,8 +62,11 @@ const AboutPage: React.FC = () => {
                 }}
               >
                 <h2 className="text-3xl font-bold mb-4">{section.title}</h2>
+
                 <div className="flex items-center mb-4">
-                  <FaCheckCircle className="text-green-500 mr-2" />
+                  <div>
+                    <FaCheckCircle className="text-green-500 mr-2" />
+                  </div>
                   <p className="text-lg text-gray-800 dark:text-gray-200 break-words">
                     {section.content}
                   </p>
@@ -54,25 +81,3 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
-
-const sections = [
-  {
-    title: "Quality Assurance",
-    content:
-      "Ensuring software quality and reliability through rigorous testing.",
-  },
-  {
-    title: "Testing Philosophy",
-    content:
-      "Following a strong philosophy of ensuring software quality and reliability.",
-  },
-  {
-    title: "Expertise",
-    content:
-      "Over three years of experience in writing tests according to best practices.",
-  },
-  {
-    title: "Personal Motto",
-    content: "Strive for excellence, one test at a time.",
-  },
-];

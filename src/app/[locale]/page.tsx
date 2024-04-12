@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Hero from "./components/Hero";
-import AboutPage from "./components/AboutPage";
-import ExperiencePage from "./components/ExperiencePage";
-import SkillsPage from "./components/SkillsPage";
-import ContactPage from "./components/ContactPage";
+import Hero from "../components/Hero";
+import AboutPage from "../components/AboutPage";
+import ExperiencePage from "../components/ExperiencePage";
+import SkillsPage from "../components/SkillsPage";
+import ContactPage from "../components/ContactPage";
 
 const HomePage: React.FC = () => {
   return (
