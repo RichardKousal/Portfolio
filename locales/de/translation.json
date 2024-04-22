@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "Hallo",
+    "name": "Ich bin Richard Kousal",
+    "intro": "Als Test-Ingenieur bin ich leidenschaftlich für automatisierte Tests. Ich bin fest davon überzeugt, dass sie eine entscheidende Rolle im Software-Entwicklungszyklus spielen. Mein Ziel ist es, die höchste Qualität und Zuverlässigkeit von Software durch sorgfältig ausgearbeitete automatisierte Tests sicherzustellen.",
+    "button": "Erfahren Sie mehr"
+  },
+  "about": {
+    "aboutMe": "Über mich",
+    "title1": "Qualitätssicherung",
+    "title1Value": "Sicherstellung von Softwarequalität und -zuverlässigkeit durch rigoroses Testen.",
+    "title2": "Testphilosophie",
+    "title2Value": "Meine Testphilosophie besteht darin, einen proaktiven Ansatz zur Entdeckung und Beseitigung potenzieller Fehler zu verfolgen, um sicherzustellen, dass die Software nicht nur von hoher Qualität und zuverlässig ist, sondern auch innovativ und benutzerfreundlich.",
+    "title3": "Fachkenntnisse",
+    "title3Value": "Über drei Jahre Erfahrung im Schreiben von Tests nach bewährten Verfahren.",
+    "title4": "Persönliches Motto",
+    "title4Value": "Jeder Test und jede neue Herausforderung hilft mir, meine eigenen Grenzen bei der Bereitstellung besserer und zuverlässigerer Software zu überschreiten."
+  },
+  "experience": {
+    "experience": "Erfahrung",
+    "titles": {
+      "title1": "Test-Ingenieur",
+      "title2": "QA-Teamleiter & Test-Ingenieur",
+      "title3": "Cypress Bootcamp",
+      "title4": "QA-Tester"
+    },
+    "descriptions": {
+      "desc1": {
+        "item1": "Entwurf und Wartung automatisierter Tests.",
+        "item2": "CI/CD-Setup.",
+        "item3": "Infrastrukturverbesserung.",
+        "item4": "Kollegen schulen.",
+        "item5": "Strategiedefinition."
+      },
+      "desc2": {
+        "item1": "Überwachung der Teamleistung und QA-Prozesse.",
+        "item2": "Zusammenarbeit mit Interessengruppen.",
+        "item3": "Einrichtung von Prozessen und Kommunikation.",
+        "item4": "Teilnahme an Codeüberprüfungen.",
+        "item5": "Testspezifikation."
+      },
+      "desc3": {
+        "item1": "Verwendung von Cypress-Befehlen für Aussagen.",
+        "item2": "Implementierung von Wiederholungslogik.",
+        "item3": "Verketten von Befehlen für Interaktionen.",
+        "item4": "Testen von APIs und Überwachung von HTTP-Aufrufen.",
+        "item5": "Konfiguration von Umgebungen und API-Authentifizierung."
+      },
+      "desc4": {
+        "item1": "Optimierung von Testszenarien.",
+        "item2": "Prozessverbesserung.",
+        "item3": "BE- und FE-Tests für Logistikanwendungen.",
+        "item4": "Mobile Tests auf verschiedenen Geräten.",
+        "item5": "Wissensaustausch im Team."
+      }
+    },
+    "years": {
+      "year1": "Mai 2022 - heute",
+      "year2": "Mai 2021 - Mai 2022",
+      "year3": "Mai 2022",
+      "year4": "Mai 2021 - Mai 2022"
+    }
+  },
+  "skills": {
+    "skills": "Fähigkeiten",
+    "title1": "Testautomatisierung",
+    "title2": "Qualitätsverbesserung",
+    "title3": "Soft Skills",
+    "title4": "Frontend-Technologien",
+    "title5": "Programmiersprachen",
+    "title6": "Sprachen"
+  },
+  "skillsDetail": {
+    "agileMethodology": "Agile Methodik",
+    "communication": "Kommunikation",
+    "teamwork": "Teamarbeit",
+    "problemSolving": "Problem lösen",
+    "timeManagement": "Zeitmanagement",
+    "SQLKnowledge": "SQL-Kenntnisse",
+    "english": "Englisch",
+    "czech": "Tschechisch",
+    "polish": "Polnisch"
+  },
+  "contact": {
+    "contact": "Kontaktieren Sie mich",
+    "labels": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "subject": "Betreff",
+      "phoneNumber": "Telefonnummer (optional)",
+      "message": "Nachricht"
+    },
+    "actions": {
+      "submit": "Absenden"
+    },
+    "validations": {
+      "name": "Dieses Feld ist erforderlich",
+      "email": "Dieses Feld ist erforderlich",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "subject": "Dieses Feld ist erforderlich",
+      "message": "Dieses Feld ist erforderlich"
+    }
+  },
+  "thankYou": {
+    "title": "Vielen Dank!",
+    "message": "Ihre Nachricht wurde erfolgreich gesendet.",
+    "response": "Ich werde mich bald bei Ihnen melden!",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "navigation": {
+    "navHome": "Startseite",
+    "navAbout": "Über mich",
+    "navExperience": "Erfahrung",
+    "navSkills": "Fähigkeiten",
+    "navContact": "Kontakt"
+  },
+  "other": {
+    "developed": "Entwickelt von",
+    "mobile": "Mobil:"
+  },
+  "languages": {
+    "en": "Englisch",
+    "cs": "Tschechisch",
+    "pl": "Polnisch",
+    "de": "Deutsch"
+  }
+}

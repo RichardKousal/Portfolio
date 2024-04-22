@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import AnimatedHeading from "./FramerComponent";
 import { FaArrowDown } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 interface CustomHeroProps {
   mainHeadingClasses: string;
@@ -9,6 +11,8 @@ interface CustomHeroProps {
 }
 
 export default function CustomHero({}: CustomHeroProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8">
       <div className="container mx-auto px-5 py-20 md:py-32 flex justify-center items-start">
@@ -24,7 +28,7 @@ export default function CustomHero({}: CustomHeroProps) {
                   transition: { duration: 2.0, visible: 100 },
                 }}
               >
-                <h1>Hi,</h1>
+                <h1>{t("hero.title")}</h1>
               </AnimatedHeading>
             </div>
             <div className="mb-0 text-3xl font-bold text-green-600 dark:text-green-500 md:mb-8">
@@ -37,21 +41,17 @@ export default function CustomHero({}: CustomHeroProps) {
                   transition: { duration: 2.5, visible: 100 },
                 }}
               >
-                <h1>I&apos;m Richard Kousal</h1>
+                <h1>{t("hero.name")}</h1>
               </AnimatedHeading>
             </div>
             <p className="mb-6 text-gray-800 dark:text-white">
-              As a Test Engineer, I have a strong passion for automated testing.
-              I believe that automated testing is essential and has a unique
-              place in the software development lifecycle. I&apos;m committed to
-              delivering high-quality software through rigorous testing
-              practices.
+              {t("hero.intro")}
             </p>
             <div className="flex justify-center md:justify-start">
               <a href="#about">
                 <button className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-700/75 p-4 font-semibold text-white hover:bg-red-700/75 p-4 relative overflow-hidden transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full">
                   <span className="flex items-center justify-center relative z-10">
-                    Learn more <FaArrowDown className="ml-2" />
+                    {t("hero.button")} <FaArrowDown className="ml-2" />
                   </span>
                 </button>
               </a>
@@ -63,8 +63,10 @@ export default function CustomHero({}: CustomHeroProps) {
               alt="Avatar"
               width={400} // Zvětšená šířka obrázku
               height={533} // Poměr stran 3:4
-              layout="fixed"
+              sizes="(max-width: 600px) 100vw, 600px" // Přidáno
+              priority // Přidáno
               className="rounded-lg shadow-xl"
+              style={{ width: "auto", height: "auto" }} // Přidáno
             />
           </div>
         </div>
