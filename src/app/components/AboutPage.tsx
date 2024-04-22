@@ -41,10 +41,10 @@ const AboutPage: React.FC = () => {
           <Image
             src={userData.aboutMePic}
             alt="Your Photo"
-            width={600} // specify the width
-            height={600} // specify the height
-            className="rounded-lg object-cover" // use className instead of objectFit
-            sizes="(max-width: 600px) 100vw, 600px"
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="w-full h-auto"
             priority={true}
           />
         </div>
