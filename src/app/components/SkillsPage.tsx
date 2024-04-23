@@ -8,7 +8,7 @@ const SkillsPage: React.FC = () => {
   return (
     <div
       id="skills"
-      className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8"
+      className="min-h-screen bg-gray-400/50 dark:bg-gray-800/75 py-8"
       style={{ paddingTop: "50px" }}
     >
       <div className="mx-auto pt-2 relative z-0">

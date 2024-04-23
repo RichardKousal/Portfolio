@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import userData from "../constants/data";
 import { useTranslation } from "react-i18next";
 
@@ -33,30 +33,35 @@ export default function Footer() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-4 md:py-6">
-      <div className="h-0.5 w-full bg-gray-300 my-2"></div>
+    <div className="mx-auto px-4 md:px-48 py-4 md:py-6 bg-blue-950 ">
+      <div className="h-0.5 w-full bg-blue-950 my-2"></div>
       <div className="flex flex-col items-center md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 md:space-x-4">
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left text-white">
           <p>
             {t("other.mobile")} {userData.phone}
           </p>
           <p>E-mail: {userData.email}</p>
         </div>
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left text-white">
           {t("other.developed")}
+
           <a
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50"
             href="#about"
             onClick={(e) => handleClick(e, "#about")}
           >
             {userData.name}
           </a>
+          <p>
+            {" "}
+            {t("other.address")} {t("other.addressValue")}
+          </p>
         </div>
         <div className="flex flex-wrap justify-center md:justify-start">
           <a
             key={homeLink.id}
             href={homeLink.href}
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50 mr-2 mb-2"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
             onClick={(e) => handleClick(e, homeLink.href)}
           >
             {homeLink.text}
@@ -64,7 +69,7 @@ export default function Footer() {
           <a
             key={aboutLink.id}
             href={aboutLink.href}
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50 mr-2 mb-2"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
             onClick={(e) => handleClick(e, aboutLink.href)}
           >
             {aboutLink.text}
@@ -72,7 +77,7 @@ export default function Footer() {
           <a
             key={experienceLink.id}
             href={experienceLink.href}
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50 mr-2 mb-2"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
             onClick={(e) => handleClick(e, experienceLink.href)}
           >
             {experienceLink.text}
@@ -80,7 +85,7 @@ export default function Footer() {
           <a
             key={skillsLink.id}
             href={skillsLink.href}
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50 mr-2 mb-2"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
             onClick={(e) => handleClick(e, skillsLink.href)}
           >
             {skillsLink.text}
@@ -88,7 +93,7 @@ export default function Footer() {
           <a
             key={contactLink.id}
             href={contactLink.href}
-            className="hover:bg-green-700/75 rounded-md px-2 py-1 hover:text-gray-50 mr-2 mb-2"
+            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
             onClick={(e) => handleClick(e, contactLink.href)}
           >
             {contactLink.text}

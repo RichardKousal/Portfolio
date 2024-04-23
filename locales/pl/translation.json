@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Cześć",
+    "title": "Cześć,",
     "name": "Jestem Richard Kousal",
     "intro": "Jako inżynier testów jestem pasjonatem automatyzacji testów. Jestem głęboko przekonany, że odgrywają one kluczową rolę w cyklu życia oprogramowania. Moim celem jest zapewnienie najwyższej jakości i niezawodności oprogramowania poprzez starannie opracowane testy automatyczne.",
     "button": "Dowiedz się więcej"
@@ -117,7 +117,9 @@
   },
   "other": {
     "developed": "Stwrzone przez",
-    "mobile": "Telefon:"
+    "mobile": "Telefon:",
+    "address": "Adres:",
+    "addressValue": "Praga, Czechy"
   },
   "languages": {
     "en": "Angielski",

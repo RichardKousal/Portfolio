@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Ahoj",
+    "title": "Ahoj,",
     "name": "Jsem Richard Kousal",
     "intro": "Jako Test inženýra mě baví psaní automatizovaných testů. Věřím, že testování je klíčové a zaujímá jedinečné místo v životním cyklu vývoje softwaru. Mým cílem je zajistit maximální kvalitu a spolehlivost softwaru prostřednictvím přesně přizpůsobených automatizovaných testů.",
     "button": "Více o mně"
@@ -116,7 +116,9 @@
   },
   "other": {
     "developed": "Vyvinuto",
-    "mobile": "Mobil:"
+    "mobile": "Mobil:",
+    "address": "Adresa:",
+    "addressValue": "Praha, Česká republika"
   },
   "languages": {
     "en": "Anglicky",

@@ -8,11 +8,13 @@ const ContactPage: React.FC = () => {
   return (
     <div
       id="contact"
-      className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8"
+      className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8"
       style={{ paddingTop: "50px" }}
     >
       <div className="mx-auto pt-2 relative z-0">
-        <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
+        <h1 className="text-4xl md:text-6xl font-bold py-14 sm:py-20 text-center md:text-left pl-6 md:pl-20 z-20">
+          {" "}
+          {/* Adjusted padding and text alignment here */}
           {t("contact.contact")}
         </h1>
       </div>

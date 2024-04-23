@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8"
+      className="min-h-screen bg-gray-400/50 dark:bg-gray-800/75 py-8"
       style={{ paddingTop: "50px" }}
     >
       <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
@@ -57,8 +57,7 @@ const AboutPage: React.FC = () => {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0 },
                   },
-                  transition: { duration: 2.0, visible: 100 },
-                  delay: index * 1000,
+                  transition: { duration: 1.0, delay: index * 0.5 },
                 }}
               >
                 <h2 className="text-3xl font-bold mb-4">{section.title}</h2>

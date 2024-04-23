@@ -14,10 +14,12 @@ export default function CustomHero({}: CustomHeroProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8">
-      <div className="container mx-auto px-5 py-20 md:py-32 flex justify-center items-start">
-        <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-8 justify-center">
-          <div className="md:mb-0">
+    <div className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8">
+      <div className="container mx-auto px-5 py-10 md:py-20 flex justify-center items-start">
+        <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-8 justify-center">
+          <div className="md:mb-0 mt-10 md:mt-20">
+            {" "}
+            {/* Added top margin here */}
             <div className="mb-0 md:mb-4 lg:mb-8 text-3xl font-bold text-neutral-800 dark:text-white">
               <AnimatedHeading
                 animationProps={{
@@ -61,12 +63,12 @@ export default function CustomHero({}: CustomHeroProps) {
             <Image
               src="/avatar2.png"
               alt="Avatar"
-              width={400} // Zvětšená šířka obrázku
-              height={533} // Poměr stran 3:4
-              sizes="(max-width: 600px) 100vw, 600px" // Přidáno
-              priority // Přidáno
+              width={400}
+              height={533}
+              sizes="(max-width: 600px) 100vw, 600px"
+              priority
               className="rounded-lg shadow-xl"
-              style={{ width: "auto", height: "auto" }} // Přidáno
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Hallo",
+    "title": "Hallo,",
     "name": "Ich bin Richard Kousal",
     "intro": "Als Test-Ingenieur bin ich leidenschaftlich für automatisierte Tests. Ich bin fest davon überzeugt, dass sie eine entscheidende Rolle im Software-Entwicklungszyklus spielen. Mein Ziel ist es, die höchste Qualität und Zuverlässigkeit von Software durch sorgfältig ausgearbeitete automatisierte Tests sicherzustellen.",
     "button": "Erfahren Sie mehr"
@@ -116,7 +116,9 @@
   },
   "other": {
     "developed": "Entwickelt von",
-    "mobile": "Mobil:"
+    "mobile": "Mobil:",
+    "address": "Adresse:",
+    "addressValue": "Prag, Tschechische Republik"
   },
   "languages": {
     "en": "Englisch",
