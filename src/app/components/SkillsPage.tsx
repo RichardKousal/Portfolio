@@ -12,7 +12,7 @@ const SkillsPage: React.FC = () => {
       style={{ paddingTop: "50px" }}
     >
       <div className="mx-auto pt-2 relative z-0">
-        <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
+        <h1 className="text-4xl md:text-6xl font-bold py-14 sm:py-20 text-center md:text-left pl-6 pr-6 md:pl-20 md:pr-20 z-20">
           {" "}
           {t("skills.skills")}
         </h1>

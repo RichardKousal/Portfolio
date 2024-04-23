@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
       className="min-h-screen bg-gray-400/50 dark:bg-gray-800/75 py-8"
       style={{ paddingTop: "50px" }}
     >
-      <h1 className="text-4xl md:text-6xl font-bold py-8 sm:py-12 text-center md:text-left pl-4 z-20 lg:text-left lg:pl-20">
+      <h1 className="text-4xl md:text-6xl font-bold py-14 sm:py-20 text-center md:text-left pl-6 pr-6 md:pl-20 md:pr-20 z-20">
         {t("about.aboutMe")}
       </h1>
       <div className="container mx-auto p-8 grid md:grid-cols-2 gap-8 items-center">
