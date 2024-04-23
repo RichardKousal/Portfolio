@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import dotenv from "dotenv";
 
-// Načtení prostředí proměnných z .env souboru
 dotenv.config();
 
 export async function POST(request: NextRequest) {

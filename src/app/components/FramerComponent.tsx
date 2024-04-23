@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { usePathname, useSearchParams } from "next/navigation";
 
 interface AnimatedHeadingProps {
   children: React.ReactNode;
@@ -19,7 +20,23 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   animationProps,
 }) => {
   const { variants, transition, delay } = animationProps || {};
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [key, setKey] = useState(Math.random());
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsVisible(false);
+      setKey(Math.random());
+    };
+
+    const url = `${pathname}?${searchParams}`;
+    console.log(url);
+
+    return () => {};
+  }, [pathname, searchParams]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,8 +46,24 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
     return () => clearTimeout(timer);
   }, [delay]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0 && !animationTriggered) {
+        setIsVisible(true);
+        setKey(Math.random());
+        setAnimationTriggered(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [animationTriggered]);
   return (
     <motion.div
+      key={key}
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       exit="hidden"

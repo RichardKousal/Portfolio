@@ -3,11 +3,10 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useTranslation } from "react-i18next";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { FaArrowDown } from "react-icons/fa";
 
 const ContactForm: React.FC = () => {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const { i18n } = useTranslation();
 
   const onSubmit = async (values: any, actions: any) => {
@@ -23,7 +22,6 @@ const ContactForm: React.FC = () => {
         console.log("Email sent successfully");
         actions.resetForm();
 
-        // Přesměrování na stránku /thank-you v aktuálním jazyce
         router.push(`/${i18n.language}/thank-you`);
       } else {
         console.error("Failed to send email");
@@ -170,9 +168,11 @@ const ContactForm: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600"
+              className="w-full text-white bg-blue-700/75 hover:bg-red-700/75 p-4 relative overflow-hidden transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full font-semibold py-2 px-4 rounded-md focus:outline-none focus:bg-blue-600"
             >
-              {t("contact.actions.submit")}
+              <span className="flex items-center justify-center relative z-10">
+                {t("contact.actions.submit")} <FaArrowDown className="ml-2" />
+              </span>
             </button>
           </Form>
         </Formik>

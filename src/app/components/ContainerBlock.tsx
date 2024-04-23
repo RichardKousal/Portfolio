@@ -1,16 +1,12 @@
-"use client";
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 type Metadata = {
   title: string;
   description?: string;
   image?: string;
   type?: string;
-  date?: string;
 };
 
 type ContainerBlockProps = {
@@ -25,9 +21,9 @@ export default function ContainerBlock({
   const router = useRouter();
 
   const meta: Metadata = {
-    title: "Manu Arora - Developer, Writer, Creator and YouTuber",
-    description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
-    image: "/avatar.png",
+    title: "Richard Kousal - Test Automation Engineer",
+    description: "Richard Kousal - Test Automation Engineer",
+    image: "/public/avatar2.png",
     type: "website",
     ...customMeta,
   };
@@ -40,31 +36,42 @@ export default function ContainerBlock({
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://yourwebsite.com${router.asPath}`}
+          content={`https://richardkousal.com${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://yourwebsite.com${router.asPath}`}
+          href={`https://richardkousal.com${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Manu Arora" />
+        <meta
+          property="og:site_name"
+          content="Richard Kousal - Test Automation Engineer"
+        />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mannupaaji" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
-        {meta.date && (
-          <meta property="article:published_time" content={meta.date} />
-        )}
+
+        {/* Metadata specific for LinkedIn */}
+        <meta name="title" content={meta.title} />
+        <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+        <meta
+          property="og:url"
+          content={`https://richardkousal.com${router.asPath}`}
+        />
+        <meta
+          property="og:site_name"
+          content="Richard Kousal - Test Automation Engineer"
+        />
+        <meta name="author" content="Richard Kousal" />
+        <meta
+          name="keywords"
+          content="Test Automation Engineer, Richard Kousal"
+        />
       </Head>
-      <main className="dark:bg-gray-800 w-full">
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
-      </main>
+      <main>{children}</main>
     </div>
   );
 }

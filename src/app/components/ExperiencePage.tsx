@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import userData from "../constants/data";
-import { title } from "process";
 import { useTranslation } from "react-i18next";
 
 const Experience: React.FC = () => {
@@ -9,7 +7,7 @@ const Experience: React.FC = () => {
   return (
     <div
       id="experience"
-      className="min-h-screen bg-gray-300 dark:bg-gray-900 py-8"
+      className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8"
       style={{ paddingTop: "50px" }}
     >
       <div className="mx-auto pt-2 relative z-0">
