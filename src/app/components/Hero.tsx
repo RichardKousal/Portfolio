@@ -14,7 +14,10 @@ export default function CustomHero({}: CustomHeroProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8">
+    <div
+      className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8"
+      id="home"
+    >
       <div className="container mx-auto px-5 py-10 md:py-20 flex justify-center items-start">
         <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-8 justify-center">
           <div className="md:mb-0 mt-10 md:mt-20">

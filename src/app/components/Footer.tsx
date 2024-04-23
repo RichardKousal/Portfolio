@@ -47,10 +47,10 @@ export default function Footer() {
 
           <a
             className="hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50"
-            href="#about"
-            onClick={(e) => handleClick(e, "#about")}
+            href="#home"
+            onClick={(e) => handleClick(e, "#home")}
           >
-            {userData.name}
+            {t("other.developedBy")}
           </a>
           <p>
             {" "}

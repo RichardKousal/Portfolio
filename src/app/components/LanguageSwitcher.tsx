@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FlagIcon } from "react-flag-kit";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { GlobeAltIcon } from "@heroicons/react/solid";
+import { GlobeAltIcon } from "@heroicons/react/24/solid";
 
 const LanguageSwitcher: React.FC = () => {
   const { t } = useTranslation();
@@ -57,7 +57,7 @@ const LanguageSwitcher: React.FC = () => {
                 {t("languages.en")}
               </div>
             </Link>
-            <Link href="/" locale="cs">
+            <Link href="/" locale="cs" scroll>
               <div
                 onClick={() => i18n.changeLanguage("cs")}
                 className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 flex items-center"

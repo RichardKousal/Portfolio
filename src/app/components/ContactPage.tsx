@@ -11,10 +11,9 @@ const ContactPage: React.FC = () => {
       className="min-h-screen bg-gray-300/50 dark:bg-gray-950 py-8"
       style={{ paddingTop: "50px" }}
     >
-      <div className="mx-auto pt-2 relative z-0">
-        <h1 className="text-4xl md:text-6xl font-bold py-14 sm:py-20 text-center md:text-left pl-6 md:pl-20 z-20">
+      <div className="mx-auto pt-2 relative z-0 flex items-center justify-center">
+        <h1 className="text-4xl md:text-6xl font-bold py-14 sm:py-20 text-center md:text-left pl-6 pr-6 md:pl-20 md:pr-20 z-20">
           {" "}
-          {/* Adjusted padding and text alignment here */}
           {t("contact.contact")}
         </h1>
       </div>

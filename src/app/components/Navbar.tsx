@@ -6,10 +6,37 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileMenu from "./MobileMenu";
 
+interface Links {
+  links: string[];
+  activeSection: string;
+}
+
+function Nav({ links, activeSection }: Links) {
+  const { t } = useTranslation();
+  return (
+    <div className="hidden md:flex space-x-4">
+      {links.map((link, index) => (
+        <a
+          key={index}
+          href={`/#${link}`}
+          className={`py-2 px-4 text-base font-medium rounded-md px-2 py-1 ${
+            activeSection === `#${link}`
+              ? "bg-blue-500 text-white"
+              : "hover:bg-blue-700/75 hover:text-gray-50 text-white"
+          }`}
+        >
+          {t(`navigation.nav${link.charAt(0).toUpperCase() + link.slice(1)}`)}
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export default function Navbar() {
   const [isDarkmode, setIsDarkmode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeHash, setActiveHash] = useState("");
+  const [activeSection, setActiveSection] = useState("#home");
+  const links = ["home", "about", "experience", "skills", "contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,16 +44,33 @@ export default function Navbar() {
       setScrolled(isScrolled);
     };
 
-    const hashListener = () => {
-      setActiveHash(window.location.hash);
+    let sections = links.map((link) => document.getElementById(link));
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2,
     };
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection((prev) =>
+            prev === null ? "#home" : `#${entry.target.id}`
+          );
+          window.history.pushState({}, "", `#${entry.target.id}`);
+        }
+      });
+    }, observerOptions);
+
+    sections?.forEach((section) => {
+      section && observer.observe(section);
+    });
+
     document.addEventListener("scroll", handleScroll);
-    window.addEventListener("hashchange", hashListener, false);
 
     return () => {
       document.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("hashchange", hashListener);
     };
   }, []);
 
@@ -34,7 +78,7 @@ export default function Navbar() {
     setIsDarkmode(!isDarkmode);
     localStorage.setItem("isDarkmode", String(!isDarkmode));
   };
-  const { t } = useTranslation();
+
   return (
     <nav
       className={`bg-blue-950 px-4 py-2 fixed top-0 left-0 right-0 z-50 flex justify-between items-center transition-all duration-500 ease-in-out ${
@@ -43,57 +87,16 @@ export default function Navbar() {
     >
       {/* Brand Name and Designation */}
       <div className="flex items-center space-x-4">
-        <a href="/">
+        <a href="/#home">
           <div className="text-white font-semibold text-xl cursor-pointer">
             {userData.name}
           </div>
         </a>
-        <span className="text-gray-400 text-sm">{userData.designation}</span>
+        <span className="text-gray-200 text-sm">{userData.designation}</span>
       </div>
 
       {/* Navigation Links for Desktop */}
-      <div className="hidden md:flex space-x-4">
-        <a
-          href="/#"
-          className={`py-2 px-4 text-base font-medium hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50 ${
-            activeHash === "#/" ? "text-blue-500" : "text-white"
-          }`}
-        >
-          {t("navigation.navHome")}
-        </a>
-        <a
-          href="/#about"
-          className={`py-2 px-4 text-base font-medium hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50 ${
-            activeHash === "#about" ? "text-blue-500" : "text-white"
-          }`}
-        >
-          {t("navigation.navAbout")}
-        </a>
-        <a
-          href="/#experience"
-          className={`py-2 px-4 text-base font-medium hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50 ${
-            activeHash === "#experience" ? "text-blue-500" : "text-white"
-          }`}
-        >
-          {t("navigation.navExperience")}
-        </a>
-        <a
-          href="/#skills"
-          className={`py-2 px-4 text-base font-medium hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50 ${
-            activeHash === "#skills" ? "text-blue-500" : "text-white"
-          }`}
-        >
-          {t("navigation.navSkills")}
-        </a>
-        <a
-          href="/#contact"
-          className={`py-2 px-4 text-base font-medium hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50 ${
-            activeHash === "#contact" ? "text-blue-500" : "text-white"
-          }`}
-        >
-          {t("navigation.navContact")}
-        </a>
-      </div>
+      <Nav links={links} activeSection={activeSection} />
 
       {/* Social Links and Theme Switch */}
       <div className="flex items-center space-x-4">

@@ -27,14 +27,6 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      setIsVisible(false);
-      setKey(Math.random());
-    };
-
-    const url = `${pathname}?${searchParams}`;
-    console.log(url);
-
     return () => {};
   }, [pathname, searchParams]);
 

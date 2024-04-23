@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hi,",
-    "name": "I'm Richard Kousal",
+    "name": "I'm Richard",
     "intro": "As a test engineer, I'm passionate about automated testing. I firmly believe that it plays a crucial role in the software development lifecycle. My goal is to ensure the highest quality and reliability of software through carefully crafted automated tests.",
     "button": "Learn More"
   },
@@ -116,6 +116,7 @@
   },
   "other": {
     "developed": "Developed by",
+    "developedBy": "Richard Kousal",
     "mobile": "Mobile:",
     "address": "Address:",
     "addressValue": "Prague, Czech Republic"

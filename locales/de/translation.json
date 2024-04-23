@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hallo,",
-    "name": "Ich bin Richard Kousal",
+    "name": "Ich bin Richard",
     "intro": "Als Test-Ingenieur bin ich leidenschaftlich für automatisierte Tests. Ich bin fest davon überzeugt, dass sie eine entscheidende Rolle im Software-Entwicklungszyklus spielen. Mein Ziel ist es, die höchste Qualität und Zuverlässigkeit von Software durch sorgfältig ausgearbeitete automatisierte Tests sicherzustellen.",
     "button": "Erfahren Sie mehr"
   },
@@ -40,11 +40,11 @@
         "item5": "Testspezifikation."
       },
       "desc3": {
-        "item1": "Verwendung von Cypress-Befehlen für Aussagen.",
-        "item2": "Implementierung von Wiederholungslogik.",
-        "item3": "Verketten von Befehlen für Interaktionen.",
-        "item4": "Testen von APIs und Überwachung von HTTP-Aufrufen.",
-        "item5": "Konfiguration von Umgebungen und API-Authentifizierung."
+        "item1": "Cypress-Befehle verwenden.",
+        "item2": "Wiederholungslogik implementieren.",
+        "item3": "Befehle für Interaktionen verketten.",
+        "item4": "APIs testen und HTTP-Aufrufe überwachen.",
+        "item5": "Umgebungen und API-Authentifizierung konfigurieren."
       },
       "desc4": {
         "item1": "Optimierung von Testszenarien.",
@@ -116,6 +116,7 @@
   },
   "other": {
     "developed": "Entwickelt von",
+    "developedBy": "Richard Kousal",
     "mobile": "Mobil:",
     "address": "Adresse:",
     "addressValue": "Prag, Tschechische Republik"
