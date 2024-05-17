@@ -8,18 +8,17 @@ interface Props {
 
 export default function ThemeSwitch({ toggleTheme }: Props) {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [localTheme, setLocalTheme] = useState(theme);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setLocalTheme(theme);
+  }, [theme]);
 
   const handleToggleTheme = () => {
-    toggleTheme();
-    setTheme(theme === "dark" ? "light" : "dark");
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    setLocalTheme(newTheme);
   };
-
-  if (!mounted) return null;
 
   return (
     <button
@@ -30,12 +29,12 @@ export default function ThemeSwitch({ toggleTheme }: Props) {
     >
       <div
         className={`w-7 h-7 flex items-center justify-center rounded-full transition duration-500 transform ${
-          theme === "dark"
+          localTheme === "dark"
             ? "bg-yellow-500 -translate-x-3"
             : "bg-blue-500 translate-x-3"
         } p-1 text-white`}
       >
-        {theme === "dark" ? (
+        {localTheme === "dark" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
