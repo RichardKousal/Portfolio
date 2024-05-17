@@ -35,19 +35,19 @@ const Experience: React.FC = () => {
                   </a>
                   <ul className="list-disc list-outside text-white dark:text-gray-200 text-sm my-4 ml-4">
                     <li className="text-white hover:text-green-500 ">
-                      {t("experience.descriptions.desc2.item1")}
+                      {t("experience.descriptions.desc1.item1")}
                     </li>
                     <li className="text-white hover:text-green-500 ">
-                      {t("experience.descriptions.desc2.item2")}
+                      {t("experience.descriptions.desc1.item2")}
                     </li>
                     <li className="text-white hover:text-green-500 ">
-                      {t("experience.descriptions.desc2.item3")}
+                      {t("experience.descriptions.desc1.item3")}
                     </li>
                     <li className="text-white hover:text-green-500 ">
-                      {t("experience.descriptions.desc2.item4")}
+                      {t("experience.descriptions.desc1.item4")}
                     </li>
                     <li className="text-white hover:text-green-500 ">
-                      {t("experience.descriptions.desc2.item5")}
+                      {t("experience.descriptions.desc1.item5")}
                     </li>
                   </ul>
                 </div>
