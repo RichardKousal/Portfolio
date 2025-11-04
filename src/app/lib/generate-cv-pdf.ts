@@ -114,7 +114,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
               ],
               fillColor: '#f0f9ff',
               border: [true, true, true, true],
-              borderColor: '#0ea5e9',
+              borderColor: ['#0ea5e9', '#0ea5e9', '#0ea5e9', '#0ea5e9'],
               margin: 5
             },
             {
@@ -124,7 +124,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
               ],
               fillColor: '#f0f9ff',
               border: [true, true, true, true],
-              borderColor: '#0ea5e9',
+              borderColor: ['#0ea5e9', '#0ea5e9', '#0ea5e9', '#0ea5e9'],
               margin: 5
             },
             {
@@ -134,7 +134,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
               ],
               fillColor: '#f0f9ff',
               border: [true, true, true, true],
-              borderColor: '#0ea5e9',
+              borderColor: ['#0ea5e9', '#0ea5e9', '#0ea5e9', '#0ea5e9'],
               margin: 5
             },
             {
@@ -144,7 +144,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
               ],
               fillColor: '#f0f9ff',
               border: [true, true, true, true],
-              borderColor: '#0ea5e9',
+              borderColor: ['#0ea5e9', '#0ea5e9', '#0ea5e9', '#0ea5e9'],
               margin: 5
             }
           ]
