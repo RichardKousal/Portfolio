@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@fixtures/*": ["tests/fixtures/*"],
+      "@page-objects/*": ["tests/page-objects/*"],
+      "@helpers/*": ["tests/helpers/*"]
+    }
+  },
+  "include": ["tests/**/*"]
+}
+
+
+

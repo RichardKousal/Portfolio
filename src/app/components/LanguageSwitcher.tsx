@@ -1,103 +1,111 @@
-"use client";
-import React, { useState, useEffect, useRef } from "react";
-import { FlagIcon } from "react-flag-kit";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
+'use client';
 
-const LanguageSwitcher: React.FC = () => {
-  const { t } = useTranslation();
+import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
+import { useTransition, useState, useRef, useEffect } from 'react';
+import { MdLanguage, MdExpandMore } from 'react-icons/md';
+
+const locales = [
+  { code: 'cs', label: 'CS', fullName: 'Čeština' },
+  { code: 'en', label: 'EN', fullName: 'English' },
+  { code: 'de', label: 'DE', fullName: 'Deutsch' },
+  { code: 'pl', label: 'PL', fullName: 'Polski' },
+];
+
+interface LanguageSwitcherProps {
+  view: 'professional' | 'personal';
+}
+
+export default function LanguageSwitcher({ view }: LanguageSwitcherProps) {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
-  const { i18n } = useTranslation();
-  const ref = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+  // Close dropdown when clicking outside
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        ref.current &&
-        !(ref.current as unknown as Node).contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    // Use setTimeout to avoid race condition with button click
+    const timer = setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+    }, 0);
+
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timer);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [ref]);
+  }, [isOpen]);
+
+  const handleLocaleChange = (newLocale: string) => {
+    if (newLocale === locale) {
+      setIsOpen(false);
+      return;
+    }
+
+    startTransition(() => {
+      const pathWithoutLocale = pathname.replace(`/${locale}`, '');
+      router.replace(`/${newLocale}${pathWithoutLocale}?view=${view}`);
+      setIsOpen(false);
+    });
+  };
+
+  const currentLocale = locales.find((loc) => loc.code === locale) || locales[0];
 
   return (
-    <div className="relative inline-block text-left" ref={ref}>
+    <div className="relative" ref={dropdownRef}>
+      {/* Trigger Button */}
       <button
-        onClick={toggleDropdown}
-        className="text-white hover:text-green-300 focus:outline-none flex items-center"
+        data-testid="language-switcher-button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+        }}
+        disabled={isPending}
+        className="flex items-center gap-2 px-3 py-2 bg-dark-secondary rounded-lg border border-primary-500/20 
+          hover:border-primary-500/40 transition-all text-dark-text hover:text-primary-400 group"
+        aria-label="Change language"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="w-6 h-6"
-        >
-          <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
-        </svg>
+        <MdLanguage className="w-5 h-5" />
+        <span className="text-sm font-medium hidden sm:inline">{currentLocale.label}</span>
+        <MdExpandMore 
+          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
+        />
       </button>
+
+      {/* Dropdown Menu */}
       {isOpen && (
-        <div className="origin-top-right absolute left-0 sm:right-0 mt-8 sm:mt-6 min-w-max rounded-md shadow-lg bg-white dark:bg-gray-700 ring-1 ring-black ring-opacity-5">
-          <div
-            className="py-1"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="options-menu"
-          >
-            <Link href="/" locale="en">
-              <div
-                onClick={() => i18n.changeLanguage("en")}
-                className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 flex items-center"
-                role="menuitem"
-              >
-                <FlagIcon code="GB" size={24} className="mr-2" />
-                {t("languages.en")}
-              </div>
-            </Link>
-            <Link href="/" locale="cs" scroll>
-              <div
-                onClick={() => i18n.changeLanguage("cs")}
-                className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 flex items-center"
-                role="menuitem"
-              >
-                <FlagIcon code="CZ" size={24} className="mr-2" />
-                {t("languages.cs")}
-              </div>
-            </Link>
-            <Link href="/" locale="pl">
-              <div
-                onClick={() => i18n.changeLanguage("pl")}
-                className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 flex items-center"
-                role="menuitem"
-              >
-                <FlagIcon code="PL" size={24} className="mr-2" />
-                {t("languages.pl")}
-              </div>
-            </Link>
-            <Link href="/" locale="de">
-              <div
-                onClick={() => i18n.changeLanguage("de")}
-                className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 flex items-center"
-                role="menuitem"
-              >
-                <FlagIcon code="DE" size={24} className="mr-2" />
-                {t("languages.de")}
-              </div>
-            </Link>
-          </div>
+        <div className="absolute right-0 mt-2 w-40 bg-dark-secondary border border-primary-500/20 rounded-lg shadow-2xl shadow-primary-500/20 
+          overflow-hidden z-50 animate-slide-down">
+          {locales.map((loc) => (
+            <button
+              key={loc.code}
+              data-testid={`language-option-${loc.code}`}
+              onClick={() => handleLocaleChange(loc.code)}
+              disabled={isPending}
+              className={`
+                w-full px-4 py-2.5 text-left text-sm transition-all flex items-center justify-between
+                ${locale === loc.code
+                  ? 'bg-gradient-to-r from-primary-600 to-accent-purple text-white font-medium'
+                  : 'text-dark-muted hover:text-white hover:bg-dark-accent'
+                }
+                ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+              `}
+            >
+              <span>{loc.fullName}</span>
+              <span className="text-xs opacity-70">{loc.label}</span>
+            </button>
+          ))}
         </div>
       )}
     </div>
   );
-};
-
-export default LanguageSwitcher;
+}

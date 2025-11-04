@@ -1,0 +1,26 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="192" height="192" fill="#0a0a0f" rx="32"/>
+  
+  <!-- Gradient circle -->
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle -->
+  <circle cx="96" cy="96" r="64" fill="url(#iconGradient)" opacity="0.2"/>
+  <circle cx="96" cy="96" r="48" fill="url(#iconGradient)" opacity="0.4"/>
+  
+  <!-- RK initials -->
+  <text x="96" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="white" text-anchor="middle">
+    RK
+  </text>
+  
+  <!-- Small accent circle -->
+  <circle cx="136" cy="56" r="8" fill="#43e97b"/>
+</svg>
+
