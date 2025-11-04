@@ -1,105 +1,47 @@
-"use client";
-import React from "react";
-import userData from "../constants/data";
-import { useTranslation } from "react-i18next";
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
-  const { t } = useTranslation();
-
-  const homeLink = { id: 1, text: t("navigation.navHome"), href: "/" };
-  const aboutLink = { id: 2, text: t("navigation.navAbout"), href: "#about" };
-  const experienceLink = {
-    id: 3,
-    text: t("navigation.navExperience"),
-    href: "#experience",
-  };
-  const skillsLink = {
-    id: 4,
-    text: t("navigation.navSkills"),
-    href: "#skills",
-  };
-  const contactLink = {
-    id: 5,
-    text: t("navigation.navContact"),
-    href: "#contact",
-  };
-
-  const handleClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    href: string
-  ) => {
-    e.preventDefault();
-    window.location.href = `/#${href.substring(1)}`;
-  };
+  const t = useTranslations('footer');
+  const currentYear = new Date().getFullYear();
 
   return (
-    <div className="mx-auto px-4 md:px-48 py-4 md:py-6 bg-blue-950 ">
-      <div className="h-0.5 w-full bg-blue-950 my-2"></div>
-      <div className="flex flex-col items-center md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 md:space-x-4">
-        <div className="text-center md:text-left text-white">
-          <p>
-            {t("other.mobile")} {userData.phone}
+    <footer className="bg-dark-secondary border-t border-primary-500/20 py-8 relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-accent-purple/5 to-accent-pink/5"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Copyright */}
+          <p className="text-dark-muted text-sm hover:text-primary-400 transition-colors">
+            {t('copyright', { year: currentYear })}
           </p>
-          <p>E-mail: {userData.email}</p>
-        </div>
-        <div className="text-center md:text-left text-white">
-          {t("other.developed")}
 
-          <a
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 hover:text-gray-50"
-            href="#home"
-            onClick={(e) => handleClick(e, "#home")}
-          >
-            {t("other.developedBy")}
-          </a>
-          <p>
-            {" "}
-            {t("other.address")} {t("other.addressValue")}
-          </p>
-        </div>
-        <div className="flex flex-wrap justify-center md:justify-start">
-          <a
-            key={homeLink.id}
-            href={homeLink.href}
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
-            onClick={(e) => handleClick(e, homeLink.href)}
-          >
-            {homeLink.text}
-          </a>
-          <a
-            key={aboutLink.id}
-            href={aboutLink.href}
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
-            onClick={(e) => handleClick(e, aboutLink.href)}
-          >
-            {aboutLink.text}
-          </a>
-          <a
-            key={experienceLink.id}
-            href={experienceLink.href}
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
-            onClick={(e) => handleClick(e, experienceLink.href)}
-          >
-            {experienceLink.text}
-          </a>
-          <a
-            key={skillsLink.id}
-            href={skillsLink.href}
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
-            onClick={(e) => handleClick(e, skillsLink.href)}
-          >
-            {skillsLink.text}
-          </a>
-          <a
-            key={contactLink.id}
-            href={contactLink.href}
-            className="hover:bg-blue-700/75 rounded-md px-2 py-1 text-white hover:text-gray-50 mr-2 mb-2"
-            onClick={(e) => handleClick(e, contactLink.href)}
-          >
-            {contactLink.text}
-          </a>
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/richard-kousal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-muted hover:text-primary-400 transition-all hover:scale-125 hover:rotate-6 transform"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://github.com/richardkousal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-muted hover:text-accent-purple transition-all hover:scale-125 hover:-rotate-6 transform"
+              aria-label="GitHub"
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

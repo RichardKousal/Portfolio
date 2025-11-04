@@ -1,0 +1,146 @@
+{
+  "header": {
+    "name": "Richard Kousal",
+    "email": "richard.kousal@gmail.com",
+    "phone": "+420 604 674 931",
+    "toggleProfessional": "Profesní",
+    "togglePersonal": "Osobní"
+  },
+  "notFound": {
+    "title": "Stránka nenalezena",
+    "description": "Omlouváme se, ale stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "homeButton": "Zpět domů",
+    "backButton": "Zpět"
+  },
+  "error": {
+    "title": "Něco se pokazilo",
+    "description": "Omlouváme se, ale došlo k neočekávané chybě. Zkuste to prosím znovu.",
+    "retryButton": "Zkusit znovu",
+    "homeButton": "Zpět domů"
+  },
+  "pdf": {
+    "aboutMe": "O MNĚ",
+    "location": "Lokace",
+    "availability": "Dostupnost",
+    "specialization": "Specializace",
+    "languages": "Jazyky",
+    "locationValue": "Rokytnice n. J. / Praha",
+    "availabilityValue": "Otevřen příležitostem",
+    "specializationValue": "QA Lead, Playwright",
+    "languagesValue": "ČJ (rodilý), AJ (pokročilá)",
+    "generatedFrom": "Generováno z"
+  },
+  "professional": {
+    "hero": {
+      "title": "Ahoj, jsem Richard",
+      "subtitle": "QA & Test Automation Lead",
+      "description": "Jako QA & Test Automation Lead se zaměřuji na to, aby byl software spolehlivý a abychom ho dodávali efektivně. Věřím v budování silných týmů, mentoring a v to, že kvalita je společnou odpovědností. Automatizace (hlavně Playwright) je pro mě klíčový nástroj, jak toho dosáhnout, a AI vnímám jako další logický krok, který nám v budoucnu pomůže.",
+      "btnLinkedIn": "LinkedIn",
+      "btnContact": "Kontaktuj mě",
+      "btnDownloadCV": "Stáhni CV"
+    },
+    "experience": {
+      "title": "Zkušenosti",
+      "timeline": [
+        {
+          "role": "QA & Test Automation Lead",
+          "company": "Etnetera Core",
+          "period": "leden 2025 - současnost",
+          "responsibilities": [
+            "Vedení QA a automatizačních aktivit v rámci firmy.",
+            "Nastavování a exekuce QA strategií, metodik a testovacích procesů.",
+            "Zodpovědnost za mentoring kolegů a strategické zlepšování QA standardů.",
+            "Hands-on vývoj a architektura automatizovaných testů s primárním zaměřením na Playwright."
+          ]
+        },
+        {
+          "role": "QA Team Lead / Test Engineer",
+          "company": "DODO",
+          "period": "květen 2022 - leden 2025",
+          "responsibilities": [
+            "<strong>Vedení lidí v QA:</strong> Dohled nad výkonem a vytížením týmu.",
+            "<strong>Mentoring:</strong> Návrh a údržba automatizovaných testů (Cypress) pro kritické scénáře.",
+            "Navrhování zlepšení kvality a efektivní komunikace se stakeholders."
+          ]
+        },
+        {
+          "role": "QA Tester",
+          "company": "DODO",
+          "period": "květen 2021 - květen 2022",
+          "responsibilities": [
+            "Optimalizace testovacích scénářů, BE/FE testování (E2E, integrační).",
+            "Testování hybridních (nativní & web) mobilních aplikací."
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Dovednosti",
+      "categories": [
+        {
+          "name": "Tým & Strategie",
+          "items": ["QA Leadership", "Mentoring", "Nastavování QA strategií", "Transformace QA", "Agilní metodologie"]
+        },
+        {
+          "name": "Nástroje a Automatizace",
+          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+        },
+        {
+          "name": "Technologie",
+          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
+        },
+        {
+          "name": "Budoucí směr",
+          "items": ["Umělá inteligence (AI) v testování"]
+        },
+        {
+          "name": "Jazyky",
+          "items": ["Čeština (Nativní)", "Polština (Nativní)", "Angličtina (Pracovní)"]
+        }
+      ]
+    },
+    "vision": {
+      "title": "Můj přístup",
+      "text": "Technologie jsou důležité, ale na konci dne je to práce o lidech. Jsem týmový hráč s pozitivním přístupem k práci i životu. Věřím, že spokojený a motivovaný tým je základem pro dodání kvalitního produktu. Mým úkolem je nejen nastavovat procesy, ale hlavně vytvářet prostředí, kde se lidem dobře pracuje a kde má každý prostor růst."
+    }
+  },
+  "personal": {
+    "intro": {
+      "title": "Když zavřu notebook...",
+      "description": "Technologie jsou moje profese, ale moji skutečnou vášní je svět venku. Svět, kde se počítá každý krok, dech a východ slunce. Věřím v rovnováhu a v to, že nejlepší nápady přicházejí, když má člověk čistou hlavu – a tu si nejlépe vyčistím v horách nebo na moři.",
+      "btnLinkedIn": "Propojme se",
+      "btnContact": "Napiš mi"
+    },
+    "passions": {
+      "title": "Tam, kde dobíjím energii",
+      "categories": [
+        {
+          "name": "Hory",
+          "description": "Nejraději jsem v horách. Ten pocit, když zdoláte vrchol a za odměnu dostanete zasloužené výhledy, které můžete sdílet... Nebo brzy ráno, ještě před svítáním, nasadit skialpy a vyrazit vstříc tichu, prázdným svahům a východu slunce."
+        },
+        {
+          "name": "Voda a běh",
+          "description": "Stejně tak miluji rána na jachtě, kdy vás probudí slunce a první, co uděláte, je skok do moře. Běh v přírodě je pro mě zase forma aktivní meditace. Vypnu a hlavou mi samovolně plynou řešení problémů, které mě zrovna trápí."
+        },
+        {
+          "name": "A když zbyde čas...",
+          "items": ["Bouldering", "Kutilství", "Vaření", "Pečení", "Horská turistika"]
+        }
+      ]
+    },
+    "sideHustle": {
+      "title": "Můj projekt v pohostinství: Apartmány Iwona",
+      "link": "www.apartmany-iwona.cz",
+      "description": "Tohle není o kódu, ale o lidech. Ve volném čase se s vášní věnuji správě našeho rodinného penzionu. Starám se o kompletní zážitek pro hosty – od cenotvorby a komunikace při rezervacích až po finální údržbu, úklid (s důrazem na eko prostředky) a vytváření atmosféry, kde mohou lidé nejen sportovat, ale hlavně si opravdu odpočinout."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Richard Kousal | IČO: 09121251"
+  },
+  "languages": {
+    "cs": "Česky",
+    "en": "Anglicky",
+    "de": "Německy",
+    "pl": "Polsky"
+  }
+}

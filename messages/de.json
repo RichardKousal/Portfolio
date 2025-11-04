@@ -1,0 +1,146 @@
+{
+  "header": {
+    "name": "Richard Kousal",
+    "email": "richard.kousal@gmail.com",
+    "phone": "+420 604 674 931",
+    "toggleProfessional": "Beruflich",
+    "togglePersonal": "Persönlich"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.",
+    "homeButton": "Zur Startseite",
+    "backButton": "Zurück"
+  },
+  "error": {
+    "title": "Etwas ist schief gelaufen",
+    "description": "Entschuldigung, es ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "retryButton": "Erneut versuchen",
+    "homeButton": "Zur Startseite"
+  },
+  "pdf": {
+    "aboutMe": "ÜBER MICH",
+    "location": "Standort",
+    "availability": "Verfügbarkeit",
+    "specialization": "Spezialisierung",
+    "languages": "Sprachen",
+    "locationValue": "Rokytnice n. J. / Prag",
+    "availabilityValue": "Offen für Möglichkeiten",
+    "specializationValue": "QA Lead, Playwright",
+    "languagesValue": "Tschechisch (Muttersprache), Englisch (fortgeschritten)",
+    "generatedFrom": "Generiert von"
+  },
+  "professional": {
+    "hero": {
+      "title": "Hallo, ich bin Richard",
+      "subtitle": "QA & Test Automation Lead",
+      "description": "Als QA & Test Automation Lead konzentriere ich mich darauf, dass Software zuverlässig ist und wir sie effizient liefern. Ich glaube an den Aufbau starker Teams, Mentoring und daran, dass Qualität eine gemeinsame Verantwortung ist. Automatisierung (hauptsächlich Playwright) ist für mich ein Schlüsselwerkzeug, um dies zu erreichen, und ich sehe KI als den nächsten logischen Schritt, der uns in Zukunft helfen wird.",
+      "btnLinkedIn": "LinkedIn",
+      "btnContact": "Kontaktiere mich",
+      "btnDownloadCV": "CV herunterladen"
+    },
+    "experience": {
+      "title": "Erfahrung",
+      "timeline": [
+        {
+          "role": "QA & Test Automation Lead",
+          "company": "Etnetera Core",
+          "period": "Januar 2025 - Gegenwart",
+          "responsibilities": [
+            "Leitung von QA- und Automatisierungsaktivitäten im gesamten Unternehmen.",
+            "Etablierung und Durchführung von QA-Strategien, Methoden und Testprozessen.",
+            "Verantwortlich für Mentoring von Kollegen und strategische Verbesserung der QA-Standards.",
+            "Hands-on Entwicklung und Architektur von automatisierten Tests mit Hauptfokus auf Playwright."
+          ]
+        },
+        {
+          "role": "QA Team Lead / Test Engineer",
+          "company": "DODO",
+          "period": "Mai 2022 - Januar 2025",
+          "responsibilities": [
+            "<strong>QA-Personalmanagement:</strong> Überwachung der Teamleistung und Arbeitsbelastung.",
+            "<strong>Mentoring:</strong> Design und Wartung automatisierter Tests (Cypress) für kritische Szenarien.",
+            "Vorschlag von Qualitätsverbesserungen und effektive Stakeholder-Kommunikation."
+          ]
+        },
+        {
+          "role": "QA Tester",
+          "company": "DODO",
+          "period": "Mai 2021 - Mai 2022",
+          "responsibilities": [
+            "Optimierung von Testszenarien, BE/FE-Testing (E2E, Integration).",
+            "Testen von hybriden (nativen & Web) mobilen Anwendungen."
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Fähigkeiten",
+      "categories": [
+        {
+          "name": "Team & Strategie",
+          "items": ["QA Leadership", "Mentoring", "QA-Strategieentwicklung", "QA-Transformation", "Agile Methodik"]
+        },
+        {
+          "name": "Tools und Automatisierung",
+          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+        },
+        {
+          "name": "Technologie",
+          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
+        },
+        {
+          "name": "Zukünftige Richtung",
+          "items": ["Künstliche Intelligenz (KI) im Testen"]
+        },
+        {
+          "name": "Sprachen",
+          "items": ["Tschechisch (Muttersprache)", "Polnisch (Muttersprache)", "Englisch (Professionell)"]
+        }
+      ]
+    },
+    "vision": {
+      "title": "Mein Ansatz",
+      "text": "Technologie ist wichtig, aber am Ende des Tages geht es um Menschen. Ich bin ein Teamplayer mit einer positiven Einstellung zur Arbeit und zum Leben. Ich glaube, dass ein zufriedenes und motiviertes Team die Grundlage für die Lieferung eines qualitativ hochwertigen Produkts ist. Meine Aufgabe ist es nicht nur, Prozesse einzurichten, sondern vor allem ein Umfeld zu schaffen, in dem Menschen gerne arbeiten und in dem jeder Raum zum Wachsen hat."
+    }
+  },
+  "personal": {
+    "intro": {
+      "title": "Wenn ich mein Notebook schließe...",
+      "description": "Technologie ist mein Beruf, aber meine wahre Leidenschaft ist die Welt draußen. Eine Welt, in der jeder Schritt, jeder Atemzug und jeder Sonnenaufgang zählt. Ich glaube an Gleichgewicht und daran, dass die besten Ideen kommen, wenn man einen klaren Kopf hat – und ich bekomme meinen am besten in den Bergen oder am Meer frei.",
+      "btnLinkedIn": "Lass uns vernetzen",
+      "btnContact": "Schreib mir"
+    },
+    "passions": {
+      "title": "Wo ich auftanke",
+      "categories": [
+        {
+          "name": "Berge",
+          "description": "Am liebsten bin ich in den Bergen. Dieses Gefühl, wenn man den Gipfel erreicht und mit den Aussichten belohnt wird, die man teilen kann... Oder früh am Morgen, noch vor der Morgendämmerung, Skitourenausrüstung anlegen und sich auf den Weg in die Stille, leere Hänge und den Sonnenaufgang machen."
+        },
+        {
+          "name": "Wasser und Laufen",
+          "description": "Genauso liebe ich Morgen auf einer Yacht, wenn die Sonne einen weckt und das Erste, was man tut, ist ins Meer zu springen. Laufen in der Natur ist für mich eine Form aktiver Meditation. Ich schalte ab und Lösungen für Probleme, die mich gerade beschäftigen, fließen natürlich durch meinen Kopf."
+        },
+        {
+          "name": "Und wenn noch Zeit bleibt...",
+          "items": ["Bouldern", "Heimwerken", "Kochen", "Backen", "Bergwandern"]
+        }
+      ]
+    },
+    "sideHustle": {
+      "title": "Mein Gastgewerbe-Projekt: Apartmány Iwona",
+      "link": "www.apartmany-iwona.cz",
+      "description": "Das ist nicht über Code, sondern über Menschen. In meiner Freizeit verwalte ich mit Leidenschaft unsere Familienpension. Ich kümmere mich um das komplette Gästeerlebnis – von der Preisgestaltung und Kommunikation bei Reservierungen bis zur finalen Wartung, Reinigung (mit Schwerpunkt auf umweltfreundlichen Produkten) und der Schaffung einer Atmosphäre, in der Menschen nicht nur aktiv sein, sondern sich wirklich entspannen können."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Richard Kousal | Unternehmens-ID: 09121251"
+  },
+  "languages": {
+    "cs": "Tschechisch",
+    "en": "Englisch",
+    "de": "Deutsch",
+    "pl": "Polnisch"
+  }
+}

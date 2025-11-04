@@ -1,0 +1,146 @@
+{
+  "header": {
+    "name": "Richard Kousal",
+    "email": "richard.kousal@gmail.com",
+    "phone": "+420 604 674 931",
+    "toggleProfessional": "Professional",
+    "togglePersonal": "Personal"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "homeButton": "Go Home",
+    "backButton": "Go Back"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "Sorry, an unexpected error occurred. Please try again.",
+    "retryButton": "Try Again",
+    "homeButton": "Go Home"
+  },
+  "pdf": {
+    "aboutMe": "ABOUT ME",
+    "location": "Location",
+    "availability": "Availability",
+    "specialization": "Specialization",
+    "languages": "Languages",
+    "locationValue": "Rokytnice n. J. / Prague",
+    "availabilityValue": "Open to opportunities",
+    "specializationValue": "QA Lead, Playwright",
+    "languagesValue": "Czech (native), English (advanced)",
+    "generatedFrom": "Generated from"
+  },
+  "professional": {
+    "hero": {
+      "title": "Hi, I'm Richard",
+      "subtitle": "QA & Test Automation Lead",
+      "description": "As a QA & Test Automation Lead, I focus on ensuring software is reliable and that we deliver it efficiently. I believe in building strong teams, mentoring, and in quality being a shared responsibility. Automation (mainly Playwright) is a key tool for me to achieve this, and I see AI as the next logical step that will help us in the future.",
+      "btnLinkedIn": "LinkedIn",
+      "btnContact": "Contact Me",
+      "btnDownloadCV": "Download CV"
+    },
+    "experience": {
+      "title": "Experience",
+      "timeline": [
+        {
+          "role": "QA & Test Automation Lead",
+          "company": "Etnetera Core",
+          "period": "January 2025 - Present",
+          "responsibilities": [
+            "Leading QA and automation activities across the company.",
+            "Establishing and executing QA strategies, methodologies, and testing processes.",
+            "Responsible for mentoring colleagues and strategic improvement of QA standards.",
+            "Hands-on development and architecture of automated tests with primary focus on Playwright."
+          ]
+        },
+        {
+          "role": "QA Team Lead / Test Engineer",
+          "company": "DODO",
+          "period": "May 2022 - January 2025",
+          "responsibilities": [
+            "<strong>QA People Management:</strong> Overseeing team performance and workload.",
+            "<strong>Mentoring:</strong> Design and maintenance of automated tests (Cypress) for critical scenarios.",
+            "Proposing quality improvements and effective stakeholder communication."
+          ]
+        },
+        {
+          "role": "QA Tester",
+          "company": "DODO",
+          "period": "May 2021 - May 2022",
+          "responsibilities": [
+            "Optimization of test scenarios, BE/FE testing (E2E, integration).",
+            "Testing hybrid (native & web) mobile applications."
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "categories": [
+        {
+          "name": "Team & Strategy",
+          "items": ["QA Leadership", "Mentoring", "QA Strategy Setup", "QA Transformation", "Agile Methodology"]
+        },
+        {
+          "name": "Tools and Automation",
+          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+        },
+        {
+          "name": "Technology",
+          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
+        },
+        {
+          "name": "Future Direction",
+          "items": ["Artificial Intelligence (AI) in Testing"]
+        },
+        {
+          "name": "Languages",
+          "items": ["Czech (Native)", "Polish (Native)", "English (Professional)"]
+        }
+      ]
+    },
+    "vision": {
+      "title": "My Approach",
+      "text": "Technology is important, but at the end of the day, it's about people. I'm a team player with a positive approach to work and life. I believe that a happy and motivated team is the foundation for delivering a quality product. My job is not just to set up processes, but mainly to create an environment where people enjoy working and where everyone has room to grow."
+    }
+  },
+  "personal": {
+    "intro": {
+      "title": "When I close my notebook...",
+      "description": "Technology is my profession, but my real passion is the world outside. A world where every step, every breath, and every sunrise counts. I believe in balance and that the best ideas come when you have a clear mind – and I clear mine best in the mountains or by the sea.",
+      "btnLinkedIn": "Let's connect",
+      "btnContact": "Write to me"
+    },
+    "passions": {
+      "title": "Where I recharge",
+      "categories": [
+        {
+          "name": "Mountains",
+          "description": "I love being in the mountains most. That feeling when you reach the summit and get rewarded with the views you can share... Or early in the morning, before dawn, putting on ski touring equipment and heading towards silence, empty slopes, and the sunrise."
+        },
+        {
+          "name": "Water and Running",
+          "description": "I equally love mornings on a yacht when the sun wakes you up and the first thing you do is jump into the sea. Running in nature is for me a form of active meditation. I switch off and solutions to problems that are bothering me naturally flow through my head."
+        },
+        {
+          "name": "And when there's time left...",
+          "items": ["Bouldering", "DIY", "Cooking", "Baking", "Mountain Hiking"]
+        }
+      ]
+    },
+    "sideHustle": {
+      "title": "My Hospitality Project: Apartmány Iwona",
+      "link": "www.apartmany-iwona.cz",
+      "description": "This isn't about code, but about people. In my free time, I passionately manage our family guesthouse. I take care of the complete guest experience – from pricing and communication during reservations to final maintenance, cleaning (with emphasis on eco-friendly products), and creating an atmosphere where people can not only be active but truly relax."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Richard Kousal | Business ID: 09121251"
+  },
+  "languages": {
+    "cs": "Czech",
+    "en": "English",
+    "de": "German",
+    "pl": "Polish"
+  }
+}
