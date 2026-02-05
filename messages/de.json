@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Richard Kousal",
-    "email": "richard.kousal@gmail.com",
+    "email": "kousal.richard@gmail.com",
     "phone": "+420 604 674 931",
     "toggleProfessional": "Beruflich",
     "togglePersonal": "Persönlich"
@@ -26,15 +26,15 @@
     "languages": "Sprachen",
     "locationValue": "Rokytnice n. J. / Prag",
     "availabilityValue": "Offen für Möglichkeiten",
-    "specializationValue": "QA Lead, Playwright",
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "Tschechisch (Muttersprache), Englisch (fortgeschritten)",
     "generatedFrom": "Generiert von"
   },
   "professional": {
     "hero": {
       "title": "Hallo, ich bin Richard",
-      "subtitle": "QA & Test Automation Lead",
-      "description": "Als QA & Test Automation Lead konzentriere ich mich darauf, dass Software zuverlässig ist und wir sie effizient liefern. Ich glaube an den Aufbau starker Teams, Mentoring und daran, dass Qualität eine gemeinsame Verantwortung ist. Automatisierung (hauptsächlich Playwright) ist für mich ein Schlüsselwerkzeug, um dies zu erreichen, und ich sehe KI als den nächsten logischen Schritt, der uns in Zukunft helfen wird.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
+      "description": "Ich führe und baue moderne QA-Teams, die mit der schnellen Softwareentwicklung und dem Aufstieg von KI Schritt halten. Ich konzentriere mich auf KI-gesteuertes Testen und agentenbasierte Ansätze zur Eliminierung von Routinearbeit und Shift-Left-Qualität. Ich sehe QA als Partner für Produkt und Engineering, nicht als finalen Gatekeeper — Automatisierung übernimmt die Ausführung, QA konzentriert sich auf Risiken und kontinuierliche Verbesserung. Ich bleibe hands-on: Playwright, TypeScript, CI/CD, Azure.",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Kontaktiere mich",
       "btnDownloadCV": "CV herunterladen"
@@ -45,12 +45,23 @@
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "Januar 2025 - Gegenwart",
+          "period": "April 2025 - Gegenwart",
+          "type": "Freelance",
           "responsibilities": [
-            "Leitung von QA- und Automatisierungsaktivitäten im gesamten Unternehmen.",
-            "Etablierung und Durchführung von QA-Strategien, Methoden und Testprozessen.",
-            "Verantwortlich für Mentoring von Kollegen und strategische Verbesserung der QA-Standards.",
-            "Hands-on Entwicklung und Architektur von automatisierten Tests mit Hauptfokus auf Playwright."
+            "Führung von QA über Projekte hinweg mit Verantwortung für QA-Strategie und Testautomatisierungsrichtung.",
+            "Aufbau skalierbarer QA-Prozesse und Mentoring von QA-Ingenieuren.",
+            "Einführung von KI-gesteuerten und agentenbasierten QA-Ansätzen zur Optimierung von Testaktivitäten.",
+            "Abstimmung von Qualität mit Produkt- und Engineering-Zielen."
+          ]
+        },
+        {
+          "role": "QA Engineer",
+          "company": "Etnetera Core",
+          "period": "Januar 2025 - Gegenwart",
+          "type": "Self-employed",
+          "responsibilities": [
+            "Design und Entwicklung von Automatisierungen für neue und bestehende Projekte mit Playwright.",
+            "Optimierung von Prozessen und Beschleunigung der Lieferung."
           ]
         },
         {
@@ -79,23 +90,45 @@
       "categories": [
         {
           "name": "Team & Strategie",
-          "items": ["QA Leadership", "Mentoring", "QA-Strategieentwicklung", "QA-Transformation", "Agile Methodik"]
+          "items": [
+            "QA Leadership",
+            "QA-Strategie",
+            "Test Automation Strategy",
+            "Continuous Quality / Shift-Left",
+            "Mentoring",
+            "Agile Methodik"
+          ]
         },
         {
-          "name": "Tools und Automatisierung",
-          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+          "name": "KI & Automatisierung",
+          "items": [
+            "KI im Software-Testing",
+            "Agent-based QA",
+            "Playwright",
+            "Cypress",
+            "CI/CD",
+            "DevOps"
+          ]
         },
         {
           "name": "Technologie",
-          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
-        },
-        {
-          "name": "Zukünftige Richtung",
-          "items": ["Künstliche Intelligenz (KI) im Testen"]
+          "items": [
+            "TypeScript",
+            "JavaScript",
+            "Azure",
+            "Git",
+            "GitLab",
+            "Postman",
+            "Temporal"
+          ]
         },
         {
           "name": "Sprachen",
-          "items": ["Tschechisch (Muttersprache)", "Polnisch (Muttersprache)", "Englisch (Professionell)"]
+          "items": [
+            "Tschechisch (Muttersprache)",
+            "Polnisch (Muttersprache)",
+            "Englisch (Professionell)"
+          ]
         }
       ]
     },

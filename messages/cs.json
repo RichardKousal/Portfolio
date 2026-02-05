@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Richard Kousal",
-    "email": "richard.kousal@gmail.com",
+    "email": "kousal.richard@gmail.com",
     "phone": "+420 604 674 931",
     "toggleProfessional": "Profesní",
     "togglePersonal": "Osobní"
@@ -26,15 +26,15 @@
     "languages": "Jazyky",
     "locationValue": "Rokytnice n. J. / Praha",
     "availabilityValue": "Otevřen příležitostem",
-    "specializationValue": "QA Lead, Playwright",
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "ČJ (rodilý), AJ (pokročilá)",
     "generatedFrom": "Generováno z"
   },
   "professional": {
     "hero": {
       "title": "Ahoj, jsem Richard",
-      "subtitle": "QA & Test Automation Lead",
-      "description": "Jako QA & Test Automation Lead se zaměřuji na to, aby byl software spolehlivý a abychom ho dodávali efektivně. Věřím v budování silných týmů, mentoring a v to, že kvalita je společnou odpovědností. Automatizace (hlavně Playwright) je pro mě klíčový nástroj, jak toho dosáhnout, a AI vnímám jako další logický krok, který nám v budoucnu pomůže.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
+      "description": "Vedu a buduji moderní QA týmy, které drží krok s rychlým vývojem softwaru a nástupem AI. Zaměřuji se na AI-driven testování a agentové přístupy k eliminaci rutinní práce a posouvání kvality na začátek vývoje. QA vnímám jako partnera produktu a engineeringu, ne jako finálního vrátného — automatizace řeší exekuci, QA se soustředí na rizika a kontinuální zlepšování. Zůstávám hands-on: Playwright, TypeScript, CI/CD, Azure.",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Kontaktuj mě",
       "btnDownloadCV": "Stáhni CV"
@@ -45,12 +45,23 @@
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "leden 2025 - současnost",
+          "period": "duben 2025 - současnost",
+          "type": "Freelance",
           "responsibilities": [
-            "Vedení QA a automatizačních aktivit v rámci firmy.",
-            "Nastavování a exekuce QA strategií, metodik a testovacích procesů.",
-            "Zodpovědnost za mentoring kolegů a strategické zlepšování QA standardů.",
-            "Hands-on vývoj a architektura automatizovaných testů s primárním zaměřením na Playwright."
+            "Vedení QA napříč projekty s odpovědností za QA strategii a směřování automatizace.",
+            "Budování škálovatelných QA procesů a mentoring QA inženýrů.",
+            "Zavádění AI-driven a agent-based QA přístupů pro optimalizaci testování.",
+            "Propojování kvality s produktovými a engineeringovými cíli."
+          ]
+        },
+        {
+          "role": "QA Engineer",
+          "company": "Etnetera Core",
+          "period": "leden 2025 - současnost",
+          "type": "Self-employed",
+          "responsibilities": [
+            "Návrh a vývoj automatizací pro nové i existující projekty pomocí Playwright.",
+            "Zefektivňování procesů a zrychlování dodávek."
           ]
         },
         {
@@ -79,23 +90,45 @@
       "categories": [
         {
           "name": "Tým & Strategie",
-          "items": ["QA Leadership", "Mentoring", "Nastavování QA strategií", "Transformace QA", "Agilní metodologie"]
+          "items": [
+            "QA Leadership",
+            "QA Strategie",
+            "Test Automation Strategy",
+            "Continuous Quality / Shift-Left",
+            "Mentoring",
+            "Agilní metodologie"
+          ]
         },
         {
-          "name": "Nástroje a Automatizace",
-          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+          "name": "AI & Automatizace",
+          "items": [
+            "AI v testování softwaru",
+            "Agent-based QA",
+            "Playwright",
+            "Cypress",
+            "CI/CD",
+            "DevOps"
+          ]
         },
         {
           "name": "Technologie",
-          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
-        },
-        {
-          "name": "Budoucí směr",
-          "items": ["Umělá inteligence (AI) v testování"]
+          "items": [
+            "TypeScript",
+            "JavaScript",
+            "Azure",
+            "Git",
+            "GitLab",
+            "Postman",
+            "Temporal"
+          ]
         },
         {
           "name": "Jazyky",
-          "items": ["Čeština (Nativní)", "Polština (Nativní)", "Angličtina (Pracovní)"]
+          "items": [
+            "Čeština (Nativní)",
+            "Polština (Nativní)",
+            "Angličtina (Pracovní)"
+          ]
         }
       ]
     },
@@ -124,7 +157,13 @@
         },
         {
           "name": "A když zbyde čas...",
-          "items": ["Bouldering", "Kutilství", "Vaření", "Pečení", "Horská turistika"]
+          "items": [
+            "Bouldering",
+            "Kutilství",
+            "Vaření",
+            "Pečení",
+            "Horská turistika"
+          ]
         }
       ]
     },

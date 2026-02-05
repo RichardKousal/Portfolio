@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Richard Kousal",
-    "email": "richard.kousal@gmail.com",
+    "email": "kousal.richard@gmail.com",
     "phone": "+420 604 674 931",
     "toggleProfessional": "Zawodowe",
     "togglePersonal": "Osobiste"
@@ -26,15 +26,15 @@
     "languages": "Języki",
     "locationValue": "Rokytnice n. J. / Praga",
     "availabilityValue": "Otwarty na możliwości",
-    "specializationValue": "QA Lead, Playwright",
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "Czeski (native), Angielski (zaawansowany)",
     "generatedFrom": "Wygenerowano z"
   },
   "professional": {
     "hero": {
       "title": "Cześć, jestem Richard",
-      "subtitle": "QA & Test Automation Lead",
-      "description": "Jako QA & Test Automation Lead skupiam się na tym, aby oprogramowanie było niezawodne i abyśmy dostarczali je wydajnie. Wierzę w budowanie silnych zespołów, mentoring i to, że jakość jest wspólną odpowiedzialnością. Automatyzacja (głównie Playwright) jest dla mnie kluczowym narzędziem do osiągnięcia tego, a AI postrzegam jako kolejny logiczny krok, który pomoże nam w przyszłości.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
+      "description": "Prowadzę i buduję nowoczesne zespoły QA, które nadążają za szybkim rozwojem oprogramowania i wzrostem AI. Skupiam się na testowaniu opartym na AI i podejściach agentowych, aby eliminować rutynową pracę i przesuwać jakość na początek procesu. QA postrzegam jako partnera produktu i inżynierii, nie jako ostatecznego strażnika — automatyzacja zajmuje się wykonaniem, QA koncentruje się na ryzykach i ciągłym doskonaleniu. Pozostaję hands-on: Playwright, TypeScript, CI/CD, Azure.",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Skontaktuj się",
       "btnDownloadCV": "Pobierz CV"
@@ -45,12 +45,23 @@
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "styczeń 2025 - obecnie",
+          "period": "kwiecień 2025 - obecnie",
+          "type": "Freelance",
           "responsibilities": [
-            "Prowadzenie działań QA i automatyzacji w całej firmie.",
-            "Ustanawianie i realizacja strategii QA, metodyk i procesów testowych.",
-            "Odpowiedzialność za mentoring kolegów i strategiczne usprawnianie standardów QA.",
-            "Hands-on rozwój i architektura automatycznych testów z głównym naciskiem na Playwright."
+            "Prowadzenie QA w ramach projektów z odpowiedzialnością za strategię QA i kierunek automatyzacji testów.",
+            "Budowanie skalowalnych procesów QA i mentoring inżynierów QA.",
+            "Wprowadzanie podejść QA opartych na AI i agentach do optymalizacji działań testowych.",
+            "Dostosowywanie jakości do celów produktu i inżynierii."
+          ]
+        },
+        {
+          "role": "QA Engineer",
+          "company": "Etnetera Core",
+          "period": "styczeń 2025 - obecnie",
+          "type": "Self-employed",
+          "responsibilities": [
+            "Projektowanie i rozwój automatyzacji dla nowych i istniejących projektów przy użyciu Playwright.",
+            "Usprawnianie procesów i przyspieszanie dostawy."
           ]
         },
         {
@@ -79,23 +90,45 @@
       "categories": [
         {
           "name": "Zespół i Strategia",
-          "items": ["Przywództwo QA", "Mentoring", "Ustanawianie strategii QA", "Transformacja QA", "Metodyka Agile"]
+          "items": [
+            "Przywództwo QA",
+            "Strategia QA",
+            "Test Automation Strategy",
+            "Continuous Quality / Shift-Left",
+            "Mentoring",
+            "Metodyka Agile"
+          ]
         },
         {
-          "name": "Narzędzia i Automatyzacja",
-          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+          "name": "AI i Automatyzacja",
+          "items": [
+            "AI w testowaniu oprogramowania",
+            "Agent-based QA",
+            "Playwright",
+            "Cypress",
+            "CI/CD",
+            "DevOps"
+          ]
         },
         {
           "name": "Technologia",
-          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
-        },
-        {
-          "name": "Przyszły kierunek",
-          "items": ["Sztuczna inteligencja (AI) w testowaniu"]
+          "items": [
+            "TypeScript",
+            "JavaScript",
+            "Azure",
+            "Git",
+            "GitLab",
+            "Postman",
+            "Temporal"
+          ]
         },
         {
           "name": "Języki",
-          "items": ["Czeski (ojczysty)", "Polski (ojczysty)", "Angielski (zawodowy)"]
+          "items": [
+            "Czeski (ojczysty)",
+            "Polski (ojczysty)",
+            "Angielski (zawodowy)"
+          ]
         }
       ]
     },
@@ -124,7 +157,13 @@
         },
         {
           "name": "A gdy zostanie czas...",
-          "items": ["Bouldering", "Majsterkowanie", "Gotowanie", "Pieczenie", "Turystyka górska"]
+          "items": [
+            "Bouldering",
+            "Majsterkowanie",
+            "Gotowanie",
+            "Pieczenie",
+            "Turystyka górska"
+          ]
         }
       ]
     },
