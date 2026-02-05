@@ -80,7 +80,7 @@ export default function ProfessionalHero() {
               </a>
 
               <a
-                href="mailto:richard.kousal@gmail.com"
+                href="mailto:kousal.richard@gmail.com"
                 onClick={() => analytics.socialClick("email")}
                 data-testid="btn-email-professional"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-cyan to-accent-emerald 

@@ -74,7 +74,7 @@ export default function PersonalIntro() {
               </a>
 
               <a
-                href="mailto:richard.kousal@gmail.com"
+                href="mailto:kousal.richard@gmail.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-pink to-accent-purple 
                   text-white font-medium rounded-lg shadow-lg shadow-accent-pink/30 
                   hover:shadow-accent-pink/50 hover:scale-105 transition-all duration-300"

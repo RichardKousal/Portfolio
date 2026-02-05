@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Richard Kousal",
-    "email": "richard.kousal@gmail.com",
+    "email": "kousal.richard@gmail.com",
     "phone": "+420 604 674 931",
     "toggleProfessional": "Professional",
     "togglePersonal": "Personal"
@@ -26,15 +26,15 @@
     "languages": "Languages",
     "locationValue": "Rokytnice n. J. / Prague",
     "availabilityValue": "Open to opportunities",
-    "specializationValue": "QA Lead, Playwright",
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "Czech (native), English (advanced)",
     "generatedFrom": "Generated from"
   },
   "professional": {
     "hero": {
       "title": "Hi, I'm Richard",
-      "subtitle": "QA & Test Automation Lead",
-      "description": "As a QA & Test Automation Lead, I focus on ensuring software is reliable and that we deliver it efficiently. I believe in building strong teams, mentoring, and in quality being a shared responsibility. Automation (mainly Playwright) is a key tool for me to achieve this, and I see AI as the next logical step that will help us in the future.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
+      "description": "I lead and build modern QA teams that keep pace with rapid software development and the rise of AI. I focus on AI-driven testing and agentic approaches to eliminate routine work and shift quality left. I see QA as a partner to product and engineering, not a final gatekeeper — automation handles execution, QA focuses on risks and continuous improvement. I stay hands-on: Playwright, TypeScript, CI/CD, Azure.",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Contact Me",
       "btnDownloadCV": "Download CV"
@@ -45,12 +45,23 @@
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "January 2025 - Present",
+          "period": "April 2025 - Present",
+          "type": "Freelance",
           "responsibilities": [
-            "Leading QA and automation activities across the company.",
-            "Establishing and executing QA strategies, methodologies, and testing processes.",
-            "Responsible for mentoring colleagues and strategic improvement of QA standards.",
-            "Hands-on development and architecture of automated tests with primary focus on Playwright."
+            "Leading QA across projects with responsibility for QA strategy and test automation direction.",
+            "Building scalable QA processes and mentoring QA engineers.",
+            "Introducing AI-driven and agent-based QA approaches to optimize testing activities.",
+            "Aligning quality with product and engineering goals."
+          ]
+        },
+        {
+          "role": "QA Engineer",
+          "company": "Etnetera Core",
+          "period": "January 2025 - Present",
+          "type": "Self-employed",
+          "responsibilities": [
+            "Designing and developing automations for new and existing projects using Playwright.",
+            "Streamlining processes and accelerating delivery."
           ]
         },
         {
@@ -79,23 +90,45 @@
       "categories": [
         {
           "name": "Team & Strategy",
-          "items": ["QA Leadership", "Mentoring", "QA Strategy Setup", "QA Transformation", "Agile Methodology"]
+          "items": [
+            "QA Leadership",
+            "QA Strategy",
+            "Test Automation Strategy",
+            "Continuous Quality / Shift-Left",
+            "Mentoring",
+            "Agile Methodology"
+          ]
         },
         {
-          "name": "Tools and Automation",
-          "items": ["Playwright", "Cypress", "Postman", "CI/CD", "DevOps", "Git"]
+          "name": "AI & Automation",
+          "items": [
+            "AI in Software Testing",
+            "Agent-based QA",
+            "Playwright",
+            "Cypress",
+            "CI/CD",
+            "DevOps"
+          ]
         },
         {
           "name": "Technology",
-          "items": ["TypeScript", "JavaScript", "Azure", "Next.js", "React"]
-        },
-        {
-          "name": "Future Direction",
-          "items": ["Artificial Intelligence (AI) in Testing"]
+          "items": [
+            "TypeScript",
+            "JavaScript",
+            "Azure",
+            "Git",
+            "GitLab",
+            "Postman",
+            "Temporal"
+          ]
         },
         {
           "name": "Languages",
-          "items": ["Czech (Native)", "Polish (Native)", "English (Professional)"]
+          "items": [
+            "Czech (Native)",
+            "Polish (Native)",
+            "English (Professional)"
+          ]
         }
       ]
     },
