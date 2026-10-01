@@ -2,9 +2,7 @@
   "header": {
     "name": "Richard Kousal",
     "email": "kousal.richard@gmail.com",
-    "phone": "+420 604 674 931",
-    "toggleProfessional": "Professional",
-    "togglePersonal": "Personal"
+    "phone": "+420 604 674 931"
   },
   "notFound": {
     "title": "Page Not Found",
@@ -25,7 +23,7 @@
     "specialization": "Specialization",
     "languages": "Languages",
     "locationValue": "Rokytnice n. J. / Prague",
-    "availabilityValue": "Open to opportunities",
+    "availabilityValue": "Open to collaboration and knowledge sharing",
     "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "Czech (native), English (advanced)",
     "generatedFrom": "Generated from"
@@ -157,7 +155,13 @@
         },
         {
           "name": "And when there's time left...",
-          "items": ["Bouldering", "DIY", "Cooking", "Baking", "Mountain Hiking"]
+          "items": [
+            "Bouldering",
+            "DIY",
+            "Cooking",
+            "Baking",
+            "Mountain Hiking"
+          ]
         }
       ]
     },
@@ -168,12 +172,222 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Richard Kousal | Business ID: 09121251"
+    "copyright": "© {year} Richard Kousal | Business ID: 09121251",
+    "rss": "RSS"
   },
   "languages": {
-    "cs": "Czech",
-    "en": "English",
-    "de": "German",
-    "pl": "Polish"
+    "cs": "Čeština",
+    "en": "English"
+  },
+  "meta": {
+    "home": {
+      "title": "Richard Kousal – QA & Test Automation Lead | AI-driven QA",
+      "description": "Personal site of Richard Kousal: AI-driven QA, AI agents, Playwright and k6 at Etnetera Core. Articles, projects and talks."
+    },
+    "articles": {
+      "title": "Articles | Richard Kousal",
+      "description": "Articles on QA in the age of AI, test automation, and how I use AI outside work – like at our guesthouse in the Krkonoše mountains."
+    },
+    "projects": {
+      "title": "Projects | Richard Kousal",
+      "description": "QA Control Center, QA Brain, a k6 performance framework, QA Manual Copilot, an MTP generator and AI for a mountain guesthouse."
+    },
+    "about": {
+      "title": "About | Richard Kousal",
+      "description": "Career path, skills and my approach to QA – plus mountains, water and our family guesthouse Apartmány Iwona."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "articles": "Articles",
+    "projects": "Projects",
+    "about": "About",
+    "mainLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "skipLink": "Skip to content",
+    "backToTop": "Back to top"
+  },
+  "common": {
+    "availability": "Open to collaboration and knowledge sharing",
+    "readMore": "Read more",
+    "allArticles": "All articles",
+    "allProjects": "All projects",
+    "minRead": "{minutes} min read",
+    "draft": "Draft",
+    "inCzech": "in Czech",
+    "publishedOnEtnetera": "Published on the Etnetera blog",
+    "linkComing": "Link coming soon",
+    "backToArticles": "Back to articles",
+    "visitWebsite": "Visit website",
+    "opensInNewTab": "(opens in a new tab)"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "QA & Test Automation Lead · Etnetera Core",
+      "title": "Hi, I'm Richard.",
+      "lead": "I lead QA at Etnetera Core and build AI-driven testing: agents propose criteria and tests, people decide what to trust. I write about what works – at work and at our guesthouse in the Krkonoše mountains.",
+      "ctaArticles": "Read articles",
+      "ctaProjects": "What I'm working on"
+    },
+    "latest": {
+      "title": "Latest articles"
+    },
+    "work": {
+      "title": "What I'm working on",
+      "intro": "Tools and experiments I'm building right now or use every day."
+    },
+    "talks": {
+      "title": "Talks",
+      "upcoming": "Upcoming",
+      "past": "Past"
+    }
+  },
+  "talks": {
+    "items": [
+      {
+        "title": "Etnology #6",
+        "date": "2026-10-14",
+        "place": "Etnetera, Prague",
+        "description": "Live demo of QA Control Center in the AI demo zone."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Happy to talk about AI in QA, test automation or performance testing. Drop me an email or reach out on LinkedIn.",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "articles": {
+    "title": "Articles",
+    "intro": "Notes from practice: QA in the age of AI, test automation and personal AI experiments. Some are published on the Etnetera blog, others only here.",
+    "filterLabel": "Filter articles by category",
+    "filters": {
+      "all": "All",
+      "qa-ai": "QA & AI",
+      "personal": "Personal"
+    },
+    "empty": "Nothing here yet – the first articles are on their way.",
+    "emptyFilter": "Nothing in this category yet.",
+    "rss": "Subscribe via RSS",
+    "fallbackNotice": "This article is currently available in Czech only.",
+    "publishedLabel": "Published",
+    "todoDraftNotice": "Draft – not shown in production."
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Tools and experiments around AI-driven QA – and one mountain guesthouse where I try AI in practice.",
+    "items": [
+      {
+        "id": "qa-control-center",
+        "name": "QA Control Center",
+        "tagline": "AI proposes, a human decides.",
+        "description": "A workspace where AI turns a requirement into acceptance criteria, test scenarios and Playwright tests. Instead of pass rate it measures trust – how well a test actually verifies the requirement. Human gates sit at the key points: nothing moves on without QA approval.",
+        "highlights": [
+          "Acceptance criteria → scenarios → Playwright tests",
+          "Trust metric instead of pass rate",
+          "Human gates (human-in-the-loop)"
+        ],
+        "tags": [
+          "AI agents",
+          "Playwright",
+          "TypeScript"
+        ]
+      },
+      {
+        "id": "qa-brain",
+        "name": "QA Brain",
+        "tagline": "Shared QA rules for AI agents.",
+        "description": "A library of QA rules with unique IDs that AI agents in Claude Code and GitHub Copilot draw from. An agent cites a rule the same way a person would – and the output stays consistent across teams and tools.",
+        "highlights": [
+          "Rules with citable IDs",
+          "Works in Claude Code and Copilot",
+          "One source of truth for people and agents"
+        ],
+        "tags": [
+          "Claude Code",
+          "GitHub Copilot",
+          "AI agents"
+        ]
+      },
+      {
+        "id": "k6-framework",
+        "name": "k6 performance framework",
+        "tagline": "Even a PM can order a load test.",
+        "description": "A framework on top of k6 that lets even a non-technical product manager order a load test – by answering five questions or letting an AI configurator build the setup. The framework prepares the scenario, runs it and returns a readable report.",
+        "highlights": [
+          "5 questions instead of scripting",
+          "AI configurator",
+          "Readable report for non-technical audiences"
+        ],
+        "tags": [
+          "k6",
+          "Performance testing",
+          "AI"
+        ]
+      },
+      {
+        "id": "qa-manual-copilot",
+        "name": "QA Manual Copilot",
+        "tagline": "An AI sidekick for manual testers.",
+        "description": "A Chrome extension that helps manual testers: it suggests what to check and helps write up findings. It has one hard rule – it must not claim anything without evidence. Every finding has to be backed by a screenshot, a log or a concrete step.",
+        "highlights": [
+          "Chrome extension",
+          "No claim without evidence",
+          "Help with exploratory testing and bug write-ups"
+        ],
+        "tags": [
+          "Chrome extension",
+          "AI",
+          "Manual testing"
+        ]
+      },
+      {
+        "id": "mtp-generator",
+        "name": "MTP generator",
+        "tagline": "A deterministic Master Test Plan.",
+        "description": "A Master Test Plan generator where structure, scope and rules are derived deterministically from input data. AI only writes the prose – introductions and summaries. The result is repeatable and traceable.",
+        "highlights": [
+          "Deterministic structure",
+          "AI only for prose",
+          "Repeatable, traceable output"
+        ],
+        "tags": [
+          "Test management",
+          "AI",
+          "Documentation"
+        ]
+      },
+      {
+        "id": "apartmany-iwona",
+        "name": "Apartmány Iwona + AI",
+        "tagline": "A mountain guesthouse as a lab.",
+        "description": "Our family guesthouse in the Krkonoše mountains is my personal lab. I collect pricing and occupancy data, look for patterns and automate the routine around bookings and guest communication. I'll write about what actually works.",
+        "highlights": [
+          "Pricing and occupancy data",
+          "Automating booking routines",
+          "AI in a small business, in practice"
+        ],
+        "tags": [
+          "Data",
+          "Automation",
+          "AI"
+        ],
+        "url": "https://www.apartmany-iwona.cz"
+      }
+    ],
+    "featured": [
+      "qa-control-center",
+      "qa-brain",
+      "apartmany-iwona"
+    ]
+  },
+  "about": {
+    "title": "About",
+    "professionalTitle": "Professionally",
+    "personalTitle": "Outside work",
+    "downloadCv": "Download CV (PDF)"
   }
 }

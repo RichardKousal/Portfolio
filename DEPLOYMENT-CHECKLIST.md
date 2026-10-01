@@ -4,7 +4,7 @@ Před spuštěním webu do produkce zkontroluj následující:
 
 ## ⚙️ Environment Variables
 
-- [ ] Nastavit `NEXT_PUBLIC_SITE_URL=https://tvoje-domena.cz`
+- [ ] Nastavit `NEXT_PUBLIC_SITE_URL=https://richardkousal.com`
 - [ ] (Optional) Google Analytics ID
 - [ ] (Optional) Site verification kódy
 
@@ -31,9 +31,10 @@ Před spuštěním webu do produkce zkontroluj následující:
 - [ ] **Open Graph preview**:
   - [ ] [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
   - [ ] [Facebook Debugger](https://developers.facebook.com/tools/debug/)
-- [ ] **Multilingual routing** - zkontrolovat všechny jazyky (cs, en, de, pl)
-- [ ] **View toggle** - profesní/osobní přepínání
-- [ ] **Language switcher** - zachování view při změně jazyka
+- [ ] **Multilingual routing** - zkontrolovat cs a en (a přesměrování /de, /pl → /en)
+- [ ] **Navigace** - Domů / Články / Projekty / O mně (desktop i mobilní menu)
+- [ ] **Language switcher** - zachování stránky při změně jazyka
+- [ ] **Články** - jen `status: published` v produkci, RSS `/feed.xml`
 
 ## 📱 PWA & Mobile
 

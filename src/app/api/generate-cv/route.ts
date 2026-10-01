@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     const locale = searchParams.get('locale') || 'cs';
 
     // Validate locale
-    const validLocales = ['cs', 'en', 'pl', 'de'];
+    const validLocales = ['cs', 'en'];
     const finalLocale = validLocales.includes(locale) ? locale : 'cs';
 
     // Load messages for the locale

@@ -9,6 +9,19 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Article markdown is read from disk at runtime (ISR / on-demand pages)
+  outputFileTracingIncludes: {
+    '/**': ['./content/articles/**'],
+  },
+
+  // Old German/Polish URLs -> English (de/pl locales were removed)
+  async redirects() {
+    return [
+      { source: '/:lang(de|pl)', destination: '/en', permanent: true },
+      { source: '/:lang(de|pl)/:path*', destination: '/en/:path*', permanent: true },
+    ];
+  },
+
   // Enable React strict mode for better development experience
   reactStrictMode: true,
 

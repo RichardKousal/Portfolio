@@ -2,9 +2,7 @@
   "header": {
     "name": "Richard Kousal",
     "email": "kousal.richard@gmail.com",
-    "phone": "+420 604 674 931",
-    "toggleProfessional": "Profesní",
-    "togglePersonal": "Osobní"
+    "phone": "+420 604 674 931"
   },
   "notFound": {
     "title": "Stránka nenalezena",
@@ -25,7 +23,7 @@
     "specialization": "Specializace",
     "languages": "Jazyky",
     "locationValue": "Rokytnice n. J. / Praha",
-    "availabilityValue": "Otevřen příležitostem",
+    "availabilityValue": "Otevřen spolupráci a sdílení know-how",
     "specializationValue": "QA Lead, AI-Driven QA, Playwright",
     "languagesValue": "ČJ (rodilý), AJ (pokročilá)",
     "generatedFrom": "Generováno z"
@@ -174,12 +172,222 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Richard Kousal | IČO: 09121251"
+    "copyright": "© {year} Richard Kousal | IČO: 09121251",
+    "rss": "RSS"
   },
   "languages": {
-    "cs": "Česky",
-    "en": "Anglicky",
-    "de": "Německy",
-    "pl": "Polsky"
+    "cs": "Čeština",
+    "en": "English"
+  },
+  "meta": {
+    "home": {
+      "title": "Richard Kousal – QA & Test Automation Lead | AI-driven QA",
+      "description": "Osobní web Richarda Kousala: AI-driven QA, AI agenti, Playwright a k6 v Etnetera Core. Články, projekty a vystoupení."
+    },
+    "articles": {
+      "title": "Články | Richard Kousal",
+      "description": "Články o QA v době AI, test automation a o tom, jak používám AI i mimo práci – třeba v penzionu v Krkonoších."
+    },
+    "projects": {
+      "title": "Projekty | Richard Kousal",
+      "description": "QA Control Center, QA Brain, k6 performance framework, QA Manual Copilot, MTP generátor a AI pro penzion v Krkonoších."
+    },
+    "about": {
+      "title": "O mně | Richard Kousal",
+      "description": "Profesní cesta, dovednosti a přístup ke QA – a taky hory, voda a rodinný penzion Apartmány Iwona."
+    }
+  },
+  "nav": {
+    "home": "Domů",
+    "articles": "Články",
+    "projects": "Projekty",
+    "about": "O mně",
+    "mainLabel": "Hlavní navigace",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "language": "Jazyk",
+    "skipLink": "Přeskočit na obsah",
+    "backToTop": "Zpět nahoru"
+  },
+  "common": {
+    "availability": "Otevřen spolupráci a sdílení know-how",
+    "readMore": "Číst dál",
+    "allArticles": "Všechny články",
+    "allProjects": "Všechny projekty",
+    "minRead": "{minutes} min čtení",
+    "draft": "Koncept",
+    "inCzech": "Česky",
+    "publishedOnEtnetera": "Vyšlo na blogu Etnetery",
+    "linkComing": "Odkaz doplníme",
+    "backToArticles": "Zpět na články",
+    "visitWebsite": "Navštívit web",
+    "opensInNewTab": "(otevře se v novém okně)"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "QA & Test Automation Lead · Etnetera Core",
+      "title": "Ahoj, jsem Richard.",
+      "lead": "Vedu QA v Etnetera Core a stavím AI-driven testování: agenti navrhují kritéria a testy, lidé rozhodují, čemu věřit. Píšu o tom, co funguje – v práci i v našem penzionu v Krkonoších.",
+      "ctaArticles": "Číst články",
+      "ctaProjects": "Na čem pracuji"
+    },
+    "latest": {
+      "title": "Nejnovější články"
+    },
+    "work": {
+      "title": "Na čem pracuji",
+      "intro": "Nástroje a experimenty, které teď stavím nebo používám každý den."
+    },
+    "talks": {
+      "title": "Vystoupení",
+      "upcoming": "Chystá se",
+      "past": "Proběhlo"
+    }
+  },
+  "talks": {
+    "items": [
+      {
+        "title": "Etnology #6",
+        "date": "2026-10-14",
+        "place": "Etnetera, Praha",
+        "description": "Živé demo QA Control Center v AI demozóně."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "text": "Rád proberu AI v QA, test automation nebo výkonnostní testy. Ozvi se e-mailem nebo na LinkedInu.",
+    "email": "E-mail",
+    "phone": "Telefon"
+  },
+  "articles": {
+    "title": "Články",
+    "intro": "Poznámky z praxe: QA v době AI, test automation a osobní experimenty s AI. Některé vycházejí na blogu Etnetery, jiné jen tady.",
+    "filterLabel": "Filtrovat články podle kategorie",
+    "filters": {
+      "all": "Vše",
+      "qa-ai": "QA & AI",
+      "personal": "Osobní"
+    },
+    "empty": "Zatím tu nic není – první články se připravují.",
+    "emptyFilter": "V této kategorii zatím nic není.",
+    "rss": "Odebírat přes RSS",
+    "fallbackNotice": "Tento článek zatím existuje jen v češtině.",
+    "publishedLabel": "Publikováno",
+    "todoDraftNotice": "Koncept – v produkci se nezobrazuje."
+  },
+  "projects": {
+    "title": "Projekty",
+    "intro": "Nástroje a experimenty kolem AI-driven QA – a jeden penzion v horách, na kterém si AI zkouším v praxi.",
+    "items": [
+      {
+        "id": "qa-control-center",
+        "name": "QA Control Center",
+        "tagline": "AI navrhne, člověk rozhodne.",
+        "description": "Pracovní prostředí, kde AI z požadavku navrhne akceptační kritéria, testovací scénáře a Playwright testy. Místo pass rate měří důvěru – jak dobře test skutečně ověřuje požadavek. Na klíčových místech stojí lidské brány: nic nejde dál bez schválení QA.",
+        "highlights": [
+          "Akceptační kritéria → scénáře → Playwright testy",
+          "Metrika důvěry místo pass rate",
+          "Lidské brány (human-in-the-loop)"
+        ],
+        "tags": [
+          "AI agents",
+          "Playwright",
+          "TypeScript"
+        ]
+      },
+      {
+        "id": "qa-brain",
+        "name": "QA Brain",
+        "tagline": "Sdílená QA pravidla pro AI agenty.",
+        "description": "Knihovna QA pravidel s jednoznačnými ID, ze které čerpají AI agenti v Claude Code i GitHub Copilotu. Agent se na pravidlo odkáže stejně jako člověk – a výstupy jsou konzistentní napříč týmy i nástroji.",
+        "highlights": [
+          "Pravidla s ID, na která se dá odkázat",
+          "Funguje v Claude Code i Copilotu",
+          "Jeden zdroj pravdy pro lidi i agenty"
+        ],
+        "tags": [
+          "Claude Code",
+          "GitHub Copilot",
+          "AI agents"
+        ]
+      },
+      {
+        "id": "k6-framework",
+        "name": "k6 performance framework",
+        "tagline": "Zátěžový test si objedná i PM.",
+        "description": "Framework nad k6, ve kterém si zátěžový test objedná i netechnický produktový manažer – odpoví na pět otázek, nebo nechá konfiguraci sestavit AI konfigurátor. Framework z toho připraví scénář, spustí ho a vrátí srozumitelný report.",
+        "highlights": [
+          "5 otázek místo skriptování",
+          "AI konfigurátor",
+          "Čitelný report i pro netechnické publikum"
+        ],
+        "tags": [
+          "k6",
+          "Performance testing",
+          "AI"
+        ]
+      },
+      {
+        "id": "qa-manual-copilot",
+        "name": "QA Manual Copilot",
+        "tagline": "AI parťák manuálního testera.",
+        "description": "Rozšíření pro Chrome, které pomáhá manuálnímu testerovi: navrhuje, co prověřit, a pomáhá zapisovat nálezy. Má jedno tvrdé pravidlo – nesmí nic tvrdit bez důkazu. Každé zjištění musí podložit screenshotem, logem nebo konkrétním krokem.",
+        "highlights": [
+          "Chrome extension",
+          "Žádné tvrzení bez důkazu",
+          "Pomoc s průzkumným testováním i zápisem nálezů"
+        ],
+        "tags": [
+          "Chrome extension",
+          "AI",
+          "Manual testing"
+        ]
+      },
+      {
+        "id": "mtp-generator",
+        "name": "MTP generátor",
+        "tagline": "Deterministický Master Test Plan.",
+        "description": "Generátor Master Test Planu, ve kterém struktura, rozsah a pravidla vznikají deterministicky ze vstupních dat. AI píše jen prózu – úvody a shrnutí. Výsledek je opakovatelný a dá se zpětně dohledat, odkud co pochází.",
+        "highlights": [
+          "Deterministická struktura",
+          "AI jen pro prózu",
+          "Opakovatelné a dohledatelné výstupy"
+        ],
+        "tags": [
+          "Test management",
+          "AI",
+          "Dokumentace"
+        ]
+      },
+      {
+        "id": "apartmany-iwona",
+        "name": "Apartmány Iwona + AI",
+        "tagline": "Penzion v Krkonoších jako laboratoř.",
+        "description": "Náš rodinný penzion v Krkonoších je moje osobní laboratoř. Sbírám data o cenách a obsazenosti, hledám v nich vzorce a automatizuji rutinu kolem rezervací a komunikace s hosty. O tom, co z toho funguje, budu psát.",
+        "highlights": [
+          "Data o cenách a obsazenosti",
+          "Automatizace rutiny kolem rezervací",
+          "AI v malém byznysu v praxi"
+        ],
+        "tags": [
+          "Data",
+          "Automatizace",
+          "AI"
+        ],
+        "url": "https://www.apartmany-iwona.cz"
+      }
+    ],
+    "featured": [
+      "qa-control-center",
+      "qa-brain",
+      "apartmany-iwona"
+    ]
+  },
+  "about": {
+    "title": "O mně",
+    "professionalTitle": "Profesně",
+    "personalTitle": "Mimo práci",
+    "downloadCv": "Stáhnout CV (PDF)"
   }
 }
