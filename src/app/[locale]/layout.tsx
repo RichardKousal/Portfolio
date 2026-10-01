@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Lato, JetBrains_Mono } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { locales, isLocale } from "@/i18n/routing";
 import { generateStructuredData } from "@/app/lib/seo";
+import { hasArticles } from "@/app/lib/articles";
 import { KEYWORDS } from "@/app/lib/metadata";
 import { PERSON, SITE_URL } from "@/app/lib/site";
 import Header from "@/app/components/Header";
@@ -18,16 +19,17 @@ import Footer from "@/app/components/Footer";
 import BackToTop from "@/app/components/BackToTop";
 import "@/app/globals.css";
 
-const montserrat = Montserrat({
+// Inter has hand-drawn Czech diacritics (ě, ř, ů); Lato's latin-ext set did not.
+const display = Inter_Tight({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-montserrat",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const lato = Lato({
-  weight: ["400", "700"],
+const sans = Inter({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-lato",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -37,20 +39,12 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-// Applies the saved/preferred theme before first paint (no flash).
-// Default is light; dark only when chosen, or when the OS prefers dark and
-// the visitor has not chosen anything yet.
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){}})()`;
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8f5ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#121416" },
-  ],
+  themeColor: "#fafaf8",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -91,7 +85,7 @@ export async function generateMetadata({
       ],
       apple: "/apple-touch-icon.svg",
     },
-    appleWebApp: { capable: true, statusBarStyle: "black-translucent" },
+    appleWebApp: { capable: true, statusBarStyle: "default" },
     formatDetection: { telephone: true, email: true },
     other: {
       "contact:email": PERSON.email,
@@ -118,13 +112,8 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      data-theme="light"
-      suppressHydrationWarning
-      className={`${montserrat.variable} ${lato.variable} ${mono.variable}`}
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
-      </head>
       <body className="flex min-h-screen flex-col bg-paper font-body text-ink antialiased">
         <script
           type="application/ld+json"
@@ -134,8 +123,8 @@ export default async function LocaleLayout({
           {t("skipLink")}
         </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main id="main-content" tabIndex={-1} className="flex-1 pt-16 md:pt-20 outline-none">
+          <Header showArticles={hasArticles()} />
+          <main id="main-content" tabIndex={-1} className="flex-1 pt-16 md:pt-[4.5rem] outline-none">
             {children}
           </main>
           <Footer locale={locale} />

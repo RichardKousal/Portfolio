@@ -68,34 +68,7 @@ test.describe("Portfolio - Profile data (LinkedIn 1:1)", () => {
 });
 
 test.describe("Portfolio - Theme", () => {
-  test("should default to light and remember the dark choice", { tag: "@a11y" }, async ({ browserContext }, testInfo) => {
-    testInfo.annotations.push({ type: "TestCaseID", description: "TC_053" });
-
-    // Arrange
-    await browserContext.page.emulateMedia({ colorScheme: "light" });
-    await browserContext.site.goto("/cs");
-    await browserContext.site.waitForPageLoad();
-    const html = browserContext.page.locator("html");
-    await expect(html).toHaveAttribute("data-theme", "light");
-
-    // Act
-    await browserContext.page.getByTestId("theme-toggle").click();
-
-    // Assert
-    await expect(html).toHaveAttribute("data-theme", "dark");
-    await browserContext.page.reload();
-    await expect(html).toHaveAttribute("data-theme", "dark");
-    expect(await browserContext.page.evaluate(() => localStorage.getItem("theme"))).toBe("dark");
-
-    // Act
-    await browserContext.site.waitForPageLoad();
-    await browserContext.page.getByTestId("theme-toggle").click();
-
-    // Assert
-    await expect(html).toHaveAttribute("data-theme", "light");
-  });
-
-  test("should follow a dark OS preference when nothing was chosen", { tag: "@a11y" }, async ({ browserContext }, testInfo) => {
+  test("should stay light even when the OS prefers dark", { tag: "@a11y" }, async ({ browserContext }, testInfo) => {
     testInfo.annotations.push({ type: "TestCaseID", description: "TC_054" });
 
     // Arrange
@@ -105,6 +78,8 @@ test.describe("Portfolio - Theme", () => {
     await browserContext.site.goto("/cs");
 
     // Assert
-    await expect(browserContext.page.locator("html")).toHaveAttribute("data-theme", "dark");
+    await expect(browserContext.page.getByTestId("theme-toggle")).toHaveCount(0);
+    const bg = await browserContext.page.evaluate(() => getComputedStyle(document.body).backgroundColor);
+    expect(bg).toBe("rgb(250, 250, 248)");
   });
 });

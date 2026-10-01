@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/base.fixture";
+import { test, expect, DRAFTS_VISIBLE } from "../fixtures/base.fixture";
 
 test.describe("Portfolio - Navigation", () => {
   test("should load the homepage with hero and availability", { tag: "@regression" }, async ({ browserContext }, testInfo) => {
@@ -31,11 +31,12 @@ test.describe("Portfolio - Navigation", () => {
     await browserContext.site.goto("/cs");
 
     // Act & Assert
-    for (const [key, heading] of [
-      ["articles", "Články"],
-      ["projects", "Projekty"],
-      ["about", "O mně"],
-    ] as const) {
+    const pages = [
+      ...(DRAFTS_VISIBLE ? [["articles", "Články"] as const] : []),
+      ["projects", "Projekty"] as const,
+      ["about", "O mně"] as const,
+    ];
+    for (const [key, heading] of pages) {
       await browserContext.site.navigateTo(key);
       await expect(browserContext.page.locator("h1")).toHaveText(heading);
       await browserContext.site.expectActiveNav(key);

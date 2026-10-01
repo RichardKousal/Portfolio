@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { FaRss } from "react-icons/fa";
 import type { Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/app/lib/metadata";
-import { getArticlesForLocale } from "@/app/lib/articles";
+import { getArticlesForLocale, hasArticles } from "@/app/lib/articles";
 import { toArticleCards } from "@/app/lib/article-cards";
 import ArticleFilter from "@/app/components/articles/ArticleFilter";
 
@@ -23,14 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ArticlesPage({ params }: Props) {
   const locale = (await params).locale as Locale;
   setRequestLocale(locale);
+  if (!hasArticles()) notFound();
   const t = await getTranslations("articles");
   const cards = await toArticleCards(getArticlesForLocale(locale), locale);
 
   return (
-    <div className="container-page py-14 sm:py-20">
-      <header className="mb-10 max-w-2xl">
-        <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">{t("title")}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-muted">{t("intro")}</p>
+    <div className="container-page py-16 sm:py-24">
+      <header className="mb-12 max-w-3xl">
+        <h1 className="page-title">{t("title")}</h1>
+        <p className="lead mt-5">{t("intro")}</p>
         <a href="/feed.xml" className="link mt-4 inline-flex items-center gap-2 text-sm">
           <FaRss className="h-3.5 w-3.5" aria-hidden />
           {t("rss")}

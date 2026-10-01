@@ -9,7 +9,6 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { locales } from "@/i18n/routing";
 import { PERSON } from "@/app/lib/site";
 import { analytics } from "@/app/lib/analytics";
-import ThemeToggle from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { href: "/", key: "home" },
@@ -33,7 +32,7 @@ function LanguageLinks({ testIdPrefix }: { testIdPrefix: string }) {
     <div
       role="group"
       aria-label={tNav("language")}
-      className="flex items-center rounded-lg border border-line p-0.5 font-mono text-xs"
+      className="flex items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold"
     >
       {locales.map((loc) => {
         const current = loc === locale;
@@ -48,7 +47,7 @@ function LanguageLinks({ testIdPrefix }: { testIdPrefix: string }) {
             aria-current={current ? "true" : undefined}
             data-testid={`${testIdPrefix}-lang-${loc}`}
             onClick={() => !current && analytics.languageChange(locale, loc)}
-            className={`rounded-md px-2 py-1 uppercase transition-colors ${
+            className={`rounded-full px-2.5 py-1 uppercase transition-colors ${
               current ? "bg-ink text-paper" : "text-muted hover:text-ink"
             }`}
           >
@@ -60,10 +59,11 @@ function LanguageLinks({ testIdPrefix }: { testIdPrefix: string }) {
   );
 }
 
-export default function Header() {
+export default function Header({ showArticles }: { showArticles: boolean }) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const navItems = NAV_ITEMS.filter((item) => showArticles || item.key !== "articles");
 
   // Close the mobile menu on navigation and on Escape
   useEffect(() => setOpen(false), [pathname]);
@@ -75,8 +75,8 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6 md:h-20">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-paper/85 backdrop-blur-xl backdrop-saturate-150">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8 md:h-[4.5rem]">
         <Link
           href="/"
           className="flex min-w-0 items-center gap-3 rounded-lg"
@@ -92,15 +92,18 @@ export default function Header() {
               priority
             />
           </span>
-          <span className="truncate font-heading text-lg font-bold text-ink">
-            Richard Kousal
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate font-heading text-[1.0625rem] font-bold tracking-tight text-ink">
+              Richard Kousal
+            </span>
+            <span className="hidden truncate text-xs text-muted sm:block">QA &amp; Test Automation Lead</span>
           </span>
         </Link>
 
         {/* Desktop navigation */}
         <nav aria-label={t("mainLabel")} className="hidden md:block" data-testid="nav-desktop">
           <ul className="flex items-center gap-1">
-            {NAV_ITEMS.map((item) => {
+            {navItems.map((item) => {
               const active = isActive(pathname, item.href);
               return (
                 <li key={item.key}>
@@ -108,10 +111,8 @@ export default function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     data-testid={`nav-${item.key}`}
-                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-                      active
-                        ? "text-ink underline decoration-accent decoration-2 underline-offset-[10px]"
-                        : "text-muted hover:text-ink"
+                    className={`rounded-full px-4 py-2 text-[0.9375rem] font-medium transition-colors ${
+                      active ? "bg-ink/[0.06] text-ink" : "text-muted hover:text-ink"
                     }`}
                   >
                     {t(item.key)}
@@ -122,34 +123,18 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <LanguageLinks testIdPrefix="desktop" />
-          <ThemeToggle labels={{ toDark: t("themeToDark"), toLight: t("themeToLight") }} />
-          <a
-            href={PERSON.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            onClick={() => analytics.socialClick("linkedin")}
-            className="rounded p-1 text-muted transition-colors hover:text-ink"
+          <Link
+            href={{ pathname: "/", hash: "contact" }}
+            className="inline-flex items-center rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition hover:bg-accent"
+            data-testid="header-contact"
           >
-            <FaLinkedin className="h-5 w-5" aria-hidden />
-          </a>
-          <a
-            href={PERSON.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            onClick={() => analytics.socialClick("github")}
-            className="rounded p-1 text-muted transition-colors hover:text-ink"
-          >
-            <FaGithub className="h-5 w-5" aria-hidden />
-          </a>
+            {t("contact")}
+          </Link>
         </div>
 
         {/* Mobile controls */}
-        <div className="flex items-center gap-1 md:hidden">
-        <ThemeToggle testId="theme-toggle-mobile" labels={{ toDark: t("themeToDark"), toLight: t("themeToLight") }} />
         <button
           type="button"
           data-testid="mobile-menu-toggle"
@@ -157,11 +142,10 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? t("closeMenu") : t("openMenu")}
-          className="rounded-lg p-2 text-muted transition-colors hover:text-ink"
+          className="rounded-lg p-2 text-muted transition-colors hover:text-ink md:hidden"
         >
           {open ? <MdClose className="h-6 w-6" aria-hidden /> : <MdMenu className="h-6 w-6" aria-hidden />}
         </button>
-        </div>
       </div>
 
       {/* Mobile menu */}
@@ -173,7 +157,7 @@ export default function Header() {
       >
         <nav aria-label={t("mainLabel")} className="mx-auto max-w-5xl px-4 py-4 sm:px-6">
           <ul className="flex flex-col gap-1">
-            {NAV_ITEMS.map((item) => {
+            {navItems.map((item) => {
               const active = isActive(pathname, item.href);
               return (
                 <li key={item.key}>

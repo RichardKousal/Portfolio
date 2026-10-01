@@ -397,6 +397,7 @@
     "articles": "Articles",
     "projects": "Projects",
     "about": "About",
+    "contact": "Contact",
     "mainLabel": "Main navigation",
     "footerLabel": "Footer navigation",
     "openMenu": "Open menu",
@@ -451,6 +452,23 @@
       "title": "Where you can hear me",
       "upcoming": "upcoming",
       "past": "done"
+    },
+    "facts": {
+      "years": "{years}+",
+      "yearsLabel": "years in QA and testing",
+      "role": "Etnetera Core",
+      "roleLabel": "leading QA and test automation",
+      "tools": "Playwright · k6",
+      "toolsLabel": "automation and load testing",
+      "projectsLabel": "AI projects I'm working on",
+      "label": "At a glance"
+    },
+    "eyebrows": {
+      "latest": "Articles",
+      "work": "Projects",
+      "series": "LinkedIn series",
+      "talks": "Talks",
+      "contact": "Contact"
     }
   },
   "talks": {
@@ -467,7 +485,8 @@
     "title": "Contact",
     "text": "If you want to talk about AI in testing, automation or load testing, send me an email or a message on LinkedIn.",
     "email": "Email",
-    "phone": "Phone"
+    "phone": "Phone",
+    "heading": "Let's talk"
   },
   "articles": {
     "title": "Articles",

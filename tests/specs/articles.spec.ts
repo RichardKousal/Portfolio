@@ -1,5 +1,23 @@
 import { test, expect, DRAFTS_VISIBLE } from "../fixtures/base.fixture";
 
+test.describe("Portfolio - Articles hidden without published articles", () => {
+  test.skip(DRAFTS_VISIBLE, "Drafts are visible in next dev, so the section exists there");
+
+  test("should hide the Articles section until something is published", { tag: "@regression" }, async ({ browserContext, request }, testInfo) => {
+    testInfo.annotations.push({ type: "TestCaseID", description: "TC_026" });
+
+    // Arrange & Act
+    await browserContext.site.goto("/cs");
+
+    // Assert
+    await expect(browserContext.page.locator('header a[href$="/articles"], footer a[href$="/articles"]')).toHaveCount(0);
+    await expect(browserContext.page.getByTestId("hero-cta-articles")).toHaveCount(0);
+    await expect(browserContext.page.getByTestId("hero-cta-projects")).toBeVisible();
+    expect((await request.get("/cs/articles")).status()).toBe(404);
+    expect(await (await request.get("/sitemap.xml")).text()).not.toContain("/articles");
+  });
+});
+
 // Seed articles are drafts: they are visible only when running against `next dev`.
 test.describe("Portfolio - Articles", () => {
   test.skip(!DRAFTS_VISIBLE, "Seed articles are drafts (visible only in next dev)");
@@ -113,7 +131,7 @@ test.describe("Portfolio - Feeds", () => {
 
     expect(sitemap.ok()).toBe(true);
     const xml = await sitemap.text();
-    for (const path of ["/cs/articles", "/en/projects", "/cs/about"]) {
+    for (const path of ["/en/projects", "/cs/about", ...(DRAFTS_VISIBLE ? ["/cs/articles"] : [])]) {
       expect(xml).toContain(`https://richardkousal.com${path}`);
     }
     expect(xml).not.toMatch(/richardkousal\.com\/(de|pl)\b/);

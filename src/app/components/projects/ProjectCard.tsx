@@ -25,21 +25,29 @@ export default function ProjectCard({ project, variant, labels }: Props) {
     return (
       <article
         data-testid="project-card"
-        className="card relative flex h-full flex-col p-5 transition-colors hover:border-ink/30 focus-within:ring-2 focus-within:ring-accent sm:p-6"
+        className="card card-interactive group relative flex h-full flex-col p-6 focus-within:ring-2 focus-within:ring-accent sm:p-7"
       >
-        <h3 className="font-heading text-lg font-semibold">
-          <Link
-            href={`/projects#${project.id}`}
-            className="after:absolute after:inset-0 after:rounded-xl after:content-[''] hover:text-accent focus-visible:outline-none"
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="font-heading text-xl font-semibold tracking-tight">
+            <Link
+              href={`/projects#${project.id}`}
+              className="after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus-visible:outline-none"
+            >
+              {project.name}
+            </Link>
+          </h3>
+          <span
+            aria-hidden
+            className="mt-1 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent"
           >
-            {project.name}
-          </Link>
-        </h3>
-        <p className="mt-1 text-sm font-semibold text-accent">{project.tagline}</p>
-        <div className="mt-3 flex-1">
-          <p className="line-clamp-4 text-sm leading-relaxed text-muted">{project.description}</p>
+            →
+          </span>
         </div>
-        <div className="mt-4">
+        <p className="mt-2 font-medium text-accent">{project.tagline}</p>
+        <div className="mt-3 flex-1">
+          <p className="line-clamp-4 text-[0.9375rem] leading-relaxed text-muted">{project.description}</p>
+        </div>
+        <div className="mt-6">
           <Tags tags={project.tags} />
         </div>
       </article>
@@ -52,23 +60,23 @@ export default function ProjectCard({ project, variant, labels }: Props) {
       id={project.id}
       aria-labelledby={headingId}
       data-testid="project-card"
-      className="scroll-mt-28 border-t border-line py-10 first:border-t-0 first:pt-0 md:grid md:grid-cols-[14rem_1fr] md:gap-10"
+      className="card scroll-mt-28 p-6 sm:p-10 md:grid md:grid-cols-[16rem_1fr] md:gap-12"
     >
       <div>
-        <h2 id={headingId} className="font-heading text-xl font-bold sm:text-2xl">
+        <h2 id={headingId} className="font-heading text-2xl font-bold tracking-tight sm:text-[1.75rem]">
           {project.name}
         </h2>
-        <p className="mt-1 text-sm font-semibold text-accent">{project.tagline}</p>
+        <p className="mt-2 font-medium text-accent">{project.tagline}</p>
       </div>
-      <div className="mt-4 max-w-prose md:mt-0">
-        <p className="leading-relaxed">{project.description}</p>
+      <div className="mt-5 max-w-prose md:mt-0">
+        <p className="text-lg leading-relaxed">{project.description}</p>
         {project.extra && labels && (
           <p className="mt-4 leading-relaxed text-muted">
-            <span className="mr-2 font-mono text-xs uppercase tracking-wider text-ok">+ {labels.extra}</span>
+            <span className="mr-2 text-xs font-semibold uppercase tracking-[0.14em] text-ok">+ {labels.extra}</span>
             {project.extra}
           </p>
         )}
-        <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-5">
           <Tags tags={project.tags} />
           {project.url && labels && (
             <a href={project.url} target="_blank" rel="noopener noreferrer" className="link inline-flex items-center gap-2 text-sm">

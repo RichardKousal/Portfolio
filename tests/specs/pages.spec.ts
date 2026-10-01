@@ -1,6 +1,9 @@
-import { test, expect } from "../fixtures/base.fixture";
+import { test, expect, DRAFTS_VISIBLE } from "../fixtures/base.fixture";
 
-const PAGES = ["/cs", "/cs/articles", "/cs/projects", "/cs/about", "/en", "/en/articles", "/en/projects", "/en/about"];
+// Articles exist only while drafts are visible (next dev); production hides the section.
+const PAGES = ["/cs", "/cs/projects", "/cs/about", "/en", "/en/projects", "/en/about"].concat(
+  DRAFTS_VISIBLE ? ["/cs/articles", "/en/articles"] : []
+);
 
 test.describe("Portfolio - Projects & About", () => {
   test("should list all six projects", { tag: "@regression" }, async ({ browserContext }, testInfo) => {

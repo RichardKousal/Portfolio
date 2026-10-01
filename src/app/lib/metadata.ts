@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { locales, type Locale } from "@/i18n/routing";
 import { OG_LOCALE, SITE_URL, localeUrl } from "./site";
+import { hasArticles } from "./articles";
 
 export const KEYWORDS = [
   "AI-driven QA",
@@ -62,7 +63,7 @@ export function buildPageMetadata({
     alternates: {
       canonical: url,
       languages,
-      types: { "application/rss+xml": `${SITE_URL}/feed.xml` },
+      ...(hasArticles() && { types: { "application/rss+xml": `${SITE_URL}/feed.xml` } }),
     },
     openGraph: {
       type,

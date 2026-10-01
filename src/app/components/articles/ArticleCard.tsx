@@ -23,7 +23,7 @@ export interface ArticleCardData {
 
 export default function ArticleCard({ article }: { article: ArticleCardData }) {
   const titleClass =
-    "after:absolute after:inset-0 after:rounded-xl after:content-[''] hover:text-accent focus-visible:outline-none";
+    "after:absolute after:inset-0 after:rounded-2xl after:content-[''] hover:text-accent focus-visible:outline-none";
 
   return (
     <article
@@ -31,7 +31,7 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
       data-category={article.category}
       data-type={article.external ? "external" : "own"}
       lang={article.lang}
-      className="card relative flex h-full flex-col p-5 transition-colors hover:border-ink/30 focus-within:ring-2 focus-within:ring-accent sm:p-6"
+      className="card card-interactive relative flex h-full flex-col p-6 focus-within:ring-2 focus-within:ring-accent sm:p-7"
     >
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <Verdict kind={article.category === "qa-ai" ? "pass" : "info"}>{article.categoryLabel}</Verdict>
@@ -42,7 +42,7 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
         ))}
       </div>
 
-      <h3 className="font-heading text-lg font-semibold leading-snug text-ink sm:text-xl">
+      <h3 className="font-heading text-xl font-semibold leading-snug tracking-tight text-ink">
         {article.href === null ? (
           article.title
         ) : article.external ? (
@@ -59,7 +59,7 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
 
       <p className="mt-2 flex-1 leading-relaxed text-muted">{article.excerpt}</p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-muted">
+      <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
         <time dateTime={article.dateISO}>{article.dateLabel}</time>
         {article.metaLabel && (
           <>

@@ -115,6 +115,11 @@ export function getAllArticles(): Article[] {
   return articles;
 }
 
+/** Whether the Articles section exists at all (hidden in production until one is published). */
+export function hasArticles(): boolean {
+  return getAllArticles().length > 0;
+}
+
 function stripContent({ content: _content, ...meta }: Article): ArticleMeta {
   return meta;
 }

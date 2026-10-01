@@ -26,12 +26,12 @@ export default async function ProjectsPage({ params }: Props) {
   const { items, extraLabel } = await getProjects(locale);
 
   return (
-    <div className="container-page py-14 sm:py-20">
-      <header className="mb-14 max-w-2xl">
-        <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">{t("title")}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-muted">{t("intro")}</p>
+    <div className="container-page py-16 sm:py-24">
+      <header className="mb-12 max-w-3xl sm:mb-16">
+        <h1 className="page-title">{t("title")}</h1>
+        <p className="lead mt-5">{t("intro")}</p>
       </header>
-      <div data-testid="project-list">
+      <div data-testid="project-list" className="flex flex-col gap-5 sm:gap-6">
         {items.map((p) => (
           <ProjectCard
             key={p.id}

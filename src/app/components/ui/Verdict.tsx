@@ -24,7 +24,7 @@ export default function Verdict({
     <span
       data-testid={testId}
       data-verdict={kind}
-      className={`inline-flex items-center gap-1.5 rounded border px-1.5 py-0.5 font-mono text-[0.72rem] font-medium leading-none ${style.className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold leading-none ${style.className}`}
     >
       <span aria-hidden>{symbol ?? style.symbol}</span>
       {children}

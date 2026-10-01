@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/routing";
-import { getAllArticles } from "@/app/lib/articles";
+import { getAllArticles, hasArticles } from "@/app/lib/articles";
 import { localeUrl } from "@/app/lib/site";
 
 const PAGES = [
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const languages = (path: string) =>
     Object.fromEntries(locales.map((l) => [l, localeUrl(l, path)]));
 
-  const pages = PAGES.flatMap((p) =>
+  const pages = PAGES.filter((p) => p.path !== "/articles" || hasArticles()).flatMap((p) =>
     locales.map((locale) => ({
       url: localeUrl(locale, p.path),
       lastModified: now,

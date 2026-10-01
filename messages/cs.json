@@ -397,6 +397,7 @@
     "articles": "Články",
     "projects": "Projekty",
     "about": "O mně",
+    "contact": "Kontakt",
     "mainLabel": "Hlavní navigace",
     "footerLabel": "Navigace v patičce",
     "openMenu": "Otevřít menu",
@@ -451,6 +452,23 @@
       "title": "Kde mě uslyšíte",
       "upcoming": "chystá se",
       "past": "proběhlo"
+    },
+    "facts": {
+      "years": "{years}+",
+      "yearsLabel": "let v QA a testování",
+      "role": "Etnetera Core",
+      "roleLabel": "vedu QA a automatizaci testů",
+      "tools": "Playwright · k6",
+      "toolsLabel": "automatizace a zátěžové testy",
+      "projectsLabel": "projektů s AI, na kterých dělám",
+      "label": "Ve zkratce"
+    },
+    "eyebrows": {
+      "latest": "Články",
+      "work": "Projekty",
+      "series": "Série na LinkedInu",
+      "talks": "Vystoupení",
+      "contact": "Kontakt"
     }
   },
   "talks": {
@@ -467,7 +485,8 @@
     "title": "Kontakt",
     "text": "Když chceš probrat AI v testování, automatizaci nebo zátěžové testy, napiš mi na e-mail nebo na LinkedIn.",
     "email": "E-mail",
-    "phone": "Telefon"
+    "phone": "Telefon",
+    "heading": "Pojďme to probrat"
   },
   "articles": {
     "title": "Články",

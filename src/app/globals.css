@@ -2,86 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme tokens (RGB triplets). Light is the default; dark is opt-in via
-   data-theme="dark" (set before paint by the inline script in the layout). */
+/* Color tokens (RGB triplets). The site is light only. */
 :root {
-  --paper: 248 245 239;
-  --surface: 255 253 248;
-  --line: 222 215 202;
-  --ink: 29 28 26;
-  --muted: 92 87 79;
-  --accent: 11 110 133;
+  --paper: 250 250 248;
+  --surface: 255 255 255;
+  --line: 228 228 223;
+  --ink: 15 23 32;
+  --muted: 84 92 102;
+  --accent: 10 102 128;
   --accent-ink: 255 255 255;
-  --ok: 23 102 58;
-  --warn: 138 75 12;
+  --ok: 21 112 66;
+  --warn: 150 82 12;
   color-scheme: light;
-}
-
-[data-theme="dark"] {
-  --paper: 18 20 22;
-  --surface: 26 29 32;
-  --line: 48 53 58;
-  --ink: 232 230 227;
-  --muted: 163 162 159;
-  --accent: 58 208 232;
-  --accent-ink: 11 18 20;
-  --ok: 95 211 141;
-  --warn: 242 193 78;
-  color-scheme: dark;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-paper text-ink;
+    @apply bg-paper text-[1.0625rem] leading-relaxed text-ink;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   ::selection {
-    @apply bg-accent/25 text-ink;
+    @apply bg-accent/20 text-ink;
   }
 
   :focus-visible {
     outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 }
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-5xl px-4 sm:px-6;
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
 
+  /* Small label above headings */
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.14em] text-muted;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-accent/60;
+  }
+
+  .page-title {
+    @apply font-heading text-[2.5rem] font-bold leading-[1.05] tracking-[-0.025em] text-ink sm:text-6xl;
   }
 
   .section-title {
-    @apply font-heading text-2xl font-bold tracking-tight text-ink sm:text-3xl;
+    @apply font-heading text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl;
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-muted sm:text-xl;
   }
 
   .card {
-    @apply rounded-xl border border-line bg-surface;
+    @apply rounded-2xl border border-line bg-surface shadow-card;
+  }
+
+  .card-interactive {
+    @apply transition duration-200 hover:-translate-y-0.5 hover:border-ink/15 hover:shadow-lift motion-reduce:hover:translate-y-0;
   }
 
   .chip {
-    @apply inline-flex items-center rounded border border-line px-2 py-0.5 font-mono text-xs text-muted;
+    @apply inline-flex items-center rounded-full bg-ink/[0.05] px-2.5 py-1 text-xs font-medium text-muted;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90;
+    @apply inline-flex min-h-[2.75rem] items-center justify-center gap-2 rounded-full bg-ink px-6 py-2.5 text-[0.9375rem] font-semibold text-paper transition hover:bg-accent;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink/40;
+    @apply inline-flex min-h-[2.75rem] items-center justify-center gap-2 rounded-full border border-ink/15 bg-surface px-6 py-2.5 text-[0.9375rem] font-semibold text-ink transition hover:border-ink/40;
   }
 
   .link {
-    @apply font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent;
+    @apply font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-accent;
   }
 
   .skip-to-content {
@@ -101,7 +120,7 @@
   @apply mt-5;
 }
 .prose-article h2 {
-  @apply mt-12 font-heading text-2xl font-bold;
+  @apply mt-12 font-heading text-2xl font-bold tracking-tight;
 }
 .prose-article h3 {
   @apply mt-8 font-heading text-xl font-semibold;
@@ -110,7 +129,7 @@
   @apply text-accent underline underline-offset-4;
 }
 .prose-article strong {
-  @apply font-bold;
+  @apply font-semibold;
 }
 .prose-article ul {
   @apply list-disc space-y-2 pl-6;
@@ -119,13 +138,13 @@
   @apply list-decimal space-y-2 pl-6;
 }
 .prose-article blockquote {
-  @apply border-l-2 border-warn pl-4 text-muted;
+  @apply border-l-2 border-accent pl-4 text-muted;
 }
 .prose-article code {
-  @apply rounded bg-ink/[0.07] px-1.5 py-0.5 font-mono text-[0.88em];
+  @apply rounded bg-ink/[0.06] px-1.5 py-0.5 font-mono text-[0.88em];
 }
 .prose-article pre {
-  @apply overflow-x-auto rounded-lg border border-line bg-surface p-4 text-sm;
+  @apply overflow-x-auto rounded-xl border border-line bg-surface p-4 text-sm;
 }
 .prose-article pre code {
   @apply bg-transparent p-0;
@@ -138,7 +157,7 @@
   @apply border border-line px-3 py-2 text-left;
 }
 .prose-article img {
-  @apply rounded-lg;
+  @apply rounded-xl;
 }
 .prose-article hr {
   @apply border-line;

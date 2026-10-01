@@ -53,8 +53,8 @@ export function generateStructuredData(locale: Locale) {
         name: PERSON.name,
         description:
           locale === "cs"
-            ? "Osobní web Richarda Kousala – AI-driven QA, test automation, články a projekty."
-            : "Personal site of Richard Kousal – AI-driven QA, test automation, articles and projects.",
+            ? "Osobní web Richarda Kousala – AI-driven QA, test automation a projekty."
+            : "Personal site of Richard Kousal – AI-driven QA, test automation and projects.",
         inLanguage: locale,
         publisher: { "@id": `${SITE_URL}/#person` },
       },
