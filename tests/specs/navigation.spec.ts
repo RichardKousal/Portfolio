@@ -8,7 +8,7 @@ test.describe("Portfolio - Navigation", () => {
     await browserContext.site.goto("/cs");
 
     // Assert
-    await browserContext.site.verifyPageTitle(/Richard Kousal – QA & Test Automation Lead/);
+    await browserContext.site.verifyPageTitle(/Richard Kousal | QA & Test Automation Lead/);
     await expect(browserContext.page.getByTestId("home-hero")).toBeVisible();
     await expect(browserContext.page.getByTestId("availability")).toHaveText(
       "Otevřen spolupráci a sdílení know-how"
@@ -16,6 +16,12 @@ test.describe("Portfolio - Navigation", () => {
     await expect(browserContext.page.getByTestId("home-projects")).toBeVisible();
     await expect(browserContext.page.getByTestId("home-talks")).toContainText("Etnology #6");
     await expect(browserContext.page.getByTestId("home-contact")).toBeVisible();
+    await expect(browserContext.page.locator("h1")).toHaveText("AI navrhuje, já rozhoduju.");
+    await expect(browserContext.page.getByTestId("status-line")).toContainText("stavím QA Control Center");
+    if (new Date().toISOString().slice(0, 10) <= "2026-10-14") {
+      await expect(browserContext.page.getByTestId("status-line")).toContainText("Etnology #6, 14. 10.");
+    }
+    await expect(browserContext.page.getByTestId("series-linkedin")).toHaveAttribute("href", "https://www.linkedin.com/in/richard-kousal");
   });
 
   test("should navigate through all pages via the header", { tag: "@regression" }, async ({ browserContext }, testInfo) => {

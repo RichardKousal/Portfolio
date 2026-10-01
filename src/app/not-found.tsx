@@ -4,13 +4,13 @@ import "@/app/globals.css";
 export default function GlobalNotFound() {
   return (
     <html lang="cs">
-      <body className="flex min-h-screen items-center justify-center bg-dark-bg px-4 font-body text-dark-text">
+      <body className="flex min-h-screen items-center justify-center bg-paper px-4 font-body text-ink">
         <main className="text-center">
-          <h1 className="font-heading text-6xl font-bold gradient-text">404</h1>
-          <p className="mt-4 text-dark-muted">Stránka nenalezena · Page not found</p>
+          <h1 className="font-mono text-2xl text-warn">✗ 404</h1>
+          <p className="mt-4 text-muted">Stránka nenalezena · Page not found</p>
           <p className="mt-6 flex justify-center gap-4">
-            <a href="/cs" className="link-arrow">Domů</a>
-            <a href="/en" className="link-arrow">Home</a>
+            <a href="/cs" className="link">Domů</a>
+            <a href="/en" className="link">Home</a>
           </p>
         </main>
       </body>

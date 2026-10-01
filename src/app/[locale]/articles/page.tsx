@@ -27,20 +27,18 @@ export default async function ArticlesPage({ params }: Props) {
   const cards = await toArticleCards(getArticlesForLocale(locale), locale);
 
   return (
-    <div className="container-page py-12 sm:py-16">
+    <div className="container-page py-14 sm:py-20">
       <header className="mb-10 max-w-2xl">
-        <h1 className="font-heading text-4xl font-bold sm:text-5xl">
-          <span className="gradient-text">{t("title")}</span>
-        </h1>
-        <p className="mt-4 text-lg leading-relaxed text-dark-muted">{t("intro")}</p>
-        <a href="/feed.xml" className="link-arrow mt-4 inline-flex items-center gap-2 text-sm">
+        <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">{t("title")}</h1>
+        <p className="mt-4 text-lg leading-relaxed text-muted">{t("intro")}</p>
+        <a href="/feed.xml" className="link mt-4 inline-flex items-center gap-2 text-sm">
           <FaRss className="h-3.5 w-3.5" aria-hidden />
           {t("rss")}
         </a>
       </header>
 
       {cards.length === 0 ? (
-        <p className="card p-6 text-dark-muted" data-testid="articles-empty">{t("empty")}</p>
+        <p className="card p-6 text-muted" data-testid="articles-empty">{t("empty")}</p>
       ) : (
         <ArticleFilter
           articles={cards}

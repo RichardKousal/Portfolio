@@ -5,81 +5,244 @@
     "phone": "+420 604 674 931"
   },
   "notFound": {
-    "title": "Stránka nenalezena",
-    "description": "Omlouváme se, ale stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
-    "homeButton": "Zpět domů",
+    "title": "Tahle stránka tu není",
+    "description": "Možná se přesunula, nebo nikdy neexistovala. Zkus to z úvodní stránky.",
+    "homeButton": "Na úvod",
     "backButton": "Zpět"
   },
   "error": {
-    "title": "Něco se pokazilo",
-    "description": "Omlouváme se, ale došlo k neočekávané chybě. Zkuste to prosím znovu.",
+    "title": "Něco se rozbilo",
+    "description": "Tohle se stát nemělo. Zkus to prosím znovu.",
     "retryButton": "Zkusit znovu",
-    "homeButton": "Zpět domů"
+    "homeButton": "Na úvod"
   },
   "pdf": {
     "aboutMe": "O MNĚ",
-    "location": "Lokace",
+    "location": "Lokalita",
     "availability": "Dostupnost",
     "specialization": "Specializace",
     "languages": "Jazyky",
     "locationValue": "Rokytnice n. J. / Praha",
     "availabilityValue": "Otevřen spolupráci a sdílení know-how",
-    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
-    "languagesValue": "ČJ (rodilý), AJ (pokročilá)",
-    "generatedFrom": "Generováno z"
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright, k6",
+    "languagesValue": "čeština a polština (rodilá), angličtina (omezená pracovní)",
+    "generatedFrom": "Generováno z",
+    "present": "současnost",
+    "issued": "vydáno",
+    "expires": "platnost do",
+    "credentialId": "ID"
   },
   "professional": {
     "hero": {
-      "title": "Ahoj, jsem Richard",
-      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
-      "description": "Vedu a buduji moderní QA týmy, které drží krok s rychlým vývojem softwaru a nástupem AI. Zaměřuji se na AI-driven testování a agentové přístupy k eliminaci rutinní práce a posouvání kvality na začátek vývoje. QA vnímám jako partnera produktu a engineeringu, ne jako finálního vrátného — automatizace řeší exekuci, QA se soustředí na rizika a kontinuální zlepšování. Zůstávám hands-on: Playwright, TypeScript, CI/CD, Azure.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation & Performance Testing | Playwright | k6",
       "btnLinkedIn": "LinkedIn",
-      "btnContact": "Kontaktuj mě",
-      "btnDownloadCV": "Stáhni CV"
+      "btnContact": "Napiš mi",
+      "btnDownloadCV": "Stáhnout CV"
     },
+    "summary": [
+      "Vedu a pomáhám budovat moderní QA týmy, které stíhají tempo vývoje softwaru i nástup AI.",
+      "Zaměřuju se na vedení QA, strategii kvality a testování s pomocí AI. Baví mě hledat, jak agenty a automatizací odstranit opakovanou QA práci a dostat kvalitu co nejblíž začátku vývoje. Ideálně už do komunikace s klientem a do návrhu řešení.",
+      "QA pro mě je partner produktu a vývoje, ne vrátný na konci. Spouštění testů a rutinní ověřování má dělat automatizace a AI. QA se má starat o rizika, celkovou kvalitu a o to, aby se týmy i produkty pořád zlepšovaly.",
+      "Hlavně vedu, ale tam, kde to pomůže, sahám i do kódu. Pracuju s Playwrightem a TypeScriptem/JavaScriptem, výkonnostní a zátěžové testy dělám v k6 a mám zkušenosti s CI/CD, DevOps a cloudem Azure. Díky tomu umím QA strategii propojit s tím, co se reálně staví, aby nezůstala jen na papíře.",
+      "Dobré QA podle mě stojí na jasné odpovědnosti, důvěře v týmu, rozhodování podle dat a rozumném použití automatizace a AI."
+    ],
     "experience": {
       "title": "Zkušenosti",
+      "present": "dnes",
       "timeline": [
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "duben 2025 - současnost",
-          "type": "Freelance",
-          "responsibilities": [
-            "Vedení QA napříč projekty s odpovědností za QA strategii a směřování automatizace.",
-            "Budování škálovatelných QA procesů a mentoring QA inženýrů.",
-            "Zavádění AI-driven a agent-based QA přístupů pro optimalizaci testování.",
-            "Propojování kvality s produktovými a engineeringovými cíli."
-          ]
+          "location": "Praha",
+          "start": "2025-04",
+          "end": null,
+          "intro": [
+            "V Etnetera Core vedu QA napříč projekty. Mám na starosti QA strategii, standardy kvality, směr automatizace testů a rozvoj výkonnostního testování.",
+            "Kromě budování škálovatelných QA procesů, mentoringu QA inženýrů a ladění kvality s cíli produktu a vývoje se čím dál víc věnuju tomu, jak AI mění roli QA v moderním vývoji softwaru.",
+            "Nechci jen automatizovat jednotlivé testovací úkoly. Chci QA posunout k modelu, kde je AI přirozenou součástí práce a kde testerské myšlení slouží jako základ pro řízení AI agentů. Tím myslím kritické uvažování, hledání rizik, práci s nejistotou a schopnost systém zpochybnit.",
+            "AI v tomhle modelu přebírá rutinní a opakovatelnou práci. QA inženýři se posouvají k roli, kde určují strategii, kontext, rizika, hranice kvality a principy validace. AI jim slouží jako výkonná vrstva, která velkou část testování zvládne sama.",
+            "Tak vidím budoucnost QA: méně ruční rutiny a víc přemýšlení o kvalitě jako o celém systému. Lidský tester svým úsudkem vede inteligentní autonomní agenty napříč celým vývojovým cyklem."
+          ],
+          "bullets": [],
+          "outro": []
         },
         {
           "role": "QA Engineer",
           "company": "Etnetera Core",
-          "period": "leden 2025 - současnost",
-          "type": "Self-employed",
-          "responsibilities": [
-            "Návrh a vývoj automatizací pro nové i existující projekty pomocí Playwright.",
-            "Zefektivňování procesů a zrychlování dodávek."
-          ]
+          "location": "Praha",
+          "start": "2025-01",
+          "end": null,
+          "intro": [
+            "Navrhuju a vyvíjím automatizaci v Playwrightu pro nové i stávající projekty. Cílem je zjednodušit procesy a zrychlit dodávky."
+          ],
+          "bullets": [],
+          "outro": []
         },
         {
           "role": "QA Team Lead / Test Engineer",
           "company": "DODO",
-          "period": "květen 2022 - leden 2025",
-          "responsibilities": [
-            "<strong>Vedení lidí v QA:</strong> Dohled nad výkonem a vytížením týmu.",
-            "<strong>Mentoring:</strong> Návrh a údržba automatizovaných testů (Cypress) pro kritické scénáře.",
-            "Navrhování zlepšení kvality a efektivní komunikace se stakeholders."
+          "location": "Česko",
+          "start": "2022-05",
+          "end": "2025-01",
+          "intro": [],
+          "bullets": [
+            "Vedení týmu: dohled nad výkonem a vytížením týmu.",
+            "Automatizace testů: návrh a údržba automatizovaných testů pro kritické scénáře.",
+            "Hodnocení a zlepšování kvality: vyhodnocování výsledků a návrhy na zlepšení.",
+            "Dokumentace: péče o testovací dokumentaci.",
+            "Podpora první úrovně (L1): první pomoc uživatelům a řešení jejich problémů.",
+            "Rychlá reakce na incidenty: řešení incidentů od uživatelů tak, aby výpadky byly co nejkratší.",
+            "Komunikace se stakeholdery: spolupráce s klienty a stakeholdery."
+          ],
+          "outro": [
+            "K roli patřilo i vedení releasů, aby proběhly bez problémů, a k tomu běžná QA a testovací práce."
           ]
         },
         {
           "role": "QA Tester",
           "company": "DODO",
-          "period": "květen 2021 - květen 2022",
-          "responsibilities": [
-            "Optimalizace testovacích scénářů, BE/FE testování (E2E, integrační).",
-            "Testování hybridních (nativní & web) mobilních aplikací."
+          "location": "Praha",
+          "start": "2021-05",
+          "end": "2022-05",
+          "intro": [],
+          "bullets": [
+            "Optimalizace testovacích scénářů: aktualizace a zefektivnění scénářů.",
+            "Zlepšování procesů: vyšší kvalita díky revizi a úpravám procesů.",
+            "Testování BE a FE: specializace na backend a frontend aplikace pro doručení ještě týž den a druhý den.",
+            "Různé typy testů: zapojení do různých typů testování, včetně integračních a end-to-end (E2E) testů.",
+            "Mobilní testování: důkladné testování hybridních (nativních i webových) mobilních aplikací na různých zařízeních.",
+            "Testování platebních bran: aby platby fungovaly hladce a spolehlivě.",
+            "Sdílení znalostí v týmu: aktivní sdílení znalostí a dovedností při řešení složitých testovacích problémů."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Customer Support PL/ENG",
+          "company": "Nokian Tyres plc",
+          "location": "Praha",
+          "start": "2019-03",
+          "end": "2021-04",
+          "intro": [],
+          "bullets": [
+            "Zákaznická podpora: dotazy, stížnosti a reklamace po telefonu, e-mailem i v chatu.",
+            "Znalost produktu: technické informace o produktech, aby si zákazník vybral správné pneumatiky.",
+            "Správa objednávek: zpracování a sledování objednávek, koordinace s logistikou.",
+            "Řešení problémů: vyřizování stížností a výměn podle firemních pravidel."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Sales Manager",
+          "company": "ConQuest entertainment a.s.",
+          "location": "Praha",
+          "start": "2017-01",
+          "end": "2019-03",
+          "intro": [],
+          "bullets": [
+            "Rozvoj obchodu: hledání nových obchodů, získávání klientů a růst prodejů produktů Nintendo.",
+            "Péče o partnery: budování a udržování vztahů s maloobchodními partnery a nabídka na míru.",
+            "Akce: plánování a realizace akcí, koordinace marketingu.",
+            "Překlady: překlad produktových informací do polštiny, aby se dostaly k většímu publiku."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Managing Director",
+          "company": "ForHandicap s.r.o.",
+          "location": "",
+          "start": "2015-05",
+          "end": "2017-12",
+          "intro": [],
+          "bullets": [
+            "Vedení a řízení distribuce aktivních vozíků v České republice.",
+            "Prodej aktivních vozíků, hlavně komunikace se zdravotními pojišťovnami, nadacemi a zákazníky."
+          ],
+          "outro": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Vzdělání",
+      "items": [
+        {
+          "school": "STŘEDNÍ ŠKOLA, Lomnice nad Popelkou, příspěvková organizace",
+          "degree": "zakončeno maturitní zkouškou",
+          "start": "2008",
+          "end": "2012",
+          "activities": [
+            "Redaktor krkonošského internetového rádia Kulíšek",
+            "Člen stravovací komise"
           ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Jazyky",
+      "items": [
+        {
+          "name": "Čeština",
+          "level": "rodilá úroveň"
+        },
+        {
+          "name": "Polština",
+          "level": "rodilá úroveň"
+        },
+        {
+          "name": "Angličtina",
+          "level": "omezená pracovní znalost"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifikáty",
+      "issued": "vydáno",
+      "expires": "platnost do",
+      "credentialId": "ID",
+      "verify": "ověřit",
+      "items": [
+        {
+          "name": "Preply - Successfully completing 30 hours of English lessons",
+          "authority": "Preply",
+          "issued": "2024-02",
+          "credentialId": "9FE84882"
+        },
+        {
+          "name": "Basic Managerial Skills",
+          "authority": "SOPHISTO",
+          "issued": "2023-07",
+          "expires": "2024-07"
+        },
+        {
+          "name": "Mentoring for Professionals",
+          "authority": "Femme Palette",
+          "issued": "2023-05",
+          "expires": "2028-05",
+          "credentialId": "TAK0IV9Z0T04",
+          "url": "https://backend.femmepalette.com/mentee_relation/certificate/TAK0IV9Z0T04/"
+        },
+        {
+          "name": "Introduction to Git and Gitlab",
+          "authority": "Tesena",
+          "issued": "2022-12",
+          "credentialId": "65366028",
+          "url": "https://www.credential.net/ff1658ec-41ca-4912-b7d7-10608f74412c"
+        },
+        {
+          "name": "Cypress.io bootcamp",
+          "authority": "Cypress.io",
+          "issued": "2021-11"
+        },
+        {
+          "name": "Learn CSS Course",
+          "authority": "Codecademy",
+          "issued": "2020-09",
+          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9a5bb1fc45b4281af1fffec93b0aaf05"
+        },
+        {
+          "name": "Learn HTML Course",
+          "authority": "Codecademy",
+          "issued": "2020-09",
+          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
         }
       ]
     },
@@ -87,74 +250,103 @@
       "title": "Dovednosti",
       "categories": [
         {
-          "name": "Tým & Strategie",
+          "name": "QA a strategie",
           "items": [
-            "QA Leadership",
-            "QA Strategie",
-            "Test Automation Strategy",
+            "QA strategie",
+            "Testovací strategie",
+            "Strategie automatizace testů",
+            "Transformace kvality",
             "Continuous Quality / Shift-Left",
-            "Mentoring",
-            "Agilní metodologie"
+            "Řízení rizik",
+            "Plánování testů",
+            "Zajištění kvality softwaru",
+            "Akceptační testy (UAT)",
+            "Hodnocení a zlepšování kvality"
           ]
         },
         {
-          "name": "AI & Automatizace",
+          "name": "Automatizace a nástroje",
           "items": [
-            "AI v testování softwaru",
-            "Agent-based QA",
             "Playwright",
+            "TypeScript / JavaScript",
+            "k6",
+            "Výkonnostní testování",
+            "Automatizace testů",
+            "Vývoj testů",
             "Cypress",
+            "Selenium",
+            "Testování API",
+            "Testování BE a FE",
+            "Mobilní testování",
+            "Testování platebních bran",
             "CI/CD",
             "DevOps"
           ]
         },
         {
-          "name": "Technologie",
+          "name": "AI",
           "items": [
-            "TypeScript",
-            "JavaScript",
-            "Azure",
-            "Git",
-            "GitLab",
-            "Postman",
-            "Temporal"
+            "AI v testování softwaru"
           ]
         },
         {
-          "name": "Jazyky",
+          "name": "Vedení lidí",
           "items": [
-            "Čeština (Nativní)",
-            "Polština (Nativní)",
-            "Angličtina (Pracovní)"
+            "QA Leadership",
+            "Vedení týmu",
+            "Mentoring",
+            "Sdílení znalostí",
+            "Komunikace se stakeholdery",
+            "Agilní vývoj",
+            "Plánování a koordinace",
+            "Týmová spolupráce"
+          ]
+        },
+        {
+          "name": "Další",
+          "items": [
+            "Kritické myšlení",
+            "Řešení problémů",
+            "Práce pod tlakem",
+            "Sebevzdělávání",
+            "Komunikační dovednosti",
+            "Komunikace se zákazníky",
+            "Orientace na zákazníka",
+            "Péče o zákazníky (CRM)",
+            "Obchod a rozvoj byznysu",
+            "Obchodní strategie",
+            "Strategické plánování",
+            "Organizace akcí",
+            "Komunikace s úřady",
+            "Znalosti ze zdravotnictví a techniky",
+            "Logistika"
           ]
         }
       ]
     },
     "vision": {
-      "title": "Můj přístup",
-      "text": "Technologie jsou důležité, ale na konci dne je to práce o lidech. Jsem týmový hráč s pozitivním přístupem k práci i životu. Věřím, že spokojený a motivovaný tým je základem pro dodání kvalitního produktu. Mým úkolem je nejen nastavovat procesy, ale hlavně vytvářet prostředí, kde se lidem dobře pracuje a kde má každý prostor růst."
+      "title": "Jak to dělám",
+      "text": "Technika je důležitá, ale nakonec jde o lidi. Spokojený tým, který má kam růst, udělá lepší produkt než tým s dokonalými procesy a špatnou náladou. Proto procesy jen nenastavuju. Hlavně se starám o to, aby se v týmu dobře pracovalo."
     }
   },
   "personal": {
     "intro": {
-      "title": "Když zavřu notebook...",
-      "description": "Technologie jsou moje profese, ale moji skutečnou vášní je svět venku. Svět, kde se počítá každý krok, dech a východ slunce. Věřím v rovnováhu a v to, že nejlepší nápady přicházejí, když má člověk čistou hlavu – a tu si nejlépe vyčistím v horách nebo na moři.",
-      "btnLinkedIn": "Propojme se",
-      "btnContact": "Napiš mi"
+      "title": "Když zavřu notebook",
+      "description": "Pracuju u počítače, ale hlavu si čistím venku. Nejradši v horách, jinak u moře. Nejlepší nápady mě stejně napadají, když na práci zrovna nemyslím."
     },
     "passions": {
-      "title": "Tam, kde dobíjím energii",
+      "title": "Kde dobíjím baterky",
       "categories": [
         {
           "name": "Hory",
-          "description": "Nejraději jsem v horách. Ten pocit, když zdoláte vrchol a za odměnu dostanete zasloužené výhledy, které můžete sdílet... Nebo brzy ráno, ještě před svítáním, nasadit skialpy a vyrazit vstříc tichu, prázdným svahům a východu slunce."
+          "description": "V horách je mi nejlíp. Vylézt nahoru a mít výhled, který stál za to. Nebo ráno před svítáním nazout skialpy a jít, dokud jsou svahy prázdné a je ticho."
         },
         {
           "name": "Voda a běh",
-          "description": "Stejně tak miluji rána na jachtě, kdy vás probudí slunce a první, co uděláte, je skok do moře. Běh v přírodě je pro mě zase forma aktivní meditace. Vypnu a hlavou mi samovolně plynou řešení problémů, které mě zrovna trápí."
+          "description": "Na lodi mě ráno vzbudí slunce a první, co udělám, je skok do moře. Běh v lese je pro mě meditace. Vypnu a řešení věcí z práce mi naskočí sama."
         },
         {
-          "name": "A když zbyde čas...",
+          "name": "A když zbyde čas",
           "items": [
             "Bouldering",
             "Kutilství",
@@ -166,9 +358,9 @@
       ]
     },
     "sideHustle": {
-      "title": "Můj projekt v pohostinství: Apartmány Iwona",
+      "title": "Apartmány Iwona",
       "link": "www.apartmany-iwona.cz",
-      "description": "Tohle není o kódu, ale o lidech. Ve volném čase se s vášní věnuji správě našeho rodinného penzionu. Starám se o kompletní zážitek pro hosty – od cenotvorby a komunikace při rezervacích až po finální údržbu, úklid (s důrazem na eko prostředky) a vytváření atmosféry, kde mohou lidé nejen sportovat, ale hlavně si opravdu odpočinout."
+      "description": "Náš rodinný penzion v Krkonoších. Řeším ceny, rezervace a psaní s hosty. Když je potřeba, tak i údržbu a úklid, ekologickými prostředky. Chci, aby si tu lidi hlavně odpočinuli."
     }
   },
   "footer": {
@@ -181,20 +373,20 @@
   },
   "meta": {
     "home": {
-      "title": "Richard Kousal – QA & Test Automation Lead | AI-driven QA",
-      "description": "Osobní web Richarda Kousala: AI-driven QA, AI agenti, Playwright a k6 v Etnetera Core. Články, projekty a vystoupení."
+      "title": "Richard Kousal | QA & Test Automation Lead",
+      "description": "Vedu QA v Etnetera Core. Píšu o testování s AI, Playwrightu a k6 a ukazuju, na čem zrovna dělám."
     },
     "articles": {
       "title": "Články | Richard Kousal",
-      "description": "Články o QA v době AI, test automation a o tom, jak používám AI i mimo práci – třeba v penzionu v Krkonoších."
+      "description": "Články o testování v době AI a o tom, jak AI používám i mimo práci, třeba v našem penzionu v Krkonoších."
     },
     "projects": {
       "title": "Projekty | Richard Kousal",
-      "description": "QA Control Center, QA Brain, k6 performance framework, QA Manual Copilot, MTP generátor a AI pro penzion v Krkonoších."
+      "description": "QA Control Center, QA Brain, framework nad k6, QA Manual Copilot, generátor MTP a AI pro penzion v Krkonoších."
     },
     "about": {
       "title": "O mně | Richard Kousal",
-      "description": "Profesní cesta, dovednosti a přístup ke QA – a taky hory, voda a rodinný penzion Apartmány Iwona."
+      "description": "Kde jsem pracoval, co umím, certifikáty a jazyky. A taky hory, moře a rodinný penzion."
     }
   },
   "nav": {
@@ -203,11 +395,14 @@
     "projects": "Projekty",
     "about": "O mně",
     "mainLabel": "Hlavní navigace",
+    "footerLabel": "Navigace v patičce",
     "openMenu": "Otevřít menu",
     "closeMenu": "Zavřít menu",
     "language": "Jazyk",
     "skipLink": "Přeskočit na obsah",
-    "backToTop": "Zpět nahoru"
+    "backToTop": "Zpět nahoru",
+    "themeToDark": "Zapnout tmavý režim",
+    "themeToLight": "Zapnout světlý režim"
   },
   "common": {
     "availability": "Otevřen spolupráci a sdílení know-how",
@@ -215,33 +410,46 @@
     "allArticles": "Všechny články",
     "allProjects": "Všechny projekty",
     "minRead": "{minutes} min čtení",
-    "draft": "Koncept",
-    "inCzech": "Česky",
+    "draft": "koncept",
+    "inCzech": "česky",
     "publishedOnEtnetera": "Vyšlo na blogu Etnetery",
-    "linkComing": "Odkaz doplníme",
+    "linkComing": "odkaz doplním",
     "backToArticles": "Zpět na články",
-    "visitWebsite": "Navštívit web",
+    "visitWebsite": "Web penzionu",
     "opensInNewTab": "(otevře se v novém okně)"
   },
   "home": {
     "hero": {
       "eyebrow": "QA & Test Automation Lead · Etnetera Core",
-      "title": "Ahoj, jsem Richard.",
-      "lead": "Vedu QA v Etnetera Core a stavím AI-driven testování: agenti navrhují kritéria a testy, lidé rozhodují, čemu věřit. Píšu o tom, co funguje – v práci i v našem penzionu v Krkonoších.",
+      "title": "AI navrhuje, já rozhoduju.",
+      "lead": "Jsem Richard a vedu QA v Etnetera Core. Stavím testování, kde AI napíše kritéria i testy a já říkám, čemu se dá věřit.",
       "ctaArticles": "Číst články",
-      "ctaProjects": "Na čem pracuji"
+      "ctaProjects": "Na čem dělám"
+    },
+    "status": {
+      "label": "Co se teď děje",
+      "now": "teď",
+      "nowValue": "stavím QA Control Center",
+      "nextTalk": "další vystoupení"
     },
     "latest": {
-      "title": "Nejnovější články"
+      "title": "Články"
     },
     "work": {
-      "title": "Na čem pracuji",
-      "intro": "Nástroje a experimenty, které teď stavím nebo používám každý den."
+      "title": "Na čem dělám",
+      "intro": "Pár věcí, které teď stavím. Většinu z nich používám každý den."
+    },
+    "series": {
+      "label": "série na LinkedInu",
+      "schedule": "každé úterý",
+      "title": "AI navrhuje, já rozhoduju",
+      "text": "Každé úterý dávám na LinkedIn jeden krátký příspěvek. Pokaždé jde o jednu skutečnou situaci, kdy mi AI něco navrhla a já musel rozhodnout, jestli to beru.",
+      "cta": "Sledovat na LinkedInu"
     },
     "talks": {
-      "title": "Vystoupení",
-      "upcoming": "Chystá se",
-      "past": "Proběhlo"
+      "title": "Kde mě uslyšíte",
+      "upcoming": "chystá se",
+      "past": "proběhlo"
     }
   },
   "talks": {
@@ -250,46 +458,43 @@
         "title": "Etnology #6",
         "date": "2026-10-14",
         "place": "Etnetera, Praha",
-        "description": "Živé demo QA Control Center v AI demozóně."
+        "description": "V AI demozóně ukážu QA Control Center naživo."
       }
     ]
   },
   "contact": {
     "title": "Kontakt",
-    "text": "Rád proberu AI v QA, test automation nebo výkonnostní testy. Ozvi se e-mailem nebo na LinkedInu.",
+    "text": "Když chceš probrat AI v testování, automatizaci nebo zátěžové testy, napiš mi na e-mail nebo na LinkedIn.",
     "email": "E-mail",
     "phone": "Telefon"
   },
   "articles": {
     "title": "Články",
-    "intro": "Poznámky z praxe: QA v době AI, test automation a osobní experimenty s AI. Některé vycházejí na blogu Etnetery, jiné jen tady.",
+    "intro": "Píšu o tom, co zkouším v práci i doma. Část vychází na blogu Etnetery, část jen tady.",
     "filterLabel": "Filtrovat články podle kategorie",
     "filters": {
       "all": "Vše",
       "qa-ai": "QA & AI",
       "personal": "Osobní"
     },
-    "empty": "Zatím tu nic není – první články se připravují.",
-    "emptyFilter": "V této kategorii zatím nic není.",
+    "empty": "Zatím tu nic není. První články právě píšu.",
+    "emptyFilter": "V téhle kategorii zatím nic není.",
     "rss": "Odebírat přes RSS",
-    "fallbackNotice": "Tento článek zatím existuje jen v češtině.",
+    "fallbackNotice": "Tenhle článek je zatím jen česky.",
     "publishedLabel": "Publikováno",
-    "todoDraftNotice": "Koncept – v produkci se nezobrazuje."
+    "todoDraftNotice": "Koncept. Na produkci se neukazuje."
   },
   "projects": {
     "title": "Projekty",
-    "intro": "Nástroje a experimenty kolem AI-driven QA – a jeden penzion v horách, na kterém si AI zkouším v praxi.",
+    "intro": "Věci, které stavím kolem testování s AI. A jeden penzion v horách, kde si AI zkouším na vlastních penězích.",
+    "extraLabel": "navíc",
     "items": [
       {
         "id": "qa-control-center",
         "name": "QA Control Center",
         "tagline": "AI navrhne, člověk rozhodne.",
-        "description": "Pracovní prostředí, kde AI z požadavku navrhne akceptační kritéria, testovací scénáře a Playwright testy. Místo pass rate měří důvěru – jak dobře test skutečně ověřuje požadavek. Na klíčových místech stojí lidské brány: nic nejde dál bez schválení QA.",
-        "highlights": [
-          "Akceptační kritéria → scénáře → Playwright testy",
-          "Metrika důvěry místo pass rate",
-          "Lidské brány (human-in-the-loop)"
-        ],
+        "description": "Dáš mu zadání a AI z něj navrhne akceptační kritéria, testovací scénáře a hotové Playwright testy. Vzniklo to, protože jsem viděl dost vygenerovaných testů, které projdou a nic neověří. Takže tady neměříme pass rate, ale jak moc se dá testu věřit.",
+        "extra": "Mezi kroky jsou lidské brány. Dokud QA neřekne ano, nic nejde dál.",
         "tags": [
           "AI agents",
           "Playwright",
@@ -299,13 +504,9 @@
       {
         "id": "qa-brain",
         "name": "QA Brain",
-        "tagline": "Sdílená QA pravidla pro AI agenty.",
-        "description": "Knihovna QA pravidel s jednoznačnými ID, ze které čerpají AI agenti v Claude Code i GitHub Copilotu. Agent se na pravidlo odkáže stejně jako člověk – a výstupy jsou konzistentní napříč týmy i nástroji.",
-        "highlights": [
-          "Pravidla s ID, na která se dá odkázat",
-          "Funguje v Claude Code i Copilotu",
-          "Jeden zdroj pravdy pro lidi i agenty"
-        ],
+        "tagline": "Jedna sada QA pravidel pro lidi i agenty.",
+        "description": "Sada QA pravidel, kde má každé pravidlo svoje ID. Agenti v Claude Code i v Copilotu je čtou a odkazují se na ně, stejně jako kolega v code review.",
+        "extra": "Když agent napíše, které pravidlo test porušuje, nikdo se nemusí ptát proč.",
         "tags": [
           "Claude Code",
           "GitHub Copilot",
@@ -315,13 +516,9 @@
       {
         "id": "k6-framework",
         "name": "k6 performance framework",
-        "tagline": "Zátěžový test si objedná i PM.",
-        "description": "Framework nad k6, ve kterém si zátěžový test objedná i netechnický produktový manažer – odpoví na pět otázek, nebo nechá konfiguraci sestavit AI konfigurátor. Framework z toho připraví scénář, spustí ho a vrátí srozumitelný report.",
-        "highlights": [
-          "5 otázek místo skriptování",
-          "AI konfigurátor",
-          "Čitelný report i pro netechnické publikum"
-        ],
+        "tagline": "Zátěžák si objedná i PM.",
+        "description": "Framework nad k6. Zátěžový test si přes něj objedná i produkťák, který nikdy neviděl skript. Odpoví na pět otázek, nebo to celé nechá na AI konfigurátoru.",
+        "extra": "Na konci dostane report, kterému rozumí bez překladatele.",
         "tags": [
           "k6",
           "Performance testing",
@@ -331,13 +528,9 @@
       {
         "id": "qa-manual-copilot",
         "name": "QA Manual Copilot",
-        "tagline": "AI parťák manuálního testera.",
-        "description": "Rozšíření pro Chrome, které pomáhá manuálnímu testerovi: navrhuje, co prověřit, a pomáhá zapisovat nálezy. Má jedno tvrdé pravidlo – nesmí nic tvrdit bez důkazu. Každé zjištění musí podložit screenshotem, logem nebo konkrétním krokem.",
-        "highlights": [
-          "Chrome extension",
-          "Žádné tvrzení bez důkazu",
-          "Pomoc s průzkumným testováním i zápisem nálezů"
-        ],
+        "tagline": "AI parťák pro manuální testery.",
+        "description": "Rozšíření do Chromu, které sedí vedle manuálního testera. Radí, co ještě zkusit, a pomáhá sepsat nález.",
+        "extra": "Má jedno pravidlo, které nejde obejít: bez důkazu nic netvrdí. Každý nález potřebuje screenshot, log nebo přesný krok.",
         "tags": [
           "Chrome extension",
           "AI",
@@ -347,13 +540,9 @@
       {
         "id": "mtp-generator",
         "name": "MTP generátor",
-        "tagline": "Deterministický Master Test Plan.",
-        "description": "Generátor Master Test Planu, ve kterém struktura, rozsah a pravidla vznikají deterministicky ze vstupních dat. AI píše jen prózu – úvody a shrnutí. Výsledek je opakovatelný a dá se zpětně dohledat, odkud co pochází.",
-        "highlights": [
-          "Deterministická struktura",
-          "AI jen pro prózu",
-          "Opakovatelné a dohledatelné výstupy"
-        ],
+        "tagline": "Master Test Plan, který vyjde pokaždé stejně.",
+        "description": "Generátor Master Test Planu. Strukturu, rozsah a pravidla skládá kód ze vstupních dat, takže ze stejných dat vyjde stejný plán.",
+        "extra": "AI smí psát jen souvislý text, třeba úvod a shrnutí.",
         "tags": [
           "Test management",
           "AI",
@@ -363,13 +552,9 @@
       {
         "id": "apartmany-iwona",
         "name": "Apartmány Iwona + AI",
-        "tagline": "Penzion v Krkonoších jako laboratoř.",
-        "description": "Náš rodinný penzion v Krkonoších je moje osobní laboratoř. Sbírám data o cenách a obsazenosti, hledám v nich vzorce a automatizuji rutinu kolem rezervací a komunikace s hosty. O tom, co z toho funguje, budu psát.",
-        "highlights": [
-          "Data o cenách a obsazenosti",
-          "Automatizace rutiny kolem rezervací",
-          "AI v malém byznysu v praxi"
-        ],
+        "tagline": "Penzion v Krkonoších jako moje laboratoř.",
+        "description": "Máme rodinný penzion v Krkonoších. Sbírám data o cenách a obsazenosti a zkouším, co z nich AI vyčte. Rutinu kolem rezervací a psaní hostům postupně automatizuju.",
+        "extra": "Co z toho funguje a co ne, budu sepisovat do článků.",
         "tags": [
           "Data",
           "Automatizace",
@@ -386,8 +571,9 @@
   },
   "about": {
     "title": "O mně",
-    "professionalTitle": "Profesně",
+    "professionalTitle": "Práce",
     "personalTitle": "Mimo práci",
-    "downloadCv": "Stáhnout CV (PDF)"
+    "downloadCv": "Stáhnout CV (PDF)",
+    "activities": "Aktivity"
   }
 }

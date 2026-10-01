@@ -43,13 +43,13 @@ export default function ArticleFilter({ articles, labels }: Props) {
               aria-pressed={active}
               data-testid={`filter-${f}`}
               onClick={() => select(f)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors ${
                 active
-                  ? "border-primary-500/60 bg-primary-500/15 text-primary-200"
-                  : "border-white/10 text-dark-muted hover:border-white/20 hover:text-dark-text"
+                  ? "border-ink bg-ink text-paper"
+                  : "border-line bg-surface text-muted hover:border-ink/40 hover:text-ink"
               }`}
             >
-              {labels[f]} <span className="ml-1 text-xs opacity-70">{count}</span>
+              {labels[f]} <span className="ml-1 font-mono text-xs opacity-75">{count}</span>
             </button>
           );
         })}
@@ -60,7 +60,7 @@ export default function ArticleFilter({ articles, labels }: Props) {
       </p>
 
       {visible.length === 0 ? (
-        <p className="text-dark-muted" data-testid="articles-empty-filter">{labels.emptyFilter}</p>
+        <p className="text-muted" data-testid="articles-empty-filter">{labels.emptyFilter}</p>
       ) : (
         <ul className="grid gap-4 md:grid-cols-2" data-testid="article-list">
           {visible.map((a) => (

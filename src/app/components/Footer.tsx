@@ -18,18 +18,18 @@ export default async function Footer({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <footer className="mt-24 border-t border-white/5 bg-dark-secondary/40">
+    <footer className="mt-24 border-t border-line">
       <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-3">
         <div>
           <p className="font-heading text-lg font-bold">Richard Kousal</p>
-          <p className="mt-1 text-sm text-dark-muted">QA & Test Automation Lead</p>
+          <p className="mt-1 font-mono text-xs text-muted">QA & Test Automation Lead</p>
         </div>
 
-        <nav aria-label={tNav("mainLabel")}>
+        <nav aria-label={tNav("footerLabel")}>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             {links.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-dark-muted hover:text-dark-text">
+                <Link href={l.href} className="text-muted hover:text-ink">
                   {l.label}
                 </Link>
               </li>
@@ -38,27 +38,27 @@ export default async function Footer({ locale }: { locale: Locale }) {
         </nav>
 
         <div className="flex flex-col gap-2 text-sm">
-          <a href={`mailto:${PERSON.email}`} className="flex items-center gap-2 text-dark-muted hover:text-dark-text">
+          <a href={`mailto:${PERSON.email}`} className="flex items-center gap-2 text-muted hover:text-ink">
             <MdEmail className="h-4 w-4" aria-hidden /> {PERSON.email}
           </a>
-          <a href={`tel:${PERSON.phoneHref}`} className="flex items-center gap-2 text-dark-muted hover:text-dark-text">
+          <a href={`tel:${PERSON.phoneHref}`} className="flex items-center gap-2 text-muted hover:text-ink">
             <MdPhone className="h-4 w-4" aria-hidden /> {PERSON.phone}
           </a>
           <div className="mt-2 flex items-center gap-4">
-            <a href={PERSON.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-dark-muted hover:text-primary-400">
+            <a href={PERSON.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted hover:text-ink">
               <FaLinkedin className="h-5 w-5" aria-hidden />
             </a>
-            <a href={PERSON.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-dark-muted hover:text-primary-400">
+            <a href={PERSON.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted hover:text-ink">
               <FaGithub className="h-5 w-5" aria-hidden />
             </a>
-            <a href="/feed.xml" aria-label={t("rss")} className="text-dark-muted hover:text-primary-400" data-testid="footer-rss">
+            <a href="/feed.xml" aria-label={t("rss")} className="text-muted hover:text-ink" data-testid="footer-rss">
               <FaRss className="h-4 w-4" aria-hidden />
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/5">
-        <p className="mx-auto max-w-5xl px-4 py-4 text-xs text-dark-muted sm:px-6">
+      <div className="border-t border-line">
+        <p className="mx-auto max-w-5xl px-4 py-4 font-mono text-xs text-muted sm:px-6">
           {t("copyright", { year })}
         </p>
       </div>

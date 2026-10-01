@@ -9,6 +9,7 @@ import { buildPageMetadata } from "@/app/lib/metadata";
 import { formatDate, getOwnArticle, getOwnArticleSlugs } from "@/app/lib/articles";
 import { generateBlogPostingData } from "@/app/lib/seo";
 import { localeUrl } from "@/app/lib/site";
+import Verdict from "@/app/components/ui/Verdict";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -52,7 +53,7 @@ export default async function ArticlePage({ params }: Props) {
   const tFilters = await getTranslations("articles.filters");
 
   return (
-    <div className="container-page py-12 sm:py-16">
+    <div className="container-page py-14 sm:py-20">
       {!article.isFallback && (
         <script
           type="application/ld+json"
@@ -70,37 +71,37 @@ export default async function ArticlePage({ params }: Props) {
       )}
 
       <nav aria-label="Breadcrumb" className="mb-8">
-        <Link href="/articles" className="link-arrow text-sm" data-testid="back-to-articles">
+        <Link href="/articles" className="link text-sm" data-testid="back-to-articles">
           <span aria-hidden>←</span> {t("backToArticles")}
         </Link>
       </nav>
 
-      <article lang={article.lang} className="mx-auto max-w-3xl" data-testid="article-detail">
+      <article lang={article.lang} className="mx-auto max-w-prose" data-testid="article-detail">
         <header className="mb-10">
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-xs">
-            <span className="tag">{tFilters(article.category)}</span>
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <Verdict kind={article.category === "qa-ai" ? "pass" : "info"}>{tFilters(article.category)}</Verdict>
             {article.status === "draft" && (
-              <span className="tag border-accent-yellow/40 text-accent-yellow" data-testid="article-badge">
+              <Verdict kind="warn" testId="article-badge">
                 {t("draft")}
-              </span>
+              </Verdict>
             )}
           </div>
-          <h1 className="font-heading text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+          <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             {article.title}
           </h1>
-          <p className="mt-4 text-lg leading-relaxed text-dark-muted">{article.excerpt}</p>
-          <p className="mt-4 flex flex-wrap gap-x-3 text-sm text-dark-muted">
+          <p className="mt-4 text-lg leading-relaxed text-muted">{article.excerpt}</p>
+          <p className="mt-4 flex flex-wrap gap-x-3 font-mono text-xs text-muted">
             <time dateTime={article.date}>{formatDate(article.date, locale)}</time>
             <span aria-hidden>·</span>
             <span>{t("minRead", { minutes: article.readingMinutes })}</span>
           </p>
           {article.isFallback && (
-            <p lang={locale} className="mt-6 rounded-xl border border-accent-yellow/30 bg-accent-yellow/5 px-4 py-3 text-sm text-accent-yellow" data-testid="fallback-notice">
+            <p lang={locale} className="mt-6 rounded-lg border border-warn/40 bg-warn/[0.06] px-4 py-3 text-sm text-warn" data-testid="fallback-notice">
               {tArticles("fallbackNotice")}
             </p>
           )}
           {article.status === "draft" && (
-            <p lang={locale} className="mt-4 text-xs text-dark-muted">{tArticles("todoDraftNotice")}</p>
+            <p lang={locale} className="mt-4 font-mono text-xs text-warn">{tArticles("todoDraftNotice")}</p>
           )}
         </header>
 
@@ -109,9 +110,9 @@ export default async function ArticlePage({ params }: Props) {
         </div>
 
         {article.tags.length > 0 && (
-          <ul className="mt-12 flex flex-wrap gap-2 border-t border-white/5 pt-6" aria-label="Tags">
+          <ul className="mt-12 flex flex-wrap gap-1.5 border-t border-line pt-6" aria-label="Tags">
             {article.tags.map((tag) => (
-              <li key={tag} className="tag">#{tag}</li>
+              <li key={tag} className="chip">#{tag}</li>
             ))}
           </ul>
         )}

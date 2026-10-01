@@ -1,6 +1,7 @@
 import pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { TDocumentDefinitions, Content } from 'pdfmake/interfaces';
+import { formatMonth, type Certification, type Education, type LanguageSkill, type Position } from './profile';
 
 // Set fonts - pdfMake has Roboto built-in which supports Czech
 if (pdfFonts && (pdfFonts as any).pdfMake) {
@@ -15,16 +16,14 @@ interface CVData {
   email: string;
   phone: string;
   subtitle: string;
-  description: string;
+  summary: string[];
   experience: {
     title: string;
-    timeline: Array<{
-      role: string;
-      company: string;
-      period: string;
-      responsibilities: string[];
-    }>;
+    timeline: Position[];
   };
+  education: { title: string; items: Education[] };
+  languages: { title: string; items: LanguageSkill[] };
+  certifications: { title: string; items: Certification[] };
   skills: {
     title: string;
     categories: Array<{
@@ -47,11 +46,24 @@ interface CVData {
     specializationValue: string;
     languagesValue: string;
     generatedFrom: string;
+    present: string;
+    issued: string;
+    expires: string;
+    credentialId: string;
   };
 }
 
-// Helper to strip HTML
-const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ');
+/** "2024-07" -> "07/2024" */
+const mmYYYY = (ym: string) => { const [y, m] = ym.split('-'); return `${m}/${y}`; };
+
+/** "Label: text" bullet -> bold label + text */
+const bullet = (text: string) => {
+  const idx = text.indexOf(': ');
+  if (idx > 0 && idx < 50) {
+    return { text: [{ text: text.slice(0, idx + 1), bold: true }, ' ' + text.slice(idx + 2)], style: 'responsibility' };
+  }
+  return { text, style: 'responsibility' };
+};
 
 export function generateCVPDF(data: CVData): Promise<Buffer> {
   return new Promise((resolve, reject) => {
@@ -163,24 +175,29 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
     content.push({
       text: data.pdf.aboutMe,
       style: 'sectionTitle',
+      headlineLevel: 1,
       margin: [0, 0, 0, 10]
     });
 
-    content.push({
-      text: data.description,
-      style: 'body',
-      margin: [0, 0, 0, 20]
-    });
-
-    // Experience section
-    content.push({
-      text: data.experience.title.toUpperCase(),
-      style: 'sectionTitle',
-      margin: [0, 10, 0, 10]
-    });
-
-    data.experience.timeline.forEach((job, index) => {
+    data.summary.forEach((paragraph, i) => {
       content.push({
+        text: paragraph,
+        style: 'body',
+        margin: [0, 0, 0, i === data.summary.length - 1 ? 20 : 6]
+      });
+    });
+
+    // Experience section (title is kept together with the first job)
+    data.experience.timeline.forEach((job, index) => {
+      const block: Content[] = [];
+      if (index === 0) {
+        block.push({
+          text: data.experience.title.toUpperCase(),
+          style: 'sectionTitle',
+          margin: [0, 10, 0, 10]
+        });
+      }
+      block.push({
         table: {
           widths: ['*', 'auto'],
           body: [
@@ -191,7 +208,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
                 border: [false, false, false, false]
               },
               {
-                text: job.period,
+                text: `${formatMonth(job.start, data.locale)} – ${job.end ? formatMonth(job.end, data.locale) : data.pdf.present}`,
                 style: 'period',
                 alignment: 'right',
                 border: [false, false, false, false]
@@ -204,33 +221,38 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
         margin: [0, 5, 0, 5]
       });
 
-      content.push({
-        text: job.company,
-        style: 'company',
+      block.push({
+        text: [
+          { text: job.company, style: 'company' },
+          ...(job.location ? [{ text: `  ·  ${job.location}`, fontSize: 9, color: '#666666' }] : [])
+        ],
         margin: [5, 5, 0, 5]
       });
 
-      const responsibilities = job.responsibilities.map(resp => ({
-        text: stripHtml(resp),
-        style: 'responsibility'
-      }));
-
-      content.push({
-        ul: responsibilities,
-        margin: [5, 0, 0, 15]
+      job.intro.forEach(paragraph => {
+        block.push({ text: paragraph, style: 'responsibility', margin: [5, 0, 0, 4] });
       });
+
+      if (job.bullets.length > 0) {
+        block.push({
+          ul: job.bullets.map(bullet),
+          margin: [5, 0, 0, 4]
+        });
+      }
+
+      job.outro.forEach(paragraph => {
+        block.push({ text: paragraph, style: 'responsibility', margin: [5, 0, 0, 4] });
+      });
+
+      content.push({ stack: block, unbreakable: true, margin: [0, 0, 0, 8] });
     });
 
-    // Page break before Vision/Approach section
-    content.push({
-      text: '',
-      pageBreak: 'after'
-    });
 
     // Vision/Approach section - on page 2
     content.push({
       text: data.vision.title.toUpperCase(),
       style: 'sectionTitle',
+      headlineLevel: 1,
       margin: [0, 10, 0, 10]
     });
 
@@ -272,6 +294,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
     content.push({
       text: data.skills.title.toUpperCase(),
       style: 'sectionTitle',
+      headlineLevel: 1,
       margin: [0, 10, 0, 10]
     });
 
@@ -298,6 +321,76 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
       });
     });
 
+    // Education (each short section is kept on one page)
+    let sec: Content[] = [];
+    sec.push({
+      text: data.education.title.toUpperCase(),
+      style: 'sectionTitle',
+      headlineLevel: 1,
+      margin: [0, 10, 0, 8]
+    });
+    data.education.items.forEach(e => {
+      sec.push({
+        columns: [
+          { text: e.school, style: 'jobTitle', fontSize: 10.5 },
+          { text: `${e.start} – ${e.end}`, style: 'period', width: 'auto' }
+        ],
+        margin: [0, 0, 0, 2]
+      });
+      sec.push({ text: e.degree, style: 'responsibility', margin: [0, 0, 0, 2] });
+      if (e.activities.length) {
+        sec.push({ ul: e.activities.map(a => ({ text: a, style: 'responsibility' })), margin: [5, 0, 0, 10] });
+      }
+    });
+
+    content.push({ stack: sec, unbreakable: true });
+
+    // Languages
+    sec = [];
+    sec.push({
+      text: data.languages.title.toUpperCase(),
+      style: 'sectionTitle',
+      headlineLevel: 1,
+      margin: [0, 10, 0, 8]
+    });
+    sec.push({
+      ul: data.languages.items.map(l => ({
+        text: [{ text: l.name, bold: true }, ` – ${l.level}`],
+        style: 'responsibility'
+      })),
+      margin: [5, 0, 0, 10]
+    });
+
+    content.push({ stack: sec, unbreakable: true });
+
+    // Certifications
+    sec = [];
+    sec.push({
+      text: data.certifications.title.toUpperCase(),
+      style: 'sectionTitle',
+      headlineLevel: 1,
+      margin: [0, 10, 0, 8]
+    });
+    data.certifications.items.forEach(c => {
+      const meta = [
+        c.authority,
+        `${data.pdf.issued} ${mmYYYY(c.issued)}`,
+        c.expires ? `${data.pdf.expires} ${mmYYYY(c.expires)}` : null,
+        c.credentialId ? `${data.pdf.credentialId} ${c.credentialId}` : null
+      ].filter(Boolean).join('  ·  ');
+      sec.push({
+        stack: [
+          c.url
+            ? { text: c.name, bold: true, fontSize: 9.5, link: c.url, color: '#0e7490' }
+            : { text: c.name, bold: true, fontSize: 9.5 },
+          { text: meta, fontSize: 8.5, color: '#666666' }
+        ],
+        margin: [0, 0, 0, 6]
+      });
+    });
+
+    content.push({ stack: sec, unbreakable: true });
+
     // Document definition
     const docDefinition: TDocumentDefinitions = {
       content: content,
@@ -307,7 +400,7 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
           bold: true
         },
         subtitle: {
-          fontSize: 16
+          fontSize: 11.5
         },
         contact: {
           fontSize: 9
@@ -416,7 +509,10 @@ export function generateCVPDF(data: CVData): Promise<Buffer> {
           ]
         };
       },
-      pageMargins: [40, 40, 40, 60]
+      pageMargins: [40, 40, 40, 60],
+      // Never leave a section title alone at the bottom of a page
+      pageBreakBefore: (currentNode: any, followingNodesOnPage: any[]) =>
+        currentNode.headlineLevel === 1 && followingNodesOnPage.length < 2
     };
 
     const pdfDocGenerator = pdfMake.createPdf(docDefinition);

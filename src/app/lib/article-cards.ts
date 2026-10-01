@@ -13,9 +13,9 @@ export async function toArticleCards(
 
   return articles.map((a) => {
     const external = a.type === "etnetera";
-    const badges: string[] = [];
-    if (a.status === "draft") badges.push(t("draft"));
-    if (a.isFallback && a.lang === "cs") badges.push(t("inCzech"));
+    const badges: ArticleCardData["badges"] = [];
+    if (a.status === "draft") badges.push({ kind: "warn", label: t("draft") });
+    if (a.isFallback && a.lang === "cs") badges.push({ kind: "neutral", label: t("inCzech") });
 
     return {
       key: `${a.slug}-${a.lang}`,
@@ -32,7 +32,7 @@ export async function toArticleCards(
       sourceLabel: external
         ? a.externalUrl
           ? t("publishedOnEtnetera")
-          : `${t("publishedOnEtnetera")} – ${t("linkComing")}`
+          : `${t("publishedOnEtnetera")} (${t("linkComing")})`
         : undefined,
       badges,
       opensInNewTabLabel: t("opensInNewTab"),

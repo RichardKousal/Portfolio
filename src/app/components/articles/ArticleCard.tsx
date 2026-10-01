@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Link } from "@/i18n/navigation";
+import Verdict, { type VerdictKind } from "@/app/components/ui/Verdict";
 
 export interface ArticleCardData {
   key: string;
@@ -16,13 +17,13 @@ export interface ArticleCardData {
   metaLabel?: string;
   /** e.g. "Published on the Etnetera blog" */
   sourceLabel?: string;
-  badges: string[];
+  badges: { kind: VerdictKind; label: string }[];
   opensInNewTabLabel?: string;
 }
 
 export default function ArticleCard({ article }: { article: ArticleCardData }) {
   const titleClass =
-    "after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus-visible:outline-none";
+    "after:absolute after:inset-0 after:rounded-xl after:content-[''] hover:text-accent focus-visible:outline-none";
 
   return (
     <article
@@ -30,18 +31,18 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
       data-category={article.category}
       data-type={article.external ? "external" : "own"}
       lang={article.lang}
-      className="card group relative flex h-full flex-col p-5 sm:p-6 focus-within:ring-2 focus-within:ring-primary-500"
+      className="card relative flex h-full flex-col p-5 transition-colors hover:border-ink/30 focus-within:ring-2 focus-within:ring-accent sm:p-6"
     >
-      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
-        <span className="tag">{article.categoryLabel}</span>
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <Verdict kind={article.category === "qa-ai" ? "pass" : "info"}>{article.categoryLabel}</Verdict>
         {article.badges.map((b) => (
-          <span key={b} className="tag border-accent-yellow/40 text-accent-yellow" data-testid="article-badge">
-            {b}
-          </span>
+          <Verdict key={b.label} kind={b.kind} testId="article-badge">
+            {b.label}
+          </Verdict>
         ))}
       </div>
 
-      <h3 className="font-heading text-lg font-semibold leading-snug text-dark-text sm:text-xl">
+      <h3 className="font-heading text-lg font-semibold leading-snug text-ink sm:text-xl">
         {article.href === null ? (
           article.title
         ) : article.external ? (
@@ -56,9 +57,9 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
         )}
       </h3>
 
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-dark-muted sm:text-base">{article.excerpt}</p>
+      <p className="mt-2 flex-1 leading-relaxed text-muted">{article.excerpt}</p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-dark-muted">
+      <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-muted">
         <time dateTime={article.dateISO}>{article.dateLabel}</time>
         {article.metaLabel && (
           <>
@@ -67,13 +68,10 @@ export default function ArticleCard({ article }: { article: ArticleCardData }) {
           </>
         )}
         {article.sourceLabel && (
-          <span
-            className="inline-flex items-center gap-1.5 text-primary-300"
-            data-testid="article-source-label"
-          >
-            <span aria-hidden>·</span>
+          <span className="inline-flex items-center gap-1.5 text-accent" data-testid="article-source-label">
+            <span aria-hidden className="text-muted">·</span>
             {article.sourceLabel}
-            {article.external && article.href && <FaExternalLinkAlt className="h-3 w-3" aria-hidden />}
+            {article.external && article.href && <FaExternalLinkAlt className="h-2.5 w-2.5" aria-hidden />}
           </span>
         )}
       </div>

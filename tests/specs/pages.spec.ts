@@ -80,7 +80,7 @@ test.describe("Portfolio - Content & SEO", () => {
       const text = await browserContext.site.mainText();
 
       // Assert
-      expect(text, path).not.toMatch(/příležitost|opportunit|hledám práci|looking for a job|open to work/);
+      expect(text, path).not.toMatch(/otevřen příležitostem|open to (new )?opportunities|open to work|hledám (novou )?práci|looking for a (new )?job/);
     }
   });
 

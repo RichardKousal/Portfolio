@@ -6,11 +6,9 @@ export default function NotFound() {
 
   return (
     <div className="container-page flex min-h-[60vh] flex-col items-center justify-center py-16 text-center" data-testid="not-found">
-      <p className="font-heading text-7xl font-bold sm:text-8xl">
-        <span className="gradient-text">404</span>
-      </p>
+      <p className="font-mono text-sm text-warn">✗ 404 not found</p>
       <h1 className="mt-6 font-heading text-2xl font-bold sm:text-3xl">{t("title")}</h1>
-      <p className="mt-3 max-w-md text-dark-muted">{t("description")}</p>
+      <p className="mt-3 max-w-md text-muted">{t("description")}</p>
       <Link href="/" className="btn-primary mt-8">
         {t("homeButton")}
       </Link>

@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme tokens (RGB triplets). Light is the default; dark is opt-in via
+   data-theme="dark" (set before paint by the inline script in the layout). */
+:root {
+  --paper: 248 245 239;
+  --surface: 255 253 248;
+  --line: 222 215 202;
+  --ink: 29 28 26;
+  --muted: 92 87 79;
+  --accent: 11 110 133;
+  --accent-ink: 255 255 255;
+  --ok: 23 102 58;
+  --warn: 138 75 12;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: 18 20 22;
+  --surface: 26 29 32;
+  --line: 48 53 58;
+  --ink: 232 230 227;
+  --muted: 163 162 159;
+  --accent: 58 208 232;
+  --accent-ink: 11 18 20;
+  --ok: 95 211 141;
+  --warn: 242 193 78;
+  color-scheme: dark;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,20 +37,17 @@
   }
 
   body {
-    color: #e5e5e5;
-    background: #0a0a0a;
+    @apply bg-paper text-ink;
   }
 
   ::selection {
-    background: rgba(14, 165, 233, 0.35);
-    color: #fff;
+    @apply bg-accent/25 text-ink;
   }
 
-  /* Visible focus for keyboard users */
   :focus-visible {
-    outline: 2px solid #38bdf8;
+    outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
 }
 
@@ -32,40 +57,35 @@
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-primary-300;
+    @apply font-mono text-xs uppercase tracking-[0.14em] text-muted;
   }
 
   .section-title {
-    @apply font-heading text-2xl font-bold text-dark-text sm:text-3xl;
+    @apply font-heading text-2xl font-bold tracking-tight text-ink sm:text-3xl;
   }
 
   .card {
-    @apply rounded-2xl border border-white/[0.08] bg-dark-secondary/60 transition-colors duration-200;
+    @apply rounded-xl border border-line bg-surface;
   }
 
-  .card:hover {
-    @apply border-white/15;
-  }
-
-  .tag {
-    @apply inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-0.5 text-xs font-medium text-dark-muted;
+  .chip {
+    @apply inline-flex items-center rounded border border-line px-2 py-0.5 font-mono text-xs text-muted;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-5 py-2.5 text-sm font-semibold text-dark-bg shadow-lg shadow-primary-500/20 transition hover:bg-primary-400;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink transition-opacity hover:opacity-90;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-dark-text transition hover:border-white/30 hover:bg-white/5;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink/40;
   }
 
-  .link-arrow {
-    @apply font-medium text-primary-300 underline-offset-4 transition-colors hover:text-primary-200 hover:underline;
+  .link {
+    @apply font-medium text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent;
   }
 
-  /* Skip link: hidden until focused */
   .skip-to-content {
-    @apply fixed left-4 top-0 z-[100] -translate-y-full rounded-b-lg bg-primary-500 px-4 py-2 text-sm font-semibold text-dark-bg transition-transform;
+    @apply fixed left-4 top-0 z-[100] -translate-y-full rounded-b-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-ink transition-transform;
   }
 
   .skip-to-content:focus {
@@ -73,29 +93,24 @@
   }
 }
 
-/* Gradient text utility */
-.gradient-text {
-  @apply bg-gradient-to-r from-primary-300 via-accent-cyan to-accent-emerald bg-clip-text text-transparent;
-}
-
-/* Long-form article typography (no extra plugin) */
+/* Long-form article typography */
 .prose-article {
-  @apply text-[1.0625rem] leading-[1.8] text-dark-text/90;
+  @apply max-w-prose text-[1.0625rem] leading-[1.75] text-ink;
 }
 .prose-article > * + * {
   @apply mt-5;
 }
 .prose-article h2 {
-  @apply mt-12 font-heading text-2xl font-bold text-dark-text;
+  @apply mt-12 font-heading text-2xl font-bold;
 }
 .prose-article h3 {
-  @apply mt-8 font-heading text-xl font-semibold text-dark-text;
+  @apply mt-8 font-heading text-xl font-semibold;
 }
 .prose-article a {
-  @apply text-primary-300 underline underline-offset-4 hover:text-primary-200;
+  @apply text-accent underline underline-offset-4;
 }
 .prose-article strong {
-  @apply font-semibold text-dark-text;
+  @apply font-bold;
 }
 .prose-article ul {
   @apply list-disc space-y-2 pl-6;
@@ -104,13 +119,13 @@
   @apply list-decimal space-y-2 pl-6;
 }
 .prose-article blockquote {
-  @apply rounded-r-xl border-l-2 border-accent-yellow/60 bg-accent-yellow/5 px-4 py-3 text-dark-text;
+  @apply border-l-2 border-warn pl-4 text-muted;
 }
 .prose-article code {
-  @apply rounded bg-white/10 px-1.5 py-0.5 font-mono text-[0.9em] text-primary-200;
+  @apply rounded bg-ink/[0.07] px-1.5 py-0.5 font-mono text-[0.88em];
 }
 .prose-article pre {
-  @apply overflow-x-auto rounded-xl border border-white/10 bg-dark-secondary p-4 text-sm;
+  @apply overflow-x-auto rounded-lg border border-line bg-surface p-4 text-sm;
 }
 .prose-article pre code {
   @apply bg-transparent p-0;
@@ -120,16 +135,15 @@
 }
 .prose-article th,
 .prose-article td {
-  @apply border border-white/10 px-3 py-2 text-left;
+  @apply border border-line px-3 py-2 text-left;
 }
 .prose-article img {
-  @apply rounded-xl;
+  @apply rounded-lg;
 }
 .prose-article hr {
-  @apply border-white/10;
+  @apply border-line;
 }
 
-/* Accessibility: Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -141,16 +155,6 @@
   }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .gradient-text {
-    background: none !important;
-    -webkit-text-fill-color: currentColor !important;
-    color: #38bdf8 !important;
-  }
-}
-
-/* Print styles */
 @media print {
   header,
   footer,

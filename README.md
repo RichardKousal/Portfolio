@@ -1,13 +1,13 @@
 # Richard Kousal – osobní hub
 
-Osobní web Richarda Kousala (QA & Test Automation Lead, Etnetera Core): články, projekty, vystoupení a profil. Tmavý minimalistický design, plně responzivní, dvojjazyčný (cs/en).
+Osobní web Richarda Kousala (QA & Test Automation Lead, Etnetera Core): články, projekty, vystoupení a profil. Editoriální design „testovací záznam“ (verdikty, monospace metadata, changelog), světlý režim jako výchozí + tmavý na přepnutí, plně responzivní, dvojjazyčný (cs/en).
 
 Produkce: https://richardkousal.com
 
 ## Technologie
 
 - **Next.js 15** (App Router, server components, SSG/ISR) · **React 18** · **TypeScript**
-- **Tailwind CSS** · fonty Montserrat (nadpisy) + Lato (text) přes `next/font`
+- **Tailwind CSS** s barevnými tokeny v CSS proměnných (`src/app/globals.css`) · fonty Montserrat (nadpisy), Lato (text), JetBrains Mono (metadata) přes `next/font`
 - **next-intl** – jazyky `cs` (výchozí) a `en`, cesty `/cs/...` a `/en/...`
 - **gray-matter + react-markdown + remark-gfm** – články v Markdownu
 - **pdfmake** – generování CV (`/api/generate-cv?locale=cs|en`)
@@ -57,6 +57,10 @@ Nevalidní soubor (chybějící pole, špatné datum, published etnetera bez URL
 
 ## Kde se co upravuje
 
+- **Profilová data jsou 1:1 s LinkedInem** (export Member Data Portability API): headline, summary, pozice, vzdělání, jazyky, certifikáty a dovednosti v `messages/*.json` → `professional.*`. EN text je doslova z LinkedInu, CS je překlad. Při změně na LinkedInu uprav obojí; CV PDF bere data odsud.
+- Status řádek na úvodní stránce: `home.status.nowValue` (další vystoupení se bere automaticky z `talks.items`).
+- Barvy světlého/tmavého režimu: CSS proměnné v `src/app/globals.css` (kontrast ověřen na WCAG AA). Volba režimu se ukládá do `localStorage.theme`; bez volby platí světlý, tmavý jen při `prefers-color-scheme: dark`.
+
 - Texty, projekty, vystoupení, timeline, dovednosti: `messages/cs.json`, `messages/en.json` (klíče `projects.items`, `projects.featured`, `talks.items`, `professional.*`, `personal.*`, `pdf.*`).
 - Kontakty a URL webu: `src/app/lib/site.ts` (`NEXT_PUBLIC_SITE_URL`, výchozí `https://richardkousal.com`).
 - SEO metadata a JSON-LD: `src/app/lib/metadata.ts`, `src/app/lib/seo.ts`.
@@ -66,10 +70,10 @@ Nevalidní soubor (chybějící pole, špatné datum, published etnetera bez URL
 
 ```bash
 npm install
-npm run dev           # http://localhost:3000
+npm run dev           # http://localhost:3003
 npm run lint
 npm run build && npm start
-npm run test:e2e:chromium   # Playwright si sám spustí dev server na portu 3003
+npm run test:e2e:chromium   # Playwright si sám spustí dev server (port 3003)
 ```
 
 ## Struktura projektu

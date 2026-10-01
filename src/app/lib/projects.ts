@@ -6,7 +6,8 @@ export interface Project {
   name: string;
   tagline: string;
   description: string;
-  highlights: string[];
+  /** One concrete extra detail */
+  extra?: string;
   tags: string[];
   url?: string;
 }
@@ -18,5 +19,5 @@ export async function getProjects(locale: Locale) {
   const featured = featuredIds
     .map((id) => items.find((p) => p.id === id))
     .filter((p): p is Project => Boolean(p));
-  return { items, featured };
+  return { items, featured, extraLabel: t("extraLabel") };
 }

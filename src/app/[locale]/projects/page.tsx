@@ -23,23 +23,25 @@ export default async function ProjectsPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("projects");
   const tCommon = await getTranslations("common");
-  const { items } = await getProjects(locale);
+  const { items, extraLabel } = await getProjects(locale);
 
   return (
-    <div className="container-page py-12 sm:py-16">
-      <header className="mb-10 max-w-2xl">
-        <h1 className="font-heading text-4xl font-bold sm:text-5xl">
-          <span className="gradient-text">{t("title")}</span>
-        </h1>
-        <p className="mt-4 text-lg leading-relaxed text-dark-muted">{t("intro")}</p>
+    <div className="container-page py-14 sm:py-20">
+      <header className="mb-14 max-w-2xl">
+        <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl">{t("title")}</h1>
+        <p className="mt-4 text-lg leading-relaxed text-muted">{t("intro")}</p>
       </header>
-      <div className="grid gap-6" data-testid="project-list">
+      <div data-testid="project-list">
         {items.map((p) => (
           <ProjectCard
             key={p.id}
             project={p}
             variant="full"
-            labels={{ visitWebsite: tCommon("visitWebsite"), opensInNewTab: tCommon("opensInNewTab") }}
+            labels={{
+              visitWebsite: tCommon("visitWebsite"),
+              opensInNewTab: tCommon("opensInNewTab"),
+              extra: extraLabel,
+            }}
           />
         ))}
       </div>

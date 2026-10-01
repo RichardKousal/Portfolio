@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Lato } from "next/font/google";
+import { Montserrat, Lato, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -31,12 +31,26 @@ const lato = Lato({
   display: "swap",
 });
 
+const mono = JetBrains_Mono({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+// Applies the saved/preferred theme before first paint (no flash).
+// Default is light; dark only when chosen, or when the OS prefers dark and
+// the visitor has not chosen anything yet.
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){}})()`;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8f5ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#121416" },
+  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -102,8 +116,16 @@ export default async function LocaleLayout({
   const structuredData = generateStructuredData(locale);
 
   return (
-    <html lang={locale} className={`${montserrat.variable} ${lato.variable}`}>
-      <body className="font-body antialiased bg-dark-bg text-dark-text min-h-screen flex flex-col">
+    <html
+      lang={locale}
+      data-theme="light"
+      suppressHydrationWarning
+      className={`${montserrat.variable} ${lato.variable} ${mono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
+      <body className="flex min-h-screen flex-col bg-paper font-body text-ink antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: structuredData }}

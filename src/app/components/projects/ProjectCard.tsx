@@ -5,79 +5,79 @@ import type { Project } from "@/app/lib/projects";
 interface Props {
   project: Project;
   variant: "compact" | "full";
-  labels?: { visitWebsite: string; opensInNewTab: string };
+  labels?: { visitWebsite: string; opensInNewTab: string; extra: string };
+}
+
+function Tags({ tags }: { tags: string[] }) {
+  return (
+    <ul className="flex flex-wrap gap-1.5" aria-label="Tags">
+      {tags.map((tag) => (
+        <li key={tag} className="chip">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default function ProjectCard({ project, variant, labels }: Props) {
-  const headingId = `project-${project.id}`;
-
   if (variant === "compact") {
     return (
       <article
         data-testid="project-card"
-        className="card relative flex h-full flex-col p-5 sm:p-6 focus-within:ring-2 focus-within:ring-primary-500"
+        className="card relative flex h-full flex-col p-5 transition-colors hover:border-ink/30 focus-within:ring-2 focus-within:ring-accent sm:p-6"
       >
         <h3 className="font-heading text-lg font-semibold">
           <Link
             href={`/projects#${project.id}`}
-            className="after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus-visible:outline-none"
+            className="after:absolute after:inset-0 after:rounded-xl after:content-[''] hover:text-accent focus-visible:outline-none"
           >
             {project.name}
           </Link>
         </h3>
-        <p className="mt-1 text-sm font-medium text-primary-300">{project.tagline}</p>
+        <p className="mt-1 text-sm font-semibold text-accent">{project.tagline}</p>
         <div className="mt-3 flex-1">
-          <p className="line-clamp-4 text-sm leading-relaxed text-dark-muted">{project.description}</p>
+          <p className="line-clamp-4 text-sm leading-relaxed text-muted">{project.description}</p>
         </div>
-        <ul className="mt-4 flex flex-wrap gap-2" aria-label="Tags">
-          {project.tags.map((tag) => (
-            <li key={tag} className="tag">{tag}</li>
-          ))}
-        </ul>
+        <div className="mt-4">
+          <Tags tags={project.tags} />
+        </div>
       </article>
     );
   }
 
+  const headingId = `project-${project.id}-heading`;
   return (
     <article
       id={project.id}
       aria-labelledby={headingId}
       data-testid="project-card"
-      className="card scroll-mt-28 p-6 sm:p-8"
+      className="scroll-mt-28 border-t border-line py-10 first:border-t-0 first:pt-0 md:grid md:grid-cols-[14rem_1fr] md:gap-10"
     >
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
+      <div>
         <h2 id={headingId} className="font-heading text-xl font-bold sm:text-2xl">
           {project.name}
         </h2>
-        <p className="text-sm font-medium text-primary-300">{project.tagline}</p>
+        <p className="mt-1 text-sm font-semibold text-accent">{project.tagline}</p>
       </div>
-      <p className="mt-4 leading-relaxed text-dark-text/90">{project.description}</p>
-      <ul className="mt-5 grid gap-2 sm:grid-cols-3">
-        {project.highlights.map((h) => (
-          <li key={h} className="flex gap-2 text-sm text-dark-muted">
-            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-emerald" aria-hidden />
-            {h}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-        <ul className="flex flex-wrap gap-2" aria-label="Tags">
-          {project.tags.map((tag) => (
-            <li key={tag} className="tag">{tag}</li>
-          ))}
-        </ul>
-        {project.url && labels && (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-arrow inline-flex items-center gap-2"
-          >
-            {labels.visitWebsite}
-            <FaExternalLinkAlt className="h-3 w-3" aria-hidden />
-            <span className="sr-only">{labels.opensInNewTab}</span>
-          </a>
+      <div className="mt-4 max-w-prose md:mt-0">
+        <p className="leading-relaxed">{project.description}</p>
+        {project.extra && labels && (
+          <p className="mt-4 leading-relaxed text-muted">
+            <span className="mr-2 font-mono text-xs uppercase tracking-wider text-ok">+ {labels.extra}</span>
+            {project.extra}
+          </p>
         )}
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+          <Tags tags={project.tags} />
+          {project.url && labels && (
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="link inline-flex items-center gap-2 text-sm">
+              {labels.visitWebsite}
+              <FaExternalLinkAlt className="h-3 w-3" aria-hidden />
+              <span className="sr-only">{labels.opensInNewTab}</span>
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );
