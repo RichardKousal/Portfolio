@@ -286,7 +286,10 @@
         {
           "name": "AI",
           "items": [
-            "AI v testování softwaru"
+            "AI v testování softwaru",
+            "AI agenti",
+            "Claude Code",
+            "GitHub Copilot"
           ]
         },
         {
@@ -374,7 +377,7 @@
   "meta": {
     "home": {
       "title": "Richard Kousal | QA & Test Automation Lead",
-      "description": "Vedu QA v Etnetera Core. Píšu o testování s AI, Playwrightu a k6 a ukazuju, na čem zrovna dělám."
+      "description": "Vedu QA v Etnetera Core. Testování s AI, Playwright, k6 a projekty, na kterých zrovna dělám."
     },
     "articles": {
       "title": "Články | Richard Kousal",
@@ -400,9 +403,7 @@
     "closeMenu": "Zavřít menu",
     "language": "Jazyk",
     "skipLink": "Přeskočit na obsah",
-    "backToTop": "Zpět nahoru",
-    "themeToDark": "Zapnout tmavý režim",
-    "themeToLight": "Zapnout světlý režim"
+    "backToTop": "Zpět nahoru"
   },
   "common": {
     "availability": "Otevřen spolupráci a sdílení know-how",
@@ -554,7 +555,6 @@
         "name": "Apartmány Iwona + AI",
         "tagline": "Penzion v Krkonoších jako moje laboratoř.",
         "description": "Máme rodinný penzion v Krkonoších. Sbírám data o cenách a obsazenosti a zkouším, co z nich AI vyčte. Rutinu kolem rezervací a psaní hostům postupně automatizuju.",
-        "extra": "Co z toho funguje a co ne, budu sepisovat do článků.",
         "tags": [
           "Data",
           "Automatizace",

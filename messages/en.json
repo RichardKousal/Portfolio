@@ -286,7 +286,10 @@
         {
           "name": "AI",
           "items": [
-            "AI in Software Testing"
+            "AI in Software Testing",
+            "AI Agents",
+            "Claude Code",
+            "GitHub Copilot"
           ]
         },
         {
@@ -374,7 +377,7 @@
   "meta": {
     "home": {
       "title": "Richard Kousal | QA & Test Automation Lead",
-      "description": "I lead QA at Etnetera Core. I write about testing with AI, Playwright and k6, and show what I'm working on."
+      "description": "I lead QA at Etnetera Core. Testing with AI, Playwright, k6 and the projects I'm working on right now."
     },
     "articles": {
       "title": "Articles | Richard Kousal",
@@ -400,9 +403,7 @@
     "closeMenu": "Close menu",
     "language": "Language",
     "skipLink": "Skip to content",
-    "backToTop": "Back to top",
-    "themeToDark": "Switch to dark mode",
-    "themeToLight": "Switch to light mode"
+    "backToTop": "Back to top"
   },
   "common": {
     "availability": "Open to collaboration and knowledge sharing",
@@ -554,7 +555,6 @@
         "name": "Apartmány Iwona + AI",
         "tagline": "A mountain guesthouse as my lab.",
         "description": "We run a family guesthouse in the Krkonoše mountains. I collect pricing and occupancy data and see what AI can get out of it. Bit by bit I'm automating the routine around bookings and messages to guests.",
-        "extra": "I'll write up what works and what doesn't.",
         "tags": [
           "Data",
           "Automation",
