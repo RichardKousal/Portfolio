@@ -41,12 +41,16 @@ export default defineConfig({
     },
   ],
 
-  webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3003',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
+  // With BASE_URL the tests target an already running server (e.g. `next start`).
+  // Starting `next dev` alongside would overwrite that build's .next directory.
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: 'npm run dev',
+        url: 'http://localhost:3003',
+        reuseExistingServer: !process.env.CI,
+        timeout: 120 * 1000,
+      },
 });
 
 
