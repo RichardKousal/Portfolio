@@ -10,11 +10,13 @@ tests/
 │   └── base.fixture.ts          # Base fixture s browserContext
 ├── page-objects/
 │   ├── base-page.ts             # Abstract BasePage class
-│   └── home-page.ts             # HomePage Page Object
+│   ├── site-page.ts             # Header, navigace, mobilní menu, jazyky, footer
+│   └── articles-page.ts         # Seznam a detail článků, filtr
 ├── specs/
-│   ├── navigation.spec.ts       # Navigation testy
-│   ├── professional-view.spec.ts # Professional view testy
-│   └── language-switching.spec.ts # Language switching testy
+│   ├── navigation.spec.ts       # Navigace, skip link, back to top, 404, mobilní menu
+│   ├── language-switching.spec.ts # cs/en přepínání, redirect /de, /pl
+│   ├── articles.spec.ts         # Filtr, odkazy na blog Etnetery, detail, RSS, sitemap
+│   └── pages.spec.ts            # Projekty, O mně + CV PDF, obsah, SEO, 375px responzivita
 └── README.md
 ```
 

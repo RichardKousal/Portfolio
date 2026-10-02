@@ -1,64 +1,56 @@
-import { test } from '../fixtures/base.fixture';
+import { test, expect } from "../fixtures/base.fixture";
 
-test.describe('Portfolio - Language Switching', () => {
-  test('should switch to English locale', { tag: '@regression' }, async ({ browserContext }, testInfo) => {
-    testInfo.annotations.push({ type: 'TestCaseID', description: 'TC_008' });
-
-    // Arrange
-    await browserContext.homePage.goto();
-    
-    // Act - Use Page Object method with mobile menu support
-    await browserContext.homePage.switchLanguage('en');
-    
-    // Assert
-    await browserContext.homePage.expectCurrentLocale('en');
-  });
-
-  test('should switch to German locale', { tag: '@regression' }, async ({ browserContext }, testInfo) => {
-    testInfo.annotations.push({ type: 'TestCaseID', description: 'TC_009' });
+test.describe("Portfolio - Language Switching", () => {
+  test("should switch to English and keep the current page", { tag: "@regression" }, async ({ browserContext }, testInfo) => {
+    testInfo.annotations.push({ type: "TestCaseID", description: "TC_008" });
 
     // Arrange
-    await browserContext.homePage.goto();
-    
-    // Act - Use Page Object method with mobile menu support
-    await browserContext.homePage.switchLanguage('de');
-    
+    await browserContext.site.goto("/cs/projects");
+    await browserContext.site.waitForPageLoad();
+
+    // Act
+    await browserContext.site.switchLanguage("en");
+
     // Assert
-    await browserContext.homePage.expectCurrentLocale('de');
+    await expect(browserContext.page).toHaveURL(/\/en\/projects$/);
+    await browserContext.site.expectHtmlLang("en");
+    await expect(browserContext.page.locator("h1")).toHaveText("Projects");
   });
 
-  test('should switch to Polish locale', { tag: '@regression' }, async ({ browserContext }, testInfo) => {
-    testInfo.annotations.push({ type: 'TestCaseID', description: 'TC_010' });
+  test("should switch back to Czech", { tag: "@regression" }, async ({ browserContext }, testInfo) => {
+    testInfo.annotations.push({ type: "TestCaseID", description: "TC_009" });
 
     // Arrange
-    await browserContext.homePage.goto();
-    
-    // Act - Use Page Object method with mobile menu support
-    await browserContext.homePage.switchLanguage('pl');
-    
+    await browserContext.site.goto("/en/about");
+    await browserContext.site.waitForPageLoad();
+
+    // Act
+    await browserContext.site.switchLanguage("cs");
+
     // Assert
-    await browserContext.homePage.expectCurrentLocale('pl');
+    await expect(browserContext.page).toHaveURL(/\/cs\/about$/);
+    await browserContext.site.expectHtmlLang("cs");
+    await expect(browserContext.page.locator("h1")).toHaveText("O mně");
   });
 
-  test('should maintain view state when switching language', { tag: '@regression' }, async ({ browserContext }, testInfo) => {
-    testInfo.annotations.push({ type: 'TestCaseID', description: 'TC_011' });
+  test("should offer only Czech and English", { tag: "@regression" }, async ({ browserContext }, testInfo) => {
+    testInfo.annotations.push({ type: "TestCaseID", description: "TC_010" });
 
-    // Arrange - Start on professional view, switch to personal
-    await browserContext.homePage.goto();
-    await browserContext.page.goto('/cs?view=personal');
-    await browserContext.page.waitForLoadState('networkidle');
-    await browserContext.homePage.expectPersonalViewVisible();
-    
-    // Act - Switch language while on personal view
-    await browserContext.homePage.switchLanguage('en');
-    
-    // Assert - Personal view should be maintained
-    await browserContext.homePage.expectCurrentLocale('en');
-    // Give extra time for view parameter to be preserved
-    await browserContext.page.waitForTimeout(1000);
-    await browserContext.homePage.expectPersonalViewVisible();
+    // Arrange
+    await browserContext.site.goto("/cs");
+
+    // Assert
+    const links = browserContext.page.locator('[data-testid^="desktop-lang-"]');
+    await expect(links).toHaveText(["cs", "en"], { ignoreCase: true });
+  });
+
+  test("should redirect removed German and Polish URLs to English", { tag: "@regression" }, async ({ browserContext }, testInfo) => {
+    testInfo.annotations.push({ type: "TestCaseID", description: "TC_011" });
+
+    // Act & Assert
+    await browserContext.page.goto("/de");
+    await expect(browserContext.page).toHaveURL(/\/en\/?$/);
+    await browserContext.page.goto("/pl/projects");
+    await expect(browserContext.page).toHaveURL(/\/en\/projects$/);
   });
 });
-
-
-

@@ -7,10 +7,6 @@ export const analyticsEvents = {
   CV_DOWNLOAD_SUCCESS: 'cv_download_success',
   CV_DOWNLOAD_ERROR: 'cv_download_error',
   
-  // View Toggle
-  VIEW_SWITCHED_TO_PROFESSIONAL: 'view_switched_professional',
-  VIEW_SWITCHED_TO_PERSONAL: 'view_switched_personal',
-  
   // Language Change
   LANGUAGE_CHANGED: 'language_changed',
   
@@ -51,15 +47,6 @@ export const analytics = {
     trackEvent(
       success ? analyticsEvents.CV_DOWNLOAD_SUCCESS : analyticsEvents.CV_DOWNLOAD_ERROR,
       { locale }
-    );
-  },
-  
-  viewSwitch: (view: 'professional' | 'personal') => {
-    trackEvent(
-      view === 'professional'
-        ? analyticsEvents.VIEW_SWITCHED_TO_PROFESSIONAL
-        : analyticsEvents.VIEW_SWITCHED_TO_PERSONAL,
-      { view }
     );
   },
   

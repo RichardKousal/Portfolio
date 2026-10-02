@@ -1,7 +1,14 @@
 import { defineRouting } from "next-intl/routing";
 
+export const locales = ["cs", "en"] as const;
+export type Locale = (typeof locales)[number];
+
 export const routing = defineRouting({
-  locales: ["cs", "en", "pl", "de"],
+  locales,
   defaultLocale: "cs",
-  localeDetection: true, // Explicitně povolíme detekci jazyka prohlížeče
+  localeDetection: true,
 });
+
+export function isLocale(value: string): value is Locale {
+  return (locales as readonly string[]).includes(value);
+}

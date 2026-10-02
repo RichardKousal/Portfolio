@@ -1,9 +1,11 @@
-import { test as base } from '@playwright/test';
-import { homePage } from '../page-objects/home-page';
-import type { Page } from '@playwright/test';
+import { test as base } from "@playwright/test";
+import type { Page } from "@playwright/test";
+import { sitePage } from "../page-objects/site-page";
+import { articlesPage } from "../page-objects/articles-page";
 
 type PageObjects = {
-  homePage: ReturnType<typeof homePage>;
+  site: ReturnType<typeof sitePage>;
+  articles: ReturnType<typeof articlesPage>;
 };
 
 export type BrowserContext = {
@@ -12,16 +14,15 @@ export type BrowserContext = {
 
 export const test = base.extend<{ browserContext: BrowserContext }>({
   browserContext: async ({ page }, use) => {
-    const context: BrowserContext = {
+    await use({
       page,
-      homePage: homePage(page),
-    };
-
-    await use(context);
+      site: sitePage(page),
+      articles: articlesPage(page),
+    });
   },
 });
 
-export { expect } from '@playwright/test';
+export { expect } from "@playwright/test";
 
-
-
+/** Draft articles are rendered only by `next dev` (the default webServer). */
+export const DRAFTS_VISIBLE = !process.env.BASE_URL;

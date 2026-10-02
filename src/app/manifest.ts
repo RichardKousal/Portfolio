@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'QA & Test Automation Lead portfolio - Playwright, Cypress, CI/CD expertise',
     start_url: '/',
     display: 'standalone',
-    background_color: '#0a0a0f',
-    theme_color: '#0a0a0f',
+    background_color: '#fafaf8',
+    theme_color: '#fafaf8',
     orientation: 'portrait-primary',
     icons: [
       {

@@ -2,21 +2,19 @@
   "header": {
     "name": "Richard Kousal",
     "email": "kousal.richard@gmail.com",
-    "phone": "+420 604 674 931",
-    "toggleProfessional": "Professional",
-    "togglePersonal": "Personal"
+    "phone": "+420 604 674 931"
   },
   "notFound": {
-    "title": "Page Not Found",
-    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
-    "homeButton": "Go Home",
-    "backButton": "Go Back"
+    "title": "This page isn't here",
+    "description": "It may have moved, or it never existed. Try the home page.",
+    "homeButton": "Go home",
+    "backButton": "Back"
   },
   "error": {
-    "title": "Something went wrong",
-    "description": "Sorry, an unexpected error occurred. Please try again.",
-    "retryButton": "Try Again",
-    "homeButton": "Go Home"
+    "title": "Something broke",
+    "description": "That shouldn't have happened. Please try again.",
+    "retryButton": "Try again",
+    "homeButton": "Go home"
   },
   "pdf": {
     "aboutMe": "ABOUT ME",
@@ -25,63 +23,226 @@
     "specialization": "Specialization",
     "languages": "Languages",
     "locationValue": "Rokytnice n. J. / Prague",
-    "availabilityValue": "Open to opportunities",
-    "specializationValue": "QA Lead, AI-Driven QA, Playwright",
-    "languagesValue": "Czech (native), English (advanced)",
-    "generatedFrom": "Generated from"
+    "availabilityValue": "Open to collaboration and knowledge sharing",
+    "specializationValue": "QA Lead, AI-Driven QA, Playwright, k6",
+    "languagesValue": "Czech & Polish (native), English (limited working)",
+    "generatedFrom": "Generated from",
+    "present": "Present",
+    "issued": "Issued",
+    "expires": "Expires",
+    "credentialId": "ID"
   },
   "professional": {
     "hero": {
-      "title": "Hi, I'm Richard",
-      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation",
-      "description": "I lead and build modern QA teams that keep pace with rapid software development and the rise of AI. I focus on AI-driven testing and agentic approaches to eliminate routine work and shift quality left. I see QA as a partner to product and engineering, not a final gatekeeper — automation handles execution, QA focuses on risks and continuous improvement. I stay hands-on: Playwright, TypeScript, CI/CD, Azure.",
+      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation & Performance Testing | Playwright | k6",
       "btnLinkedIn": "LinkedIn",
-      "btnContact": "Contact Me",
+      "btnContact": "Email me",
       "btnDownloadCV": "Download CV"
     },
+    "summary": [
+      "I lead and help build modern QA teams that keep up with the rapid pace of software development and the rise of AI.",
+      "I focus on QA leadership, quality strategy, and AI-driven testing. I enjoy exploring ways to use agent-based approaches and automation to eliminate repetitive QA work and move quality as close as possible to the start of the development process — ideally already during client communication and solution design.",
+      "I see QA as a partner to product and engineering, not a final gatekeeper. Automation and AI should handle execution and routine validation, while QA focuses on risk, overall quality, and continuous improvement across teams and products.",
+      "Although I primarily work in a leadership role, I stay hands-on where it adds value. I work with Playwright and TypeScript/JavaScript, focus on performance and load testing using k6, and have experience with CI/CD, DevOps practices, and Azure cloud environments. This allows me to connect QA strategy with real-world implementation and ensure that it does not remain just on paper, but actually works in practice.",
+      "I believe strong QA is built on clear ownership, trust within teams, data-driven decisions, and smart use of automation and AI."
+    ],
     "experience": {
       "title": "Experience",
+      "present": "now",
       "timeline": [
         {
           "role": "QA & Test Automation Lead",
           "company": "Etnetera Core",
-          "period": "April 2025 - Present",
-          "type": "Freelance",
-          "responsibilities": [
-            "Leading QA across projects with responsibility for QA strategy and test automation direction.",
-            "Building scalable QA processes and mentoring QA engineers.",
-            "Introducing AI-driven and agent-based QA approaches to optimize testing activities.",
-            "Aligning quality with product and engineering goals."
-          ]
+          "location": "Prague, Czechia",
+          "start": "2025-04",
+          "end": null,
+          "intro": [
+            "Leading QA across projects at Etnetera Core, with responsibility for QA strategy, quality standards, test automation direction, and the development of performance testing practices.",
+            "Alongside building scalable QA processes, mentoring QA engineers, and aligning quality with product and engineering goals, I am increasingly focused on how AI can fundamentally reshape the role of QA within a modern software development lifecycle.",
+            "My goal is not simply to automate individual testing tasks, but to move QA toward an AI-native model where the tester mindset — critical thinking, risk discovery, dealing with uncertainty, and the ability to challenge systems — becomes the foundation for orchestrating and directing AI agents.",
+            "In this model, AI increasingly takes over routine and repeatable activities, while QA engineers evolve into roles focused on defining strategy, context, risks, quality boundaries, and validation principles — using AI as an execution layer capable of autonomously handling a significant share of testing work.",
+            "I see this as the future of QA: less time spent manually executing routine tasks, and more focus on quality as a system, where human testers use their mindset and judgment to guide intelligent, autonomous agents across the entire SDLC."
+          ],
+          "bullets": [],
+          "outro": []
         },
         {
           "role": "QA Engineer",
           "company": "Etnetera Core",
-          "period": "January 2025 - Present",
-          "type": "Self-employed",
-          "responsibilities": [
-            "Designing and developing automations for new and existing projects using Playwright.",
-            "Streamlining processes and accelerating delivery."
-          ]
+          "location": "Prague, Czechia",
+          "start": "2025-01",
+          "end": null,
+          "intro": [
+            "Designing and developing automations for new and existing projects using Playwright, with the goal of streamlining processes and accelerating delivery."
+          ],
+          "bullets": [],
+          "outro": []
         },
         {
           "role": "QA Team Lead / Test Engineer",
           "company": "DODO",
-          "period": "May 2022 - January 2025",
-          "responsibilities": [
-            "<strong>QA People Management:</strong> Overseeing team performance and workload.",
-            "<strong>Mentoring:</strong> Design and maintenance of automated tests (Cypress) for critical scenarios.",
-            "Proposing quality improvements and effective stakeholder communication."
+          "location": "Czechia",
+          "start": "2022-05",
+          "end": "2025-01",
+          "intro": [],
+          "bullets": [
+            "Team Leadership: Overseeing team performance and workload.",
+            "Test Automation: Designing and maintaining automated tests for critical scenarios.",
+            "Assessment and Quality Improvement: Evaluating results and proposing quality enhancements.",
+            "Documentation: Ensuring proper test documentation.",
+            "First Level Support (L1): Providing initial user support and resolving issues.",
+            "Swift Incident Response: Responding to user incidents to minimize service interruptions.",
+            "Stakeholder Communication: Collaborating with clients and stakeholders for effective communication."
+          ],
+          "outro": [
+            "This role also includes leadership in ensuring successful releases, along with QA and testing responsibilities."
           ]
         },
         {
           "role": "QA Tester",
           "company": "DODO",
-          "period": "May 2021 - May 2022",
-          "responsibilities": [
-            "Optimization of test scenarios, BE/FE testing (E2E, integration).",
-            "Testing hybrid (native & web) mobile applications."
+          "location": "Prague, Czechia",
+          "start": "2021-05",
+          "end": "2022-05",
+          "intro": [],
+          "bullets": [
+            "Testing Scenarios Optimization: Updating and optimizing testing scenarios for efficiency.",
+            "Process Improvement: Enhancing quality through process review and optimization.",
+            "BE and FE Testing: Specializing in testing application's BE and FE for same-day and next-day logistics.",
+            "Diverse Testing: Active involvement in diverse testing types, including integration and end-to-end (E2E) testing.",
+            "Mobile Testing: Conducting comprehensive testing of hybrid (native & web) mobile apps on various devices.",
+            "Payment Gateway Testing: Ensuring smooth and reliable payments through the testing of payment functionality.",
+            "Team Knowledge Sharing: Actively participating in knowledge and skill sharing within the team to address complex testing challenges and achieve outstanding results."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Customer Support PL/ENG",
+          "company": "Nokian Tyres plc",
+          "location": "Prague, Czechia",
+          "start": "2019-03",
+          "end": "2021-04",
+          "intro": [],
+          "bullets": [
+            "Customer Support: Handling inquiries, complaints, and claims via phone, email, and chat.",
+            "Product Expertise: Providing technical product information to aid customers in tire selection.",
+            "Order Management: Processing and monitoring customer orders, coordinating with logistics.",
+            "Issue Resolution: Managing complaints and exchanges following company policies."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Sales Manager",
+          "company": "ConQuest entertainment a.s.",
+          "location": "Prague, Czechia",
+          "start": "2017-01",
+          "end": "2019-03",
+          "intro": [],
+          "bullets": [
+            "Business Development: Identifying opportunities, securing clients, and driving growth for Nintendo products.",
+            "Customer Engagement: Building and maintaining retail partner relationships and customizing offerings.",
+            "Event Management: Planning and executing events, coordinating marketing.",
+            "Product Translations: Translating product information into Polish for a broader audience."
+          ],
+          "outro": []
+        },
+        {
+          "role": "Managing Director",
+          "company": "ForHandicap s.r.o.",
+          "location": "",
+          "start": "2015-05",
+          "end": "2017-12",
+          "intro": [],
+          "bullets": [
+            "Leading and managing operations for distribution of active wheelchairs in the Czech Republic.",
+            "Specialized in sales of active wheelchairs, with a primary focus on communicating with health insurance companies, foundations and customers."
+          ],
+          "outro": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "school": "STŘEDNÍ ŠKOLA, Lomnice nad Popelkou, příspěvková organizace",
+          "degree": "Secondary school, completed with the Maturita exam",
+          "start": "2008",
+          "end": "2012",
+          "activities": [
+            "Editor at Kulíšek, an internet radio station in the Krkonoše region",
+            "Member of the school catering committee"
           ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        {
+          "name": "Czech",
+          "level": "Native or bilingual proficiency"
+        },
+        {
+          "name": "Polish",
+          "level": "Native or bilingual proficiency"
+        },
+        {
+          "name": "English",
+          "level": "Limited working proficiency"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "issued": "issued",
+      "expires": "expires",
+      "credentialId": "ID",
+      "verify": "verify",
+      "items": [
+        {
+          "name": "Preply - Successfully completing 30 hours of English lessons",
+          "authority": "Preply",
+          "issued": "2024-02",
+          "credentialId": "9FE84882"
+        },
+        {
+          "name": "Basic Managerial Skills",
+          "authority": "SOPHISTO",
+          "issued": "2023-07",
+          "expires": "2024-07"
+        },
+        {
+          "name": "Mentoring for Professionals",
+          "authority": "Femme Palette",
+          "issued": "2023-05",
+          "expires": "2028-05",
+          "credentialId": "TAK0IV9Z0T04",
+          "url": "https://backend.femmepalette.com/mentee_relation/certificate/TAK0IV9Z0T04/"
+        },
+        {
+          "name": "Introduction to Git and Gitlab",
+          "authority": "Tesena",
+          "issued": "2022-12",
+          "credentialId": "65366028",
+          "url": "https://www.credential.net/ff1658ec-41ca-4912-b7d7-10608f74412c"
+        },
+        {
+          "name": "Cypress.io bootcamp",
+          "authority": "Cypress.io",
+          "issued": "2021-11"
+        },
+        {
+          "name": "Learn CSS Course",
+          "authority": "Codecademy",
+          "issued": "2020-09",
+          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9a5bb1fc45b4281af1fffec93b0aaf05"
+        },
+        {
+          "name": "Learn HTML Course",
+          "authority": "Codecademy",
+          "issued": "2020-09",
+          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
         }
       ]
     },
@@ -89,91 +250,349 @@
       "title": "Skills",
       "categories": [
         {
-          "name": "Team & Strategy",
+          "name": "QA & strategy",
           "items": [
-            "QA Leadership",
             "QA Strategy",
+            "Test Strategy",
             "Test Automation Strategy",
-            "Continuous Quality / Shift-Left",
-            "Mentoring",
-            "Agile Methodology"
+            "Quality Transformation",
+            "Continuous Quality / Shift-Left Testing",
+            "Risk Management",
+            "Test Planning",
+            "Software Quality Assurance",
+            "User Acceptance Testing",
+            "Assessment and Quality Improvement"
           ]
         },
         {
-          "name": "AI & Automation",
+          "name": "Automation & tools",
           "items": [
-            "AI in Software Testing",
-            "Agent-based QA",
             "Playwright",
+            "TypeScript / JavaScript",
+            "k6 Load Testing",
+            "Performance Testing",
+            "Test Automation",
+            "Test Development",
             "Cypress",
+            "Selenium",
+            "API Testing",
+            "Backend and Frontend Testing",
+            "Mobile Testing",
+            "Payment Gateway Testing",
             "CI/CD",
             "DevOps"
           ]
         },
         {
-          "name": "Technology",
+          "name": "AI",
           "items": [
-            "TypeScript",
-            "JavaScript",
-            "Azure",
-            "Git",
-            "GitLab",
-            "Postman",
-            "Temporal"
+            "AI in Software Testing",
+            "AI Agents",
+            "Claude Code",
+            "GitHub Copilot"
           ]
         },
         {
-          "name": "Languages",
+          "name": "Leadership",
           "items": [
-            "Czech (Native)",
-            "Polish (Native)",
-            "English (Professional)"
+            "QA Leadership",
+            "Team Leadership",
+            "Mentoring",
+            "Knowledge Sharing",
+            "Stakeholder Communication",
+            "Agile Methodologies",
+            "Planning and Coordination",
+            "Team Collaboration"
+          ]
+        },
+        {
+          "name": "Other",
+          "items": [
+            "Critical Thinking",
+            "Problem Solving",
+            "Working Under Pressure",
+            "Self-learning",
+            "Communication Skills",
+            "Customer Communication",
+            "Customer Focus",
+            "Customer Relationship Management",
+            "Sales and Business Development",
+            "Business Strategy",
+            "Strategic Planning",
+            "Event Planning and Management",
+            "Communication with Public Authorities",
+            "Healthcare and Technical Knowledge",
+            "Logistics Skills"
           ]
         }
       ]
     },
     "vision": {
-      "title": "My Approach",
-      "text": "Technology is important, but at the end of the day, it's about people. I'm a team player with a positive approach to work and life. I believe that a happy and motivated team is the foundation for delivering a quality product. My job is not just to set up processes, but mainly to create an environment where people enjoy working and where everyone has room to grow."
+      "title": "How I work",
+      "text": "Tools matter, but in the end it's about people. A happy team with room to grow ships a better product than a team with perfect processes and bad morale. So I don't just set up processes. Mostly I make sure the team is a good place to work."
     }
   },
   "personal": {
     "intro": {
-      "title": "When I close my notebook...",
-      "description": "Technology is my profession, but my real passion is the world outside. A world where every step, every breath, and every sunrise counts. I believe in balance and that the best ideas come when you have a clear mind – and I clear mine best in the mountains or by the sea.",
-      "btnLinkedIn": "Let's connect",
-      "btnContact": "Write to me"
+      "title": "When I close the laptop",
+      "description": "I work at a computer, but I clear my head outside. Mountains if I can, the sea if I can't. My best ideas still show up when I'm not thinking about work."
     },
     "passions": {
       "title": "Where I recharge",
       "categories": [
         {
           "name": "Mountains",
-          "description": "I love being in the mountains most. That feeling when you reach the summit and get rewarded with the views you can share... Or early in the morning, before dawn, putting on ski touring equipment and heading towards silence, empty slopes, and the sunrise."
+          "description": "I'm happiest in the mountains. Getting to the top and having a view that was worth it. Or putting on touring skis before dawn and going up while the slopes are empty and quiet."
         },
         {
-          "name": "Water and Running",
-          "description": "I equally love mornings on a yacht when the sun wakes you up and the first thing you do is jump into the sea. Running in nature is for me a form of active meditation. I switch off and solutions to problems that are bothering me naturally flow through my head."
+          "name": "Water and running",
+          "description": "On a boat, the sun wakes me up and the first thing I do is jump in the sea. Running in the woods is my kind of meditation. I switch off and answers to work problems just show up."
         },
         {
-          "name": "And when there's time left...",
-          "items": ["Bouldering", "DIY", "Cooking", "Baking", "Mountain Hiking"]
+          "name": "When there's time left",
+          "items": [
+            "Bouldering",
+            "DIY",
+            "Cooking",
+            "Baking",
+            "Mountain hiking"
+          ]
         }
       ]
     },
     "sideHustle": {
-      "title": "My Hospitality Project: Apartmány Iwona",
+      "title": "Apartmány Iwona",
       "link": "www.apartmany-iwona.cz",
-      "description": "This isn't about code, but about people. In my free time, I passionately manage our family guesthouse. I take care of the complete guest experience – from pricing and communication during reservations to final maintenance, cleaning (with emphasis on eco-friendly products), and creating an atmosphere where people can not only be active but truly relax."
+      "description": "Our family guesthouse in the Krkonoše mountains. I handle pricing, bookings and messages with guests. When needed, maintenance and cleaning too, with eco products. I want people to actually rest here."
     }
   },
   "footer": {
-    "copyright": "© {year} Richard Kousal | Business ID: 09121251"
+    "copyright": "© {year} Richard Kousal | Business ID: 09121251",
+    "rss": "RSS"
   },
   "languages": {
-    "cs": "Czech",
-    "en": "English",
-    "de": "German",
-    "pl": "Polish"
+    "cs": "Čeština",
+    "en": "English"
+  },
+  "meta": {
+    "home": {
+      "title": "Richard Kousal | QA & Test Automation Lead",
+      "description": "I lead QA at Etnetera Core. Testing with AI, Playwright, k6 and the projects I'm working on right now."
+    },
+    "articles": {
+      "title": "Articles | Richard Kousal",
+      "description": "Articles about testing in the age of AI, and how I use AI outside work too, like at our guesthouse in the Krkonoše mountains."
+    },
+    "projects": {
+      "title": "Projects | Richard Kousal",
+      "description": "QA Control Center, QA Brain, a k6 framework, QA Manual Copilot, an MTP generator and AI for a mountain guesthouse."
+    },
+    "about": {
+      "title": "About | Richard Kousal",
+      "description": "Where I've worked, what I know, certifications and languages. Plus mountains, the sea and a family guesthouse."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "articles": "Articles",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "mainLabel": "Main navigation",
+    "footerLabel": "Footer navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "skipLink": "Skip to content",
+    "backToTop": "Back to top"
+  },
+  "common": {
+    "availability": "Open to collaboration and knowledge sharing",
+    "readMore": "Read more",
+    "allArticles": "All articles",
+    "allProjects": "All projects",
+    "minRead": "{minutes} min read",
+    "draft": "draft",
+    "inCzech": "in Czech",
+    "publishedOnEtnetera": "Published on the Etnetera blog",
+    "linkComing": "link coming",
+    "backToArticles": "Back to articles",
+    "visitWebsite": "Guesthouse website",
+    "opensInNewTab": "(opens in a new tab)"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "QA & Test Automation Lead · Etnetera Core",
+      "title": "AI proposes, I decide.",
+      "lead": "I'm Richard and I lead QA at Etnetera Core. I build testing where AI writes the criteria and the tests, and I say what can be trusted.",
+      "ctaArticles": "Read articles",
+      "ctaProjects": "What I'm working on"
+    },
+    "status": {
+      "label": "What's going on",
+      "now": "now",
+      "nowValue": "building QA Control Center",
+      "nextTalk": "next talk"
+    },
+    "latest": {
+      "title": "Articles"
+    },
+    "work": {
+      "title": "What I'm working on",
+      "intro": "A few things I'm building right now. I use most of them every day."
+    },
+    "series": {
+      "label": "LinkedIn series",
+      "schedule": "every Tuesday",
+      "title": "AI proposes, I decide",
+      "text": "Every Tuesday I post one short piece on LinkedIn. Each one is a real situation where AI suggested something and I had to decide whether to take it. The series is in Czech.",
+      "cta": "Follow on LinkedIn"
+    },
+    "talks": {
+      "title": "Where you can hear me",
+      "upcoming": "upcoming",
+      "past": "done"
+    },
+    "facts": {
+      "years": "{years}+",
+      "yearsLabel": "years in QA and testing",
+      "role": "Etnetera Core",
+      "roleLabel": "leading QA and test automation",
+      "tools": "Playwright · k6",
+      "toolsLabel": "automation and load testing",
+      "projectsLabel": "AI projects I'm working on",
+      "label": "At a glance"
+    },
+    "eyebrows": {
+      "latest": "Articles",
+      "work": "Projects",
+      "series": "LinkedIn series",
+      "talks": "Talks",
+      "contact": "Contact"
+    }
+  },
+  "talks": {
+    "items": [
+      {
+        "title": "Etnology #6",
+        "date": "2026-10-14",
+        "place": "Etnetera, Prague",
+        "description": "Live demo of QA Control Center in the AI demo zone."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "If you want to talk about AI in testing, automation or load testing, send me an email or a message on LinkedIn.",
+    "email": "Email",
+    "phone": "Phone",
+    "heading": "Let's talk"
+  },
+  "articles": {
+    "title": "Articles",
+    "intro": "I write about what I try at work and at home. Some pieces go out on the Etnetera blog, some only here.",
+    "filterLabel": "Filter articles by category",
+    "filters": {
+      "all": "All",
+      "qa-ai": "QA & AI",
+      "personal": "Personal"
+    },
+    "empty": "Nothing here yet. I'm writing the first ones.",
+    "emptyFilter": "Nothing in this category yet.",
+    "rss": "Subscribe via RSS",
+    "fallbackNotice": "This article is only in Czech for now.",
+    "publishedLabel": "Published",
+    "todoDraftNotice": "Draft. Not shown in production."
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Stuff I'm building around testing with AI. Plus a guesthouse in the mountains where I try AI with my own money.",
+    "extraLabel": "also",
+    "items": [
+      {
+        "id": "qa-control-center",
+        "name": "QA Control Center",
+        "tagline": "AI proposes, a human decides.",
+        "description": "You give it a requirement and AI drafts acceptance criteria, test scenarios and ready-to-run Playwright tests. I built it because I'd seen plenty of generated tests that pass and check nothing. So instead of pass rate, it tracks how much you can trust each test.",
+        "extra": "There are human gates between the steps. Nothing moves on until QA says yes.",
+        "tags": [
+          "AI agents",
+          "Playwright",
+          "TypeScript"
+        ]
+      },
+      {
+        "id": "qa-brain",
+        "name": "QA Brain",
+        "tagline": "One set of QA rules for people and agents.",
+        "description": "A set of QA rules where every rule has its own ID. Agents in Claude Code and Copilot read them and cite them, the way a colleague would in a code review.",
+        "extra": "When an agent says which rule a test breaks, nobody has to ask why.",
+        "tags": [
+          "Claude Code",
+          "GitHub Copilot",
+          "AI agents"
+        ]
+      },
+      {
+        "id": "k6-framework",
+        "name": "k6 performance framework",
+        "tagline": "Even a PM can order a load test.",
+        "description": "A framework on top of k6. A product manager who's never seen a script can order a load test with it. They answer five questions, or leave it all to the AI configurator.",
+        "extra": "At the end they get a report they can read without a translator.",
+        "tags": [
+          "k6",
+          "Performance testing",
+          "AI"
+        ]
+      },
+      {
+        "id": "qa-manual-copilot",
+        "name": "QA Manual Copilot",
+        "tagline": "An AI sidekick for manual testers.",
+        "description": "A Chrome extension that sits next to a manual tester. It suggests what else to try and helps write up a finding.",
+        "extra": "It has one rule it can't skip: no claim without evidence. Every finding needs a screenshot, a log or an exact step.",
+        "tags": [
+          "Chrome extension",
+          "AI",
+          "Manual testing"
+        ]
+      },
+      {
+        "id": "mtp-generator",
+        "name": "MTP generator",
+        "tagline": "A Master Test Plan that comes out the same every time.",
+        "description": "A Master Test Plan generator. Code builds the structure, scope and rules from the input data, so the same data gives you the same plan.",
+        "extra": "AI is only allowed to write the prose, like the intro and the summary.",
+        "tags": [
+          "Test management",
+          "AI",
+          "Documentation"
+        ]
+      },
+      {
+        "id": "apartmany-iwona",
+        "name": "Apartmány Iwona + AI",
+        "tagline": "A mountain guesthouse as my lab.",
+        "description": "We run a family guesthouse in the Krkonoše mountains. I collect pricing and occupancy data and see what AI can get out of it. Bit by bit I'm automating the routine around bookings and messages to guests.",
+        "tags": [
+          "Data",
+          "Automation",
+          "AI"
+        ],
+        "url": "https://www.apartmany-iwona.cz"
+      }
+    ],
+    "featured": [
+      "qa-control-center",
+      "qa-brain",
+      "apartmany-iwona"
+    ]
+  },
+  "about": {
+    "title": "About",
+    "professionalTitle": "Work",
+    "personalTitle": "Outside work",
+    "downloadCv": "Download CV (PDF)",
+    "activities": "Activities"
   }
 }

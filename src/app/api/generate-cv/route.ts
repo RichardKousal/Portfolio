@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     const locale = searchParams.get('locale') || 'cs';
 
     // Validate locale
-    const validLocales = ['cs', 'en', 'pl', 'de'];
+    const validLocales = ['cs', 'en'];
     const finalLocale = validLocales.includes(locale) ? locale : 'cs';
 
     // Load messages for the locale
@@ -24,8 +24,11 @@ export async function GET(request: NextRequest) {
       email: data.header.email,
       phone: data.header.phone,
       subtitle: data.professional.hero.subtitle,
-      description: data.professional.hero.description,
+      summary: data.professional.summary,
       experience: data.professional.experience,
+      education: data.professional.education,
+      languages: data.professional.languages,
+      certifications: data.professional.certifications,
       skills: data.professional.skills,
       vision: data.professional.vision,
       pdf: data.pdf, // PDF translations
