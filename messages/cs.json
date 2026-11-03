@@ -23,9 +23,9 @@
     "specialization": "Specializace",
     "languages": "Jazyky",
     "locationValue": "Rokytnice n. J. / Praha",
-    "availabilityValue": "Otevřen spolupráci a sdílení know-how",
+    "availabilityValue": "Rád proberu AI v testování",
     "specializationValue": "QA Lead, AI-Driven QA, Playwright, k6",
-    "languagesValue": "čeština a polština (rodilá), angličtina (omezená pracovní)",
+    "languagesValue": "čeština a polština (rodilá), angličtina (profesní pracovní)",
     "generatedFrom": "Generováno z",
     "present": "současnost",
     "issued": "vydáno",
@@ -34,17 +34,16 @@
   },
   "professional": {
     "hero": {
-      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation & Performance Testing | Playwright | k6",
+      "subtitle": "QA Lead · Automatizace testů s AI · Testování AI agentů a LLM systémů · Playwright + TypeScript · k6",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Napiš mi",
       "btnDownloadCV": "Stáhnout CV"
     },
     "summary": [
-      "Vedu a pomáhám budovat moderní QA týmy, které stíhají tempo vývoje softwaru i nástup AI.",
-      "Zaměřuju se na vedení QA, strategii kvality a testování s pomocí AI. Baví mě hledat, jak agenty a automatizací odstranit opakovanou QA práci a dostat kvalitu co nejblíž začátku vývoje. Ideálně už do komunikace s klientem a do návrhu řešení.",
-      "QA pro mě je partner produktu a vývoje, ne vrátný na konci. Spouštění testů a rutinní ověřování má dělat automatizace a AI. QA se má starat o rizika, celkovou kvalitu a o to, aby se týmy i produkty pořád zlepšovaly.",
-      "Hlavně vedu, ale tam, kde to pomůže, sahám i do kódu. Pracuju s Playwrightem a TypeScriptem/JavaScriptem, výkonnostní a zátěžové testy dělám v k6 a mám zkušenosti s CI/CD, DevOps a cloudem Azure. Díky tomu umím QA strategii propojit s tím, co se reálně staví, aby nezůstala jen na papíře.",
-      "Dobré QA podle mě stojí na jasné odpovědnosti, důvěře v týmu, rozhodování podle dat a rozumném použití automatizace a AI."
+      "Vedu QA a automatizaci testů. Teď mě nejvíc zajímá, jak testovat software, když testy píše AI.",
+      "V Etnetera Core stavím QA Control Center. Je to agentní systém, který si zmapuje webovou aplikaci, navrhne rizika a akceptační kritéria a napíše Playwright testy. Nesleduju, kolik testů prošlo. Sleduju, kolika z nich se dá věřit. Zelený test, který nic nekontroluje, se za úspěšný nepočítá. AI navrhuje, tester rozhoduje, kód měří.",
+      "Vedu QA: strategie testování, standardy kvality, mentoring testerů, reporting kvality a rizik. Automatizuju testy v Playwrightu a TypeScriptu, API i UI, napojené na CI/CD. Dělám výkonnostní a zátěžové testy v k6. A stavím a testuju systémy s AI agenty, kde o důležitých krocích rozhoduje člověk.",
+      "Než jsem přešel do QA, dělal jsem obchod a vedl malou firmu. Domluvím se proto s klienty i s byznysem, nejen s vývojáři."
     ],
     "experience": {
       "title": "Zkušenosti",
@@ -57,13 +56,14 @@
           "start": "2025-04",
           "end": null,
           "intro": [
-            "V Etnetera Core vedu QA napříč projekty. Mám na starosti QA strategii, standardy kvality, směr automatizace testů a rozvoj výkonnostního testování.",
-            "Kromě budování škálovatelných QA procesů, mentoringu QA inženýrů a ladění kvality s cíli produktu a vývoje se čím dál víc věnuju tomu, jak AI mění roli QA v moderním vývoji softwaru.",
-            "Nechci jen automatizovat jednotlivé testovací úkoly. Chci QA posunout k modelu, kde je AI přirozenou součástí práce a kde testerské myšlení slouží jako základ pro řízení AI agentů. Tím myslím kritické uvažování, hledání rizik, práci s nejistotou a schopnost systém zpochybnit.",
-            "AI v tomhle modelu přebírá rutinní a opakovatelnou práci. QA inženýři se posouvají k roli, kde určují strategii, kontext, rizika, hranice kvality a principy validace. AI jim slouží jako výkonná vrstva, která velkou část testování zvládne sama.",
-            "Tak vidím budoucnost QA: méně ruční rutiny a víc přemýšlení o kvalitě jako o celém systému. Lidský tester svým úsudkem vede inteligentní autonomní agenty napříč celým vývojovým cyklem."
+            "V Etnetera Core vedu QA napříč projekty a stavím nástroje, se kterými rutinní testování přebírá AI a rozhodování zůstává testerům."
           ],
-          "bullets": [],
+          "bullets": [
+            "Stavím QA Control Center: 16 specializovaných AI agentů ze zadání odvodí rizika, scénáře a Playwright testy. Klíčové kroky schvaluje tester a systém ukáže, kolika testům se dá věřit.",
+            "Samotný systém hlídá přes 4 000 automatických testů.",
+            "Mám na starosti strategii testování, standardy kvality a směr automatizace.",
+            "Vedu testery a dělám zátěžové a výkonnostní testy v k6."
+          ],
           "outro": []
         },
         {
@@ -71,9 +71,9 @@
           "company": "Etnetera Core",
           "location": "Praha",
           "start": "2025-01",
-          "end": null,
+          "end": "2025-03",
           "intro": [
-            "Navrhuju a vyvíjím automatizaci v Playwrightu pro nové i stávající projekty. Cílem je zjednodušit procesy a zrychlit dodávky."
+            "Stavěl jsem automatické testy v Playwrightu pro nové i stávající projekty, aby týmy mohly vydávat rychleji."
           ],
           "bullets": [],
           "outro": []
@@ -84,19 +84,18 @@
           "location": "Česko",
           "start": "2022-05",
           "end": "2025-01",
-          "intro": [],
-          "bullets": [
-            "Vedení týmu: dohled nad výkonem a vytížením týmu.",
-            "Automatizace testů: návrh a údržba automatizovaných testů pro kritické scénáře.",
-            "Hodnocení a zlepšování kvality: vyhodnocování výsledků a návrhy na zlepšení.",
-            "Dokumentace: péče o testovací dokumentaci.",
-            "Podpora první úrovně (L1): první pomoc uživatelům a řešení jejich problémů.",
-            "Rychlá reakce na incidenty: řešení incidentů od uživatelů tak, aby výpadky byly co nejkratší.",
-            "Komunikace se stakeholdery: spolupráce s klienty a stakeholdery."
+          "intro": [
+            "Vedl jsem QA tým pro aplikace DODO na doručení ve stejný a další den a odpovídal jsem za bezpečné vydávání nových verzí."
           ],
-          "outro": [
-            "K roli patřilo i vedení releasů, aby proběhly bez problémů, a k tomu běžná QA a testovací práce."
-          ]
+          "bullets": [
+            "Rozděloval jsem práci a priority v týmu.",
+            "Navrhoval a udržoval jsem automatické testy kritických scénářů.",
+            "Vyhodnocoval jsem výsledky testů a navrhoval zlepšení kvality.",
+            "Udržoval jsem testovací dokumentaci.",
+            "Řešil jsem první linii podpory a incidenty, aby výpadky trvaly co nejkratší dobu.",
+            "Komunikoval jsem přímo s klienty a stakeholdery."
+          ],
+          "outro": []
         },
         {
           "role": "QA Tester",
@@ -104,15 +103,15 @@
           "location": "Praha",
           "start": "2021-05",
           "end": "2022-05",
-          "intro": [],
+          "intro": [
+            "Testoval jsem backend a frontend aplikací DODO na doručení ve stejný a další den."
+          ],
           "bullets": [
-            "Optimalizace testovacích scénářů: aktualizace a zefektivnění scénářů.",
-            "Zlepšování procesů: vyšší kvalita díky revizi a úpravám procesů.",
-            "Testování BE a FE: specializace na backend a frontend aplikace pro doručení ještě týž den a druhý den.",
-            "Různé typy testů: zapojení do různých typů testování, včetně integračních a end-to-end (E2E) testů.",
-            "Mobilní testování: důkladné testování hybridních (nativních i webových) mobilních aplikací na různých zařízeních.",
-            "Testování platebních bran: aby platby fungovaly hladce a spolehlivě.",
-            "Sdílení znalostí v týmu: aktivní sdílení znalostí a dovedností při řešení složitých testovacích problémů."
+            "Integrační a end-to-end testy.",
+            "Testování hybridních mobilních aplikací (nativní i web) na různých zařízeních.",
+            "Testování platební brány.",
+            "Aktualizace testovacích scénářů a zlepšování QA procesů.",
+            "Sdílení know-how v týmu u složitějších testovacích problémů."
           ],
           "outro": []
         },
@@ -122,13 +121,10 @@
           "location": "Praha",
           "start": "2019-03",
           "end": "2021-04",
-          "intro": [],
-          "bullets": [
-            "Zákaznická podpora: dotazy, stížnosti a reklamace po telefonu, e-mailem i v chatu.",
-            "Znalost produktu: technické informace o produktech, aby si zákazník vybral správné pneumatiky.",
-            "Správa objednávek: zpracování a sledování objednávek, koordinace s logistikou.",
-            "Řešení problémů: vyřizování stížností a výměn podle firemních pravidel."
+          "intro": [
+            "Zákaznická podpora v polštině a angličtině: objednávky, reklamace a rady při výběru pneumatik."
           ],
+          "bullets": [],
           "outro": []
         },
         {
@@ -137,13 +133,10 @@
           "location": "Praha",
           "start": "2017-01",
           "end": "2019-03",
-          "intro": [],
-          "bullets": [
-            "Rozvoj obchodu: hledání nových obchodů, získávání klientů a růst prodejů produktů Nintendo.",
-            "Péče o partnery: budování a udržování vztahů s maloobchodními partnery a nabídka na míru.",
-            "Akce: plánování a realizace akcí, koordinace marketingu.",
-            "Překlady: překlad produktových informací do polštiny, aby se dostaly k většímu publiku."
+          "intro": [
+            "Obchod a péče o maloobchodní partnery pro produkty Nintendo v Česku a Polsku, akce a překlady do polštiny."
           ],
+          "bullets": [],
           "outro": []
         },
         {
@@ -152,11 +145,10 @@
           "location": "",
           "start": "2015-05",
           "end": "2017-12",
-          "intro": [],
-          "bullets": [
-            "Vedení a řízení distribuce aktivních vozíků v České republice.",
-            "Prodej aktivních vozíků, hlavně komunikace se zdravotními pojišťovnami, nadacemi a zákazníky."
+          "intro": [
+            "Vedl jsem malou firmu, která distribuovala aktivní vozíky. Jednal jsem s pojišťovnami, nadacemi a zákazníky."
           ],
+          "bullets": [],
           "outro": []
         }
       ]
@@ -169,10 +161,7 @@
           "degree": "zakončeno maturitní zkouškou",
           "start": "2008",
           "end": "2012",
-          "activities": [
-            "Redaktor krkonošského internetového rádia Kulíšek",
-            "Člen stravovací komise"
-          ]
+          "activities": []
         }
       ]
     },
@@ -189,7 +178,7 @@
         },
         {
           "name": "Angličtina",
-          "level": "omezená pracovní znalost"
+          "level": "profesní pracovní znalost"
         }
       ]
     },
@@ -200,12 +189,6 @@
       "credentialId": "ID",
       "verify": "ověřit",
       "items": [
-        {
-          "name": "Preply - Successfully completing 30 hours of English lessons",
-          "authority": "Preply",
-          "issued": "2024-02",
-          "credentialId": "9FE84882"
-        },
         {
           "name": "Basic Managerial Skills",
           "authority": "SOPHISTO",
@@ -231,18 +214,6 @@
           "name": "Cypress.io bootcamp",
           "authority": "Cypress.io",
           "issued": "2021-11"
-        },
-        {
-          "name": "Learn CSS Course",
-          "authority": "Codecademy",
-          "issued": "2020-09",
-          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9a5bb1fc45b4281af1fffec93b0aaf05"
-        },
-        {
-          "name": "Learn HTML Course",
-          "authority": "Codecademy",
-          "issued": "2020-09",
-          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
         }
       ]
     },
@@ -318,11 +289,7 @@
             "Péče o zákazníky (CRM)",
             "Obchod a rozvoj byznysu",
             "Obchodní strategie",
-            "Strategické plánování",
-            "Organizace akcí",
-            "Komunikace s úřady",
-            "Znalosti ze zdravotnictví a techniky",
-            "Logistika"
+            "Strategické plánování"
           ]
         }
       ]
@@ -407,7 +374,7 @@
     "backToTop": "Zpět nahoru"
   },
   "common": {
-    "availability": "Otevřen spolupráci a sdílení know-how",
+    "availability": "Rád proberu AI v testování",
     "readMore": "Číst dál",
     "allArticles": "Všechny články",
     "allProjects": "Všechny projekty",
@@ -477,7 +444,7 @@
         "title": "Etnology #6",
         "date": "2026-10-14",
         "place": "Etnetera, Praha",
-        "description": "V AI demozóně ukážu QA Control Center naživo."
+        "description": "V AI demozóně jsem ukazoval QA Control Center naživo."
       }
     ]
   },
@@ -513,7 +480,7 @@
         "id": "qa-control-center",
         "name": "QA Control Center",
         "tagline": "AI navrhne, člověk rozhodne.",
-        "description": "Dáš mu zadání a AI z něj navrhne akceptační kritéria, testovací scénáře a hotové Playwright testy. Vzniklo to, protože jsem viděl dost vygenerovaných testů, které projdou a nic neověří. Takže tady neměříme pass rate, ale jak moc se dá testu věřit.",
+        "description": "Dáš mu zadání a 16 specializovaných AI agentů z něj navrhne rizika, akceptační kritéria, testovací scénáře a hotové Playwright testy. Vzniklo to, protože jsem viděl dost vygenerovaných testů, které projdou a nic neověří. Hlavní číslo proto říká, kolika testům se dá věřit.",
         "extra": "Mezi kroky jsou lidské brány. Dokud QA neřekne ano, nic nejde dál.",
         "tags": [
           "AI agents",

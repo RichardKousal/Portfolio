@@ -1,20 +1,20 @@
 import { test, expect, DRAFTS_VISIBLE } from "../fixtures/base.fixture";
 
-test.describe("Portfolio - Articles hidden without published articles", () => {
-  test.skip(DRAFTS_VISIBLE, "Drafts are visible in next dev, so the section exists there");
+test.describe("Portfolio - Published articles in production", () => {
+  test.skip(DRAFTS_VISIBLE, "Drafts are visible in next dev, so this checks only the production build");
 
-  test("should hide the Articles section until something is published", { tag: "@regression" }, async ({ browserContext, request }, testInfo) => {
+  test("should show published articles and hide drafts", { tag: "@regression" }, async ({ browserContext, request }, testInfo) => {
     testInfo.annotations.push({ type: "TestCaseID", description: "TC_026" });
 
     // Arrange & Act
-    await browserContext.site.goto("/cs");
+    await browserContext.site.goto("/cs/articles");
 
     // Assert
-    await expect(browserContext.page.locator('header a[href$="/articles"], footer a[href$="/articles"]')).toHaveCount(0);
-    await expect(browserContext.page.getByTestId("hero-cta-articles")).toHaveCount(0);
-    await expect(browserContext.page.getByTestId("hero-cta-projects")).toBeVisible();
-    expect((await request.get("/cs/articles")).status()).toBe(404);
-    expect(await (await request.get("/sitemap.xml")).text()).not.toContain("/articles");
+    const cards = browserContext.page.getByTestId("article-card");
+    await expect(cards.filter({ hasText: "Ne každé zelené fajfce se dá věřit" })).toHaveCount(1);
+    await expect(cards.filter({ hasText: "AI napsala testlog" })).toHaveCount(0);
+    await expect(browserContext.page.locator('a[href="https://www.etnetera.cz/blog/testy-pise-ai-ne-kazde-zelene-fajfce-se-da-verit"]').first()).toBeVisible();
+    expect(await (await request.get("/sitemap.xml")).text()).toContain("/articles");
   });
 });
 

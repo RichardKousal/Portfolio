@@ -23,9 +23,9 @@
     "specialization": "Specialization",
     "languages": "Languages",
     "locationValue": "Rokytnice n. J. / Prague",
-    "availabilityValue": "Open to collaboration and knowledge sharing",
+    "availabilityValue": "Happy to talk about AI in testing",
     "specializationValue": "QA Lead, AI-Driven QA, Playwright, k6",
-    "languagesValue": "Czech & Polish (native), English (limited working)",
+    "languagesValue": "Czech & Polish (native), English (professional working)",
     "generatedFrom": "Generated from",
     "present": "Present",
     "issued": "Issued",
@@ -34,17 +34,16 @@
   },
   "professional": {
     "hero": {
-      "subtitle": "QA Lead | AI-Driven QA Strategy | Test Automation & Performance Testing | Playwright | k6",
+      "subtitle": "QA Lead · AI-Driven Test Automation · Testing AI Agents & LLM Systems · Playwright + TypeScript · k6",
       "btnLinkedIn": "LinkedIn",
       "btnContact": "Email me",
       "btnDownloadCV": "Download CV"
     },
     "summary": [
-      "I lead and help build modern QA teams that keep up with the rapid pace of software development and the rise of AI.",
-      "I focus on QA leadership, quality strategy, and AI-driven testing. I enjoy exploring ways to use agent-based approaches and automation to eliminate repetitive QA work and move quality as close as possible to the start of the development process — ideally already during client communication and solution design.",
-      "I see QA as a partner to product and engineering, not a final gatekeeper. Automation and AI should handle execution and routine validation, while QA focuses on risk, overall quality, and continuous improvement across teams and products.",
-      "Although I primarily work in a leadership role, I stay hands-on where it adds value. I work with Playwright and TypeScript/JavaScript, focus on performance and load testing using k6, and have experience with CI/CD, DevOps practices, and Azure cloud environments. This allows me to connect QA strategy with real-world implementation and ensure that it does not remain just on paper, but actually works in practice.",
-      "I believe strong QA is built on clear ownership, trust within teams, data-driven decisions, and smart use of automation and AI."
+      "I lead QA and test automation. Right now I'm most interested in how to test software when AI writes the tests.",
+      "At Etnetera Core I'm building QA Control Center. It's an agent-based system that maps a web application, proposes risks and acceptance criteria, and writes Playwright tests. I don't track how many tests pass. I track how many of them we can trust. A green test that checks nothing doesn't count as a pass. AI proposes, the tester decides, code measures.",
+      "I lead QA: test strategy, quality standards, mentoring testers, reporting quality and risk. I automate tests in Playwright and TypeScript, API and UI, wired into CI/CD. I run performance and load tests with k6. And I build and test AI-agent systems where a human makes the important calls.",
+      "Before QA I worked in sales and ran a small company. So I'm as comfortable talking to clients and business people as I am to engineers."
     ],
     "experience": {
       "title": "Experience",
@@ -57,13 +56,14 @@
           "start": "2025-04",
           "end": null,
           "intro": [
-            "Leading QA across projects at Etnetera Core, with responsibility for QA strategy, quality standards, test automation direction, and the development of performance testing practices.",
-            "Alongside building scalable QA processes, mentoring QA engineers, and aligning quality with product and engineering goals, I am increasingly focused on how AI can fundamentally reshape the role of QA within a modern software development lifecycle.",
-            "My goal is not simply to automate individual testing tasks, but to move QA toward an AI-native model where the tester mindset — critical thinking, risk discovery, dealing with uncertainty, and the ability to challenge systems — becomes the foundation for orchestrating and directing AI agents.",
-            "In this model, AI increasingly takes over routine and repeatable activities, while QA engineers evolve into roles focused on defining strategy, context, risks, quality boundaries, and validation principles — using AI as an execution layer capable of autonomously handling a significant share of testing work.",
-            "I see this as the future of QA: less time spent manually executing routine tasks, and more focus on quality as a system, where human testers use their mindset and judgment to guide intelligent, autonomous agents across the entire SDLC."
+            "I lead QA across projects at Etnetera Core and build tools that let AI take over routine testing work, while testers keep the decisions."
           ],
-          "bullets": [],
+          "bullets": [
+            "Building QA Control Center: 16 specialised AI agents turn requirements into risks, scenarios and Playwright tests. A tester approves the key steps, and the system shows how many tests can actually be trusted.",
+            "The system itself is covered by over 4,000 automated tests.",
+            "Responsible for testing strategy, quality standards and where test automation goes next.",
+            "Mentoring QA engineers and running load and performance tests in k6."
+          ],
           "outro": []
         },
         {
@@ -71,9 +71,9 @@
           "company": "Etnetera Core",
           "location": "Prague, Czechia",
           "start": "2025-01",
-          "end": null,
+          "end": "2025-03",
           "intro": [
-            "Designing and developing automations for new and existing projects using Playwright, with the goal of streamlining processes and accelerating delivery."
+            "Built Playwright test automation for new and existing projects, so the teams could release faster."
           ],
           "bullets": [],
           "outro": []
@@ -84,19 +84,18 @@
           "location": "Czechia",
           "start": "2022-05",
           "end": "2025-01",
-          "intro": [],
-          "bullets": [
-            "Team Leadership: Overseeing team performance and workload.",
-            "Test Automation: Designing and maintaining automated tests for critical scenarios.",
-            "Assessment and Quality Improvement: Evaluating results and proposing quality enhancements.",
-            "Documentation: Ensuring proper test documentation.",
-            "First Level Support (L1): Providing initial user support and resolving issues.",
-            "Swift Incident Response: Responding to user incidents to minimize service interruptions.",
-            "Stakeholder Communication: Collaborating with clients and stakeholders for effective communication."
+          "intro": [
+            "I led the QA team for DODO's same-day and next-day delivery apps and was responsible for getting releases out safely."
           ],
-          "outro": [
-            "This role also includes leadership in ensuring successful releases, along with QA and testing responsibilities."
-          ]
+          "bullets": [
+            "Managed the team's workload and priorities.",
+            "Designed and maintained automated tests for critical scenarios.",
+            "Reviewed test results and proposed quality improvements.",
+            "Kept test documentation up to date.",
+            "Handled first-level support and incidents, so outages were fixed quickly.",
+            "Worked directly with clients and stakeholders."
+          ],
+          "outro": []
         },
         {
           "role": "QA Tester",
@@ -104,15 +103,15 @@
           "location": "Prague, Czechia",
           "start": "2021-05",
           "end": "2022-05",
-          "intro": [],
+          "intro": [
+            "I tested the backend and frontend of DODO's same-day and next-day delivery apps."
+          ],
           "bullets": [
-            "Testing Scenarios Optimization: Updating and optimizing testing scenarios for efficiency.",
-            "Process Improvement: Enhancing quality through process review and optimization.",
-            "BE and FE Testing: Specializing in testing application's BE and FE for same-day and next-day logistics.",
-            "Diverse Testing: Active involvement in diverse testing types, including integration and end-to-end (E2E) testing.",
-            "Mobile Testing: Conducting comprehensive testing of hybrid (native & web) mobile apps on various devices.",
-            "Payment Gateway Testing: Ensuring smooth and reliable payments through the testing of payment functionality.",
-            "Team Knowledge Sharing: Actively participating in knowledge and skill sharing within the team to address complex testing challenges and achieve outstanding results."
+            "Integration and end-to-end testing.",
+            "Mobile testing of hybrid (native and web) apps on a range of devices.",
+            "Payment gateway testing.",
+            "Updated test scenarios and improved QA processes.",
+            "Shared knowledge in the team on harder testing problems."
           ],
           "outro": []
         },
@@ -122,13 +121,10 @@
           "location": "Prague, Czechia",
           "start": "2019-03",
           "end": "2021-04",
-          "intro": [],
-          "bullets": [
-            "Customer Support: Handling inquiries, complaints, and claims via phone, email, and chat.",
-            "Product Expertise: Providing technical product information to aid customers in tire selection.",
-            "Order Management: Processing and monitoring customer orders, coordinating with logistics.",
-            "Issue Resolution: Managing complaints and exchanges following company policies."
+          "intro": [
+            "Customer support in Polish and English: orders, claims and product advice."
           ],
+          "bullets": [],
           "outro": []
         },
         {
@@ -137,13 +133,10 @@
           "location": "Prague, Czechia",
           "start": "2017-01",
           "end": "2019-03",
-          "intro": [],
-          "bullets": [
-            "Business Development: Identifying opportunities, securing clients, and driving growth for Nintendo products.",
-            "Customer Engagement: Building and maintaining retail partner relationships and customizing offerings.",
-            "Event Management: Planning and executing events, coordinating marketing.",
-            "Product Translations: Translating product information into Polish for a broader audience."
+          "intro": [
+            "Sales and retail partnerships for Nintendo products in Czechia and Poland, events and Polish translations."
           ],
+          "bullets": [],
           "outro": []
         },
         {
@@ -152,11 +145,10 @@
           "location": "",
           "start": "2015-05",
           "end": "2017-12",
-          "intro": [],
-          "bullets": [
-            "Leading and managing operations for distribution of active wheelchairs in the Czech Republic.",
-            "Specialized in sales of active wheelchairs, with a primary focus on communicating with health insurance companies, foundations and customers."
+          "intro": [
+            "Ran a small company distributing active wheelchairs. Worked with health insurers, foundations and customers."
           ],
+          "bullets": [],
           "outro": []
         }
       ]
@@ -169,10 +161,7 @@
           "degree": "Secondary school, completed with the Maturita exam",
           "start": "2008",
           "end": "2012",
-          "activities": [
-            "Editor at Kulíšek, an internet radio station in the Krkonoše region",
-            "Member of the school catering committee"
-          ]
+          "activities": []
         }
       ]
     },
@@ -189,7 +178,7 @@
         },
         {
           "name": "English",
-          "level": "Limited working proficiency"
+          "level": "Professional working proficiency"
         }
       ]
     },
@@ -200,12 +189,6 @@
       "credentialId": "ID",
       "verify": "verify",
       "items": [
-        {
-          "name": "Preply - Successfully completing 30 hours of English lessons",
-          "authority": "Preply",
-          "issued": "2024-02",
-          "credentialId": "9FE84882"
-        },
         {
           "name": "Basic Managerial Skills",
           "authority": "SOPHISTO",
@@ -231,18 +214,6 @@
           "name": "Cypress.io bootcamp",
           "authority": "Cypress.io",
           "issued": "2021-11"
-        },
-        {
-          "name": "Learn CSS Course",
-          "authority": "Codecademy",
-          "issued": "2020-09",
-          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9a5bb1fc45b4281af1fffec93b0aaf05"
-        },
-        {
-          "name": "Learn HTML Course",
-          "authority": "Codecademy",
-          "issued": "2020-09",
-          "url": "https://www.codecademy.com/profiles/richardKousal7999677138/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
         }
       ]
     },
@@ -318,11 +289,7 @@
             "Customer Relationship Management",
             "Sales and Business Development",
             "Business Strategy",
-            "Strategic Planning",
-            "Event Planning and Management",
-            "Communication with Public Authorities",
-            "Healthcare and Technical Knowledge",
-            "Logistics Skills"
+            "Strategic Planning"
           ]
         }
       ]
@@ -407,7 +374,7 @@
     "backToTop": "Back to top"
   },
   "common": {
-    "availability": "Open to collaboration and knowledge sharing",
+    "availability": "Happy to talk about AI in testing",
     "readMore": "Read more",
     "allArticles": "All articles",
     "allProjects": "All projects",
@@ -513,7 +480,7 @@
         "id": "qa-control-center",
         "name": "QA Control Center",
         "tagline": "AI proposes, a human decides.",
-        "description": "You give it a requirement and AI drafts acceptance criteria, test scenarios and ready-to-run Playwright tests. I built it because I'd seen plenty of generated tests that pass and check nothing. So instead of pass rate, it tracks how much you can trust each test.",
+        "description": "You give it a requirement and 16 specialised AI agents draft risks, acceptance criteria, test scenarios and ready-to-run Playwright tests. I built it because I'd seen plenty of generated tests that pass and check nothing. So the main number tells you how many tests can be trusted.",
         "extra": "There are human gates between the steps. Nothing moves on until QA says yes.",
         "tags": [
           "AI agents",

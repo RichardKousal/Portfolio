@@ -10,7 +10,7 @@ test.describe("Portfolio - Profile data (LinkedIn 1:1)", () => {
 
     // Assert
     await expect(browserContext.page.getByTestId("about-headline")).toHaveText(
-      "QA Lead | AI-Driven QA Strategy | Test Automation & Performance Testing | Playwright | k6"
+      "QA Lead · AI-Driven Test Automation · Testing AI Agents & LLM Systems · Playwright + TypeScript · k6"
     );
     const positions = browserContext.page.getByTestId("experience-item");
     await expect(positions).toHaveCount(7);
@@ -36,7 +36,7 @@ test.describe("Portfolio - Profile data (LinkedIn 1:1)", () => {
     await expect(languages.nth(1)).toContainText("Polština");
     await expect(languages.nth(1)).toContainText("rodilá úroveň");
     await expect(languages.nth(2)).toContainText("Angličtina");
-    await expect(languages.nth(2)).toContainText("omezená pracovní znalost");
+    await expect(languages.nth(2)).toContainText("profesní pracovní znalost");
     await expect(browserContext.page.getByTestId("about-languages")).not.toContainText("pokročil");
 
     // Act
@@ -44,11 +44,11 @@ test.describe("Portfolio - Profile data (LinkedIn 1:1)", () => {
 
     // Assert
     await expect(browserContext.page.getByTestId("language-item").nth(2)).toContainText(
-      "Limited working proficiency"
+      "Professional working proficiency"
     );
   });
 
-  test("should list all seven certifications with issuer and date", { tag: "@content" }, async ({ browserContext }, testInfo) => {
+  test("should list all four certifications with issuer and date", { tag: "@content" }, async ({ browserContext }, testInfo) => {
     testInfo.annotations.push({ type: "TestCaseID", description: "TC_052" });
 
     // Arrange & Act
@@ -56,7 +56,7 @@ test.describe("Portfolio - Profile data (LinkedIn 1:1)", () => {
 
     // Assert
     const certs = browserContext.page.getByTestId("certification-item");
-    await expect(certs).toHaveCount(7);
+    await expect(certs).toHaveCount(4);
     const mentoring = certs.filter({ hasText: "Mentoring for Professionals" });
     await expect(mentoring).toContainText("Femme Palette");
     await expect(mentoring).toContainText("2023-05");

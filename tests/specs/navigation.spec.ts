@@ -11,7 +11,7 @@ test.describe("Portfolio - Navigation", () => {
     await browserContext.site.verifyPageTitle(/Richard Kousal | QA & Test Automation Lead/);
     await expect(browserContext.page.getByTestId("home-hero")).toBeVisible();
     await expect(browserContext.page.getByTestId("availability")).toHaveText(
-      "Otevřen spolupráci a sdílení know-how"
+      "Rád proberu AI v testování"
     );
     await expect(browserContext.page.getByTestId("home-projects")).toBeVisible();
     await expect(browserContext.page.getByTestId("home-talks")).toContainText("Etnology #6");

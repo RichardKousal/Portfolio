@@ -1,13 +1,13 @@
 ---
-title: "Dvě zelené fajfky. Jen jedné se dá věřit: QA v době, kdy testy píše AI"
+title: "Testy píše AI. Ne každé zelené fajfce se dá věřit"
 slug: dve-zelene-fajfky
-date: 2026-10-20
+date: 2026-11-03
 lang: cs
 type: etnetera
 category: qa-ai
-excerpt: "Generovaný test, který projde naoko, je horší než žádný. Proč měříme důvěru místo pass rate."
-externalUrl: ""  # TBD – doplnit URL článku na blogu etnetera.cz před publikací
-status: draft
+excerpt: "Zelená fajfka u testu od AI ještě nic nezaručuje. Jak v QA Control Center měříme, kolika testům se dá věřit."
+externalUrl: "https://www.etnetera.cz/blog/testy-pise-ai-ne-kazde-zelene-fajfce-se-da-verit"
+status: published
 tags: [AI-driven QA, Playwright, důvěra v testy]
 ---
 
