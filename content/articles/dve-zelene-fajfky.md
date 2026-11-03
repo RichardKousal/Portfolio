@@ -1,7 +1,7 @@
 ---
 title: "Testy píše AI. Ne každé zelené fajfce se dá věřit"
 slug: dve-zelene-fajfky
-date: 2026-11-03
+date: 2026-11-02
 lang: cs
 type: etnetera
 category: qa-ai
